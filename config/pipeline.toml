@@ -1,0 +1,49 @@
+# Tagger settings. Model profiles live in config/models.toml.
+# Since the review app (14 Nov 2026): categorise_model, tag_model and category_auto_threshold below were
+# the seed for the database table app_settings and are NOT read any more. Change them on the app's Models
+# and Confidence tabs. Per-facet confidence levels are in facets.review_threshold, not facet_policy.csv.
+
+categorise_model = "haiku"          # profile name; override with --model / --categorise-model
+tag_model = "sonnet"                # profile name; override with --model / --tag-model
+golden_prefill_model = "opus"       # drafts golden labels; a different model from the ones being evaluated
+category_auto_threshold = 0.75      # category confidence at or above this is 'auto'; below it 'flagged'
+                                    # (top pick and runner-up have the same facets: tagged, category to review) or 'review'
+max_images = 4                      # images sent with a tag request, in stored order
+concurrency = 4                     # products processed at once
+
+# Products in these categories get `function` from the category (step 3) and the model is not asked.
+# Key: a category name that appears anywhere in the product's category path. Value: the function label.
+[function_categories]
+Activewear = "active"
+Sleepwear = "sleep"
+Swimwear = "swim"
+Skiwear = "ski"
+Shapewear = "shapewear"
+
+# Parameters of the step 3 rules (PRD section 5). The facet values are matched by label or slug.
+[derive]
+price_band_min_department = 9               # fewer priced products than this: use the whole catalog
+recency_new_in_days = 30
+recency_current_days = 180
+metallic_colours = ["gold", "silver", "rose gold", "metallic"]
+case_size_small_below_mm = 34
+case_size_large_above_mm = 40
+gift_text_keyword = "gift"                  # whole word, case-insensitive, anywhere in the product text
+giftable_categories_file = "config/giftable_categories.csv"
+gift_occasion_rules_file = "config/gift_occasion_rules.csv"
+
+# Monitoring (PRD section 9): thresholds for flagging a shift against the baseline run.
+# Rates are compared in percentage points; confidence as a 0-1 number.
+[monitor]
+min_segment_products = 15       # a department / category / brand needs this many products for its own stats
+min_applicable = 15             # rate checks need this many applicable products in both runs
+min_values = 30                 # confidence checks need this many values with a confidence in both runs
+rate_warning_points = 10        # unknown rate / review rate up by this much: warning
+rate_alert_points = 20          # ... by this much: alert
+rate_double_min_points = 10     # ... or more than doubled with at least this rise: alert
+coverage_warning_points = 10    # coverage down by this much: warning
+coverage_alert_points = 20
+mean_confidence_warning = 0.05  # mean confidence down by this much: warning
+mean_confidence_alert = 0.10
+stability_warning = 0.10        # stability index of the confidence bands
+stability_alert = 0.25

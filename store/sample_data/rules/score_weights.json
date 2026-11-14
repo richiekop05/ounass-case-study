@@ -1,0 +1,4 @@
+{"_note": "Engineering PRD 5 to 7 defaults; starting assumptions for the owner to confirm after trying the personas.",
+ "shortlist": {"occasion_fit": 0.40, "taste": 0.35, "formality_centre": 0.15, "tag_confidence": 0.10},
+ "look": {"colour": 0.30, "formality": 0.20, "occasion": 0.15, "aesthetic": 0.15, "taste": 0.15, "price": 0.05},
+ "profile": {"purchase": 3, "add_to_bag": 3, "save": 2, "swap_in": 1.5, "view": 1, "swap_out": -1.5, "session_multiplier": 2, "looks_threshold": 3}}

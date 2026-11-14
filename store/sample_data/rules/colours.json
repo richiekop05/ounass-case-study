@@ -1,0 +1,5 @@
+{"_note": "Engineering PRD 3: neutrals pair with everything at 1.0, a colour with itself 0.8, listed complementary pairs 0.7, everything else 0.3. Neutrals here are the database's neutral and metallic values. The complementary pairs are a proposal for the owner to review.",
+ "neutrals": ["black", "white", "neutral", "grey", "brown", "cream", "beige", "mud_grey", "gold", "silver", "rose_gold", "metallic", "colourless"],
+ "complementary": [["blue", "orange"], ["blue", "yellow"], ["blue", "pink"], ["green", "pink"], ["purple", "yellow"],
+                   ["burgundy", "pink"], ["red", "blue"], ["green", "burgundy"]],
+ "scores": {"neutral": 1.0, "same": 0.8, "complementary": 0.7, "other": 0.3}}

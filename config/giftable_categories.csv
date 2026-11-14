@@ -1,0 +1,56 @@
+category_id,path,giftable,note
+K301,Kids / Clothing,false,clothing is never giftable
+M201,Men / Clothing,false,clothing is never giftable
+U401,Unisex / Clothing,false,clothing is never giftable
+W101,Women / Clothing,false,clothing is never giftable
+K302,Kids / Shoes,false,shoes are never giftable
+M202,Men / Shoes,false,shoes are never giftable
+U402,Unisex / Shoes,false,shoes are never giftable
+W102,Women / Shoes,false,shoes are never giftable
+K305199,Kids / Jewellery / Rings,false,rings are never giftable
+M205128,Men / Jewellery / Rings,false,rings are never giftable
+U405241,Unisex / Jewellery / Rings,false,rings are never giftable
+W105063,Women / Jewellery / Rings,false,rings are never giftable
+K303,Kids / Bags,true,bags
+M203,Men / Bags,true,bags
+U403,Unisex / Bags,true,bags
+W103,Women / Bags,true,bags
+K305,Kids / Jewellery,true,jewellery other than rings
+M205,Men / Jewellery,true,jewellery other than rings
+U405,Unisex / Jewellery,true,jewellery other than rings
+W105,Women / Jewellery,true,jewellery other than rings
+K306,Kids / Watches,true,watches
+M206,Men / Watches,true,watches
+U406,Unisex / Watches,true,watches
+W106,Women / Watches,true,watches
+K307204,Kids / Beauty / Fragrance,true,"fragrance, candles and home fragrance"
+M207139,Men / Beauty / Fragrance,true,"fragrance, candles and home fragrance"
+U407247,Unisex / Beauty / Fragrance,true,"fragrance, candles and home fragrance"
+U407249,Unisex / Beauty / Home Fragrance,true,"fragrance, candles and home fragrance"
+W107078,Women / Beauty / Fragrance,true,"fragrance, candles and home fragrance"
+M204125,Men / Accessories / Gift Sets,true,sets
+K304192,Kids / Accessories / Wallets & Small Leather Goods,true,small leather goods
+M204117,Men / Accessories / Wallets & Small Leather Goods,true,small leather goods
+U404228,Unisex / Accessories / Wallets & Small Leather Goods,true,small leather goods
+W104051,Women / Accessories / Wallets & Small Leather Goods,true,small leather goods
+K304190,Kids / Accessories / Scarves & Soft Accessories,true,scarves
+M204118,Men / Accessories / Scarves & Soft Accessories,true,scarves
+U404231,Unisex / Accessories / Scarves & Soft Accessories,true,scarves
+W104052,Women / Accessories / Scarves & Soft Accessories,true,scarves
+K304190-03,Kids / Accessories / Scarves & Soft Accessories / Ties,true,ties
+M204118-06,Men / Accessories / Scarves & Soft Accessories / Ties,true,ties
+U404231-03,Unisex / Accessories / Scarves & Soft Accessories / Ties,true,ties
+W104052-07,Women / Accessories / Scarves & Soft Accessories / Ties,true,ties
+K304191-01,Kids / Accessories / Eyewear / Sunglasses,true,sunglasses
+M204116-02,Men / Accessories / Eyewear / Sunglasses,true,sunglasses
+U404227-03,Unisex / Accessories / Eyewear / Sunglasses,true,sunglasses
+W104050-03,Women / Accessories / Eyewear / Sunglasses,true,sunglasses
+K304189,Kids / Accessories / Baby Accessories,true,baby gifts
+K304187,Kids / Accessories / Baby Essentials,true,baby gifts
+U407248-04,Unisex / Beauty / Bath & Body / Gift Sets,true,beauty sets
+A508251,All / Home / Dining,true,"tableware, home decor, toys"
+A508252,All / Home / Home Accessories,true,"tableware, home decor, toys"
+A508254,All / Home / Toys,true,"tableware, home decor, toys"
+A509261,All / Food / Candies,true,"chocolates, dates and sweets"
+A509258,All / Food / Chocolates,true,"chocolates, dates and sweets"
+A509263,All / Food / Hampers & Gift Boxes,true,"chocolates, dates and sweets"

@@ -1,0 +1,35 @@
+/* bottom centre of the content area: the page minus the rail */
+.toast-region {
+  position: fixed;
+  left: calc(50% + var(--rail-width) / 2);
+  bottom: var(--s5);
+  transform: translateX(-50%);
+  z-index: var(--z-toast);
+  pointer-events: none;
+}
+.toast {
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+  padding: var(--s3) var(--s4);
+  border-radius: var(--radius);
+  background: var(--toast-bg);
+  color: var(--on-action);
+  box-shadow: var(--shadow-pop);
+  white-space: nowrap;
+  pointer-events: auto;
+  animation: fade-in var(--motion) ease-out;
+  transition: opacity var(--motion);
+}
+.toast.is-leaving { opacity: 0; }
+.toast-action {
+  min-height: var(--button-small);
+  padding: var(--s1) 0;
+  border: none;
+  background: none;
+  color: var(--on-action);
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.toast-action:focus-visible { outline-color: var(--on-action); }

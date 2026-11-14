@@ -1,0 +1,21 @@
+.env
+.cache/
+data/*
+!data/.gitkeep
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+*.egg-info/
+node_modules/
+src/app/static/
+store/richies/static/
+.DS_Store
+*.tsbuildinfo
+*.log
+
+# Review and labelling sheets in progress (kept locally, not shipped)
+review/*.xlsx
+golden/labelling_sheet.xlsx
+golden/prefilled_labels*.xlsx
+golden/disagreements_*.xlsx

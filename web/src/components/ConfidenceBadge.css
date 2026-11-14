@@ -1,0 +1,27 @@
+.conf-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  height: var(--chip-height);
+  padding: 0 var(--s3);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
+  color: var(--text);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.conf-badge.is-low { border-color: var(--flag-bg); background: var(--flag-bg); color: var(--flag); }
+.conf-badge-bar {
+  display: block;
+  width: var(--conf-bar-width);
+  height: var(--conf-bar-height);
+  border-radius: var(--radius-pill);
+  background: var(--border);
+  overflow: hidden;
+}
+.conf-badge.is-low .conf-badge-bar { background: var(--flag-track); }
+.conf-badge-fill { display: block; height: 100%; background: var(--text); }
+.conf-badge.is-low .conf-badge-fill { background: var(--flag); }
+.conf-badge-quiet { color: var(--text-muted); font-size: var(--text-sm); }

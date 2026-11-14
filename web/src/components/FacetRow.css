@@ -1,0 +1,84 @@
+/* left bar: flag while undecided, ok once decided, error when a required value is missing */
+.facet-compact,
+.facet-open {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-left: var(--flag-bar) solid var(--border);
+  border-radius: var(--radius);
+}
+.facet-compact.is-flag, .facet-open.is-flag { border-left-color: var(--flag); }
+.facet-compact.is-ok, .facet-open.is-ok { border-left-color: var(--ok); }
+.facet-compact.is-error, .facet-open.is-error { border-left-color: var(--error); }
+
+.facet-compact {
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+  width: 100%;
+  height: var(--compact-row);
+  padding: 0 var(--s4);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color var(--motion);
+}
+.facet-compact:hover { border-top-color: var(--line-quiet); border-right-color: var(--line-quiet); border-bottom-color: var(--line-quiet); }
+.facet-compact .facet-name { width: var(--facet-name-width); flex: none; }
+.facet-compact-value { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.facet-status { font-size: var(--text-xs); color: var(--ok); font-weight: 500; white-space: nowrap; }
+.facet-name { cursor: help; }
+
+.facet-open { display: flex; flex-direction: column; gap: var(--s2); padding: var(--s3) var(--s4); }
+.facet-line1 { display: flex; align-items: center; gap: var(--s2); min-height: var(--chip-height); }
+.facet-line1-right { margin-left: auto; display: flex; align-items: center; gap: var(--s2); }
+.facet-required {
+  height: var(--badge-height);
+  padding: 0 var(--s2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-xs);
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-muted);
+}
+.facet-collapse {
+  width: var(--button-small);
+  height: var(--button-small);
+  border: none;
+  border-radius: var(--radius);
+  background: none;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+.facet-collapse:hover { background: var(--photo-bg); }
+.facet-body { display: flex; align-items: flex-start; gap: var(--s4); }
+.facet-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--s2); }
+.facet-values { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2); min-height: var(--chip-height); }
+.facet-values .chip { font-size: var(--text-base); padding: 0 var(--s3); }
+.facet-error { color: var(--error); }
+.facet-line3 { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s1) var(--s2); color: var(--text-muted); }
+.facet-ev {
+  padding: 0 var(--s2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-xs);
+  line-height: var(--lh-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+}
+.facet-quote {
+  padding: 0;
+  border: none;
+  background: none;
+  font-style: italic;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  text-decoration: underline dotted var(--text-muted);
+}
+.facet-flagnote { font-size: var(--text-xs); line-height: var(--lh-xs); color: var(--flag); }
+
+/* actions: always shown on a row still waiting for a decision, otherwise on hover or focus */
+.facet-actions { display: flex; gap: var(--s2); flex: none; opacity: 0; transition: opacity var(--motion); }
+.facet-open.is-pending .facet-actions,
+.facet-open:hover .facet-actions,
+.facet-open:focus-within .facet-actions { opacity: 1; }

@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Instrument+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#FAF8F5;color:#1A1A1A;font-family:'Instrument Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#1A1A1A;text-decoration:none}
+a:hover{color:#8C6A3F}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;border-radius:0}
+button:disabled{cursor:default}
+input{font:inherit}
+input:focus{outline:none}
+</style>
+</helmet>
+
+<div style="position:sticky;top:0;z-index:40;background:#141312;color:#EDE8E0;font-family:'IBM Plex Mono',monospace;font-size:12px">
+  <div style="max-width:1280px;margin:0 auto;padding:9px clamp(16px,4vw,48px);display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative">
+    <button onClick="{{ toggleMenu }}" style="display:flex;gap:8px;align-items:center;letter-spacing:0.03em">
+      <span style="color:#9C968C">Shopping as:</span>
+      <span style="color:#EDE8E0">{{ personaName }}</span>
+      <span style="color:#9C968C">·</span>
+      <span style="color:{{ intentBadgeColor }}">{{ intentLabel }}</span>
+      <span style="color:#9C968C">▾</span>
+    </button>
+    <div style="display:flex;gap:20px;align-items:center">
+      <sc-if value="{{ intentPending }}"><span style="color:#D9B98A">High intent from next page</span></sc-if>
+      <button onClick="{{ reset }}" style="text-decoration:underline;text-underline-offset:3px">Reset session</button>
+    </div>
+    <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="position:absolute;top:100%;left:clamp(16px,4vw,48px);width:min(440px,92vw);max-height:calc(100vh - 60px);overflow-y:auto;background:#141312;border:1px solid #3A3733;z-index:50">
+        <sc-for list="{{ personas }}" as="p" hint-placeholder-count="4">
+          <button onClick="{{ p.onPick }}" style="display:flex;flex-direction:column;gap:10px;width:100%;text-align:left;padding:16px 18px;border-bottom:1px solid #2A2826;background:{{ p.bg }}">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%">
+              <span style="color:#EDE8E0;font-size:13px">{{ p.full }}</span>
+              <span style="font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;padding:3px 8px;border:1px solid {{ p.badgeBorder }};background:{{ p.badgeBg }};color:{{ p.badgeColor }};white-space:nowrap">{{ p.badge }}</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:3px">
+              <sc-for list="{{ p.signals }}" as="sig" hint-placeholder-count="3">
+                <span style="color:#C8C2B8;font-size:11.5px;line-height:1.45">– {{ sig }}</span>
+              </sc-for>
+            </div>
+            <div style="color:#D9B98A;font-size:11.5px">→ {{ p.does }}</div>
+          </button>
+        </sc-for>
+        <div style="padding:10px 18px;color:#6E6962;font-size:11px">Simulated starting sessions</div>
+      </div>
+    </sc-if>
+  </div>
+</div>
+
+<header style="border-bottom:1px solid #E5E0D8;background:#FAF8F5">
+  <div style="max-width:1280px;margin:0 auto;padding:24px clamp(16px,4vw,48px) 0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center">
+    <span></span>
+    <button onClick="{{ goShopAll }}" style="font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,42px);font-weight:500;line-height:1;letter-spacing:0.005em">Richie's</button>
+    <div style="justify-self:end;display:flex;align-items:center;gap:8px">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#1A1A1A" stroke-width="1"><rect x="2.5" y="6" width="13" height="10.5"></rect><path d="M6 6V4.5a3 3 0 0 1 6 0V6"></path></svg>
+      <span style="font-size:12px;min-width:10px">{{ bagCount }}</span>
+    </div>
+  </div>
+  <nav style="display:flex;justify-content:center;gap:clamp(24px,5vw,48px);padding:18px 16px 14px">
+    <sc-for list="{{ depts }}" as="d" hint-placeholder-count="3">
+      <button onClick="{{ d.onClick }}" style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;padding-bottom:4px;border-bottom:1px solid {{ d.line }}">{{ d.label }}</button>
+    </sc-for>
+  </nav>
+</header>
+
+<div style="position:fixed;top:132px;left:50%;transform:translateX(-50%);z-index:55;background:#1A1A1A;color:#FAF8F5;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;padding:12px 22px;pointer-events:none;opacity:{{ toastOpacity }};transition:opacity 300ms ease">{{ toastText }}</div>
+
+<sc-if value="{{ isPLP }}" hint-placeholder-val="{{ true }}">
+  <main style="max-width:1280px;margin:0 auto;padding:0 clamp(16px,4vw,48px) 120px">
+
+    <sc-if value="{{ showBand }}" hint-placeholder-val="{{ true }}">
+      <section style="padding:clamp(40px,7vw,72px) 0 clamp(40px,6vw,64px);border-bottom:1px solid #E5E0D8">
+
+        <sc-if value="{{ showLooks }}">
+          <div style="margin-bottom:clamp(36px,5vw,56px)">
+            <div style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#8A857D;margin-bottom:14px">Looks for you</div>
+            <div style="display:flex;gap:16px;overflow-x:auto;scrollbar-width:none">
+              <sc-for list="{{ looks }}" as="l" hint-placeholder-count="3">
+                <button onClick="{{ l.onOpen }}" style="flex:1 1 250px;min-width:250px;text-align:left;display:grid;grid-template-columns:84px minmax(0,1fr);gap:16px;align-items:center;border:1px solid #E5E0D8;padding:10px;transition:border-color 250ms ease" style-hover="border-color:#8A857D">
+                  <div style="aspect-ratio:3/4;background:{{ l.bg }};outline:1px solid #E5E0D8"></div>
+                  <div style="display:flex;flex-direction:column;gap:8px;min-width:0">
+                    <div style="font-family:'Cormorant Garamond',serif;font-size:22px;line-height:1.1">{{ l.title }}</div>
+                    <div style="font-size:11px;color:#8A857D;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ l.sub }}</div>
+                    <div style="display:flex;gap:6px">
+                      <sc-for list="{{ l.thumbs }}" as="t" hint-placeholder-count="3">
+                        <div style="width:30px;aspect-ratio:3/4;background:{{ t.bg }};outline:1px solid #E5E0D8"></div>
+                      </sc-for>
+                    </div>
+                  </div>
+                </button>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ showPickerToggle }}">
+          <div style="display:flex;justify-content:center">
+            <button onClick="{{ openPicker }}" style="font-size:13px;color:#8C6A3F;display:flex;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid transparent;transition:border-color 250ms ease" style-hover="border-bottom-color:#8C6A3F">Shopping for an occasion? <span>↓</span></button>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ showOpener }}">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:28px;text-align:center">
+            <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,5.5vw,52px);line-height:1.05">Who is it for?</h2>
+            <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px">
+              <sc-for list="{{ openerChoices }}" as="o" hint-placeholder-count="3">
+                <button onClick="{{ o.onClick }}" style="border:1px solid #8C6A3F;color:#8C6A3F;border-radius:999px;padding:11px 24px;font-size:13px;letter-spacing:0.04em;transition:background 250ms ease,color 250ms ease" style-hover="background:#8C6A3F;color:#FAF8F5">{{ o.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ showPicker }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center">
+            <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,5.5vw,52px);line-height:1.05">Where are you going?</h2>
+            <sc-if value="{{ pickerNote }}">
+              <div style="font-size:12px;color:#8A857D;display:flex;gap:10px;align-items:center">
+                <span>{{ pickerNote }}</span>
+                <sc-if value="{{ showOpenerChange }}"><button onClick="{{ reopenOpener }}" style="text-decoration:underline;text-underline-offset:3px">Change</button></sc-if>
+              </div>
+            </sc-if>
+            <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:720px">
+              <sc-for list="{{ occChips }}" as="c" hint-placeholder-count="5">
+                <button onClick="{{ c.onClick }}" style="border:1px solid #8C6A3F;color:{{ c.color }};background:{{ c.bg }};border-radius:999px;padding:11px 24px;font-size:13px;letter-spacing:0.04em;transition:background 250ms ease,color 250ms ease" style-hover="background:#8C6A3F;color:#FAF8F5">{{ c.label }}</button>
+              </sc-for>
+            </div>
+            <sc-if value="{{ ownClosed }}" hint-placeholder-val="{{ true }}">
+              <button onClick="{{ openOwn }}" style="font-size:12px;color:#8A857D;text-decoration:underline;text-underline-offset:4px;text-decoration-color:#E5E0D8">Or describe it in your own words</button>
+            </sc-if>
+            <sc-if value="{{ ownOpen }}">
+              <div style="width:min(440px,100%);display:flex;flex-direction:column;gap:8px">
+                <input value="{{ ownText }}" onChange="{{ onOwnChange }}" onKeyDown="{{ onOwnKey }}" placeholder="A friend's engagement, outdoors, in March" style="width:100%;background:transparent;border:0;border-bottom:1px solid #1A1A1A;padding:10px 0;font-size:15px;text-align:center;color:#1A1A1A">
+                <span style="font-size:11px;color:#8A857D">{{ ownHint }}</span>
+              </div>
+            </sc-if>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ showShortlist }}">
+          <div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap">
+              <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,5.5vw,52px);line-height:1.05">{{ shortlistTitle }}</h2>
+              <button onClick="{{ changeOcc }}" style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;border-bottom:1px solid #1A1A1A;padding-bottom:2px">Change</button>
+            </div>
+            <div style="font-size:13px;color:#8A857D;margin-top:10px">{{ shortlistSub }}</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin:24px 0 32px">
+              <sc-for list="{{ refineChips }}" as="r" hint-placeholder-count="3">
+                <button onClick="{{ r.onClick }}" style="border:1px solid {{ r.border }};color:{{ r.color }};border-radius:999px;padding:7px 16px;font-size:12px;transition:border-color 250ms ease,color 250ms ease">{{ r.label }}</button>
+              </sc-for>
+            </div>
+            <sc-if value="{{ shortlistEmpty }}">
+              <div style="padding:24px 0;font-size:14px;display:flex;gap:12px;flex-wrap:wrap">
+                <span>Nothing matches that yet.</span>
+                <button onClick="{{ clearRefine }}" style="text-decoration:underline;text-underline-offset:3px;color:#8C6A3F">Clear the refinement</button>
+              </div>
+            </sc-if>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(max(150px,calc((100% - 64px) / 3)),1fr));gap:clamp(16px,3vw,32px) clamp(12px,2.5vw,32px)">
+              <sc-for list="{{ shortlist }}" as="c" hint-placeholder-count="6">
+                <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+                  <div style="position:relative">
+                    <button onClick="{{ c.onOpen }}" style="display:block;width:100%;aspect-ratio:4/5;background:{{ c.bg }}"></button>
+                    <span style="position:absolute;left:12px;bottom:12px;font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:{{ c.ink }};pointer-events:none">{{ c.imgLabel }}</span>
+                    <button onClick="{{ c.onSave }}" style="position:absolute;top:6px;right:6px;width:40px;height:40px;font-size:18px;color:{{ c.ink }}">{{ c.heart }}</button>
+                  </div>
+                  <button onClick="{{ c.onOpen }}" style="text-align:left;display:flex;flex-direction:column;gap:5px;min-width:0">
+                    <span style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase">{{ c.brand }}</span>
+                    <span style="font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:100%">{{ c.name }}</span>
+                    <span style="font-size:13px;color:#5E5A54">{{ c.price }}</span>
+                  </button>
+                  <div style="display:flex;flex-wrap:wrap;gap:6px">
+                    <sc-for list="{{ c.reasons }}" as="r" hint-placeholder-count="2">
+                      <span style="border:1px solid #D6CFC4;border-radius:999px;padding:4px 10px;font-size:11px;color:#5E5A54">{{ r }}</span>
+                    </sc-for>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+      </section>
+    </sc-if>
+
+    <div style="display:flex;gap:8px;overflow-x:auto;padding:20px 0;border-bottom:1px solid #E5E0D8">
+      <sc-for list="{{ filterDims }}" as="f" hint-placeholder-count="8">
+        <button onClick="{{ f.onClick }}" style="flex:none;border:1px solid {{ f.border }};color:{{ f.color }};padding:10px 14px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase">{{ f.label }}</button>
+      </sc-for>
+    </div>
+    <sc-if value="{{ hasApplied }}">
+      <div style="display:flex;gap:8px;flex-wrap:wrap;padding:16px 0 0;align-items:center">
+        <sc-for list="{{ applied }}" as="a" hint-placeholder-count="1">
+          <button onClick="{{ a.onRemove }}" style="border:1px solid #1A1A1A;border-radius:999px;padding:6px 12px;font-size:12px;display:flex;gap:8px">{{ a.label }}<span style="color:#8A857D">×</span></button>
+        </sc-for>
+        <button onClick="{{ clearFilters }}" style="font-size:12px;color:#8A857D;text-decoration:underline;text-underline-offset:3px;margin-left:4px">Clear all</button>
+      </div>
+    </sc-if>
+
+    <div style="display:flex;justify-content:space-between;align-items:baseline;padding:36px 0 24px;gap:16px">
+      <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,3.5vw,34px)">{{ gridLabel }}</h1>
+      <span style="font-size:12px;color:#8A857D">{{ gridCount }}</span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(max(150px,calc((100% - 96px) / 4)),1fr));gap:clamp(28px,4vw,48px) clamp(12px,2.5vw,32px)">
+      <sc-if value="{{ loading }}">
+        <sc-for list="{{ skeletons }}" as="k" hint-placeholder-count="8">
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="aspect-ratio:3/4;background:#F2EEE8"></div>
+            <div style="height:10px;width:40%;background:#F2EEE8"></div>
+            <div style="height:12px;width:80%;background:#F2EEE8"></div>
+          </div>
+        </sc-for>
+      </sc-if>
+      <sc-for list="{{ grid }}" as="p" hint-placeholder-count="8">
+        <sc-if value="{{ p.isProduct }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+          <div style="position:relative">
+            <button onClick="{{ p.onOpen }}" style="display:block;width:100%;aspect-ratio:3/4;background:{{ p.bg }}"></button>
+            <span style="position:absolute;left:10px;bottom:10px;font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:{{ p.ink }};pointer-events:none">{{ p.imgLabel }}</span>
+            <button onClick="{{ p.onSave }}" style="position:absolute;top:4px;right:4px;width:40px;height:40px;font-size:17px;color:{{ p.ink }}">{{ p.heart }}</button>
+          </div>
+          <button onClick="{{ p.onOpen }}" style="text-align:left;display:flex;flex-direction:column;gap:5px;min-width:0">
+            <span style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase">{{ p.brand }}</span>
+            <span style="font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:100%">{{ p.name }}</span>
+            <span style="font-size:13px;color:#5E5A54">{{ p.price }}</span>
+          </button>
+        </div>
+        </sc-if>
+        <sc-if value="{{ p.isLook }}">
+          <button onClick="{{ p.onOpen }}" style="grid-column:span 2;text-align:left;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(12px,2vw,24px);border:1px solid #E5E0D8;padding:clamp(10px,1.5vw,16px);align-items:stretch;min-width:0;transition:border-color 250ms ease" style-hover="border-color:#8A857D">
+            <div style="width:100%;align-self:start;aspect-ratio:3/4;background:{{ p.bg }};position:relative;outline:1px solid #E5E0D8">
+              <span style="position:absolute;left:10px;bottom:10px;font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:{{ p.ink }}">{{ p.label }}</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
+              <span style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#8A857D">A look for you</span>
+              <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.4vw,30px);line-height:1.1">{{ p.title }}</span>
+              <span style="font-size:12px;color:#5E5A54;text-wrap:pretty">{{ p.sub }}</span>
+              <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:auto">
+                <sc-for list="{{ p.thumbs }}" as="t" hint-placeholder-count="3">
+                  <div style="aspect-ratio:3/4;background:{{ t.bg }};outline:1px solid #E5E0D8"></div>
+                </sc-for>
+              </div>
+              <span style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;border-bottom:1px solid #1A1A1A;align-self:flex-start;padding-bottom:2px">View the look</span>
+            </div>
+          </button>
+        </sc-if>
+      </sc-for>
+    </div>
+  </main>
+</sc-if>
+
+<sc-if value="{{ isPDP }}">
+  <main style="max-width:1280px;margin:0 auto;padding:0 clamp(16px,4vw,48px) 120px">
+    <div style="padding:20px 0 24px">
+      <button onClick="{{ backToPLP }}" style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#8A857D">← {{ backLabel }}</button>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:clamp(28px,5vw,72px);align-items:flex-start">
+      <div style="flex:1 1 420px;min-width:0;max-width:680px">
+        <div style="display:grid;grid-auto-flow:column;grid-auto-columns:100%;overflow-x:auto;scroll-snap-type:x mandatory">
+          <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="1">
+            <div style="scroll-snap-align:start;aspect-ratio:3/4;background:{{ g.bg }};position:relative">
+              <span style="position:absolute;left:14px;bottom:14px;font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:{{ g.ink }}">{{ g.label }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="font-size:11px;color:#8A857D;text-align:center;padding-top:12px;letter-spacing:0.08em">Swipe for 3 views</div>
+      </div>
+
+      <div style="flex:1 1 360px;min-width:0;max-width:560px;display:flex;flex-direction:column">
+        <sc-if value="{{ hasCarried }}">
+          <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:11px 0;border-top:1px solid #E5E0D8;border-bottom:1px solid #E5E0D8;font-size:12px;margin-bottom:28px">
+            <span><span style="color:#8C6A3F">Styling for:</span> {{ carriedLine }}</span>
+            <button onClick="{{ backToShortlist }}" style="text-decoration:underline;text-underline-offset:3px">Back to shortlist</button>
+          </div>
+        </sc-if>
+        <div style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase">{{ pdp.brand }}</div>
+        <h1 style="margin:10px 0 12px;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,4.5vw,46px);line-height:1.05">{{ pdp.name }}</h1>
+        <div style="font-size:15px">{{ pdp.price }}</div>
+
+        <sc-if value="{{ hasSizes }}">
+          <div style="margin-top:32px">
+            <div style="display:flex;justify-content:space-between;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:12px"><span>Size</span><span style="color:#8A857D">{{ sizeNote }}</span></div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <sc-for list="{{ sizes }}" as="z" hint-placeholder-count="5">
+                <button onClick="{{ z.onClick }}" style="min-width:48px;height:48px;padding:0 12px;border:1px solid {{ z.border }};background:{{ z.bg }};color:{{ z.color }};font-size:13px;transition:background 200ms ease">{{ z.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+        <button onClick="{{ addToBag }}" style="margin-top:24px;height:54px;background:#1A1A1A;color:#FAF8F5;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;transition:background 250ms ease" style-hover="background:#33312E">Add to bag</button>
+
+        <sc-if value="{{ showCtl }}">
+          <section style="margin-top:44px;padding-top:32px;border-top:1px solid #E5E0D8">
+            <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:32px;line-height:1.1">{{ ctlTitle }}</h2>
+            <div style="font-size:12px;color:#8A857D;margin:8px 0 22px">{{ ctlSub }}</div>
+            <div style="display:flex;gap:20px;overflow-x:auto;padding-bottom:6px;align-items:stretch">
+              <sc-for list="{{ slots }}" as="s" hint-placeholder-count="3">
+                <div style="flex:1 0 148px;max-width:240px;display:flex;flex-direction:column;gap:10px;min-width:0">
+                  <div style="display:flex;justify-content:space-between;align-items:center;height:22px;gap:6px">
+                    <span style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase">{{ s.label }}</span>
+                    <sc-if value="{{ s.showSwap }}">
+                      <span style="font-size:11px;color:#8A857D">{{ s.counter }}</span>
+                    </sc-if>
+                  </div>
+                  <div style="opacity:{{ s.opacity }};transition:opacity 240ms ease;display:flex;flex-direction:column;gap:8px;min-width:0">
+                    <button onClick="{{ s.onOpen }}" style="display:block;width:100%;aspect-ratio:3/4;background:{{ s.bg }};position:relative">
+                      <span style="position:absolute;left:8px;bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:0.08em;color:{{ s.ink }};text-align:left">{{ s.imgLabel }}</span>
+                    </button>
+                    <span style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase">{{ s.brand }}</span>
+                    <span style="font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ s.name }}</span>
+                    <span style="font-size:12px;color:#5E5A54">{{ s.price }}</span>
+                    <sc-if value="{{ s.reason }}">
+                      <span style="align-self:flex-start;border:1px solid #D6CFC4;border-radius:999px;padding:4px 10px;font-size:11px;color:#5E5A54">{{ s.reason }}</span>
+                    </sc-if>
+                  </div>
+                  <sc-if value="{{ s.showSwap }}">
+                    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:auto;border-top:1px solid #E5E0D8;height:40px">
+                      <button onClick="{{ s.onBack }}" disabled="{{ s.backDisabled }}" aria-label="Previous option" style="opacity:{{ s.backOpacity }};width:32px;height:40px;text-align:left;font-size:13px;color:#8A857D;transition:color 200ms ease" style-hover="color:#1A1A1A">←</button>
+                      <button onClick="{{ s.onSwap }}" disabled="{{ s.swapDisabled }}" style="height:40px;font-size:11px;letter-spacing:0.06em;color:{{ s.swapColor }};white-space:nowrap;display:flex;align-items:center;gap:6px;transition:color 200ms ease" style-hover="color:{{ s.swapHoverColor }}">{{ s.swapText }}</button>
+                    </div>
+                  </sc-if>
+                </div>
+              </sc-for>
+            </div>
+            <sc-if value="{{ showTotal }}">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:24px;padding-top:20px;border-top:1px solid #E5E0D8">
+                <div>
+                  <div style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#8A857D">{{ lookCount }}</div>
+                  <div style="font-size:17px;margin-top:4px">{{ lookTotal }}</div>
+                </div>
+                <button onClick="{{ addLook }}" style="border:1px solid #1A1A1A;padding:15px 24px;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;transition:background 250ms ease,color 250ms ease" style-hover="background:#1A1A1A;color:#FAF8F5">Add look to bag</button>
+              </div>
+            </sc-if>
+          </section>
+        </sc-if>
+
+        <sc-if value="{{ showAbout }}">
+          <div style="margin-top:44px">
+            <div style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:14px">About this piece</div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <sc-for list="{{ aboutChips }}" as="a" hint-placeholder-count="5">
+                <button onClick="{{ a.onClick }}" style="border:1px solid #D6CFC4;border-radius:999px;padding:6px 13px;font-size:12px;transition:border-color 250ms ease" style-hover="border-color:#1A1A1A">{{ a.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <div style="margin-top:44px;border-top:1px solid #E5E0D8">
+          <sc-for list="{{ accs }}" as="a" hint-placeholder-count="3">
+            <div style="border-bottom:1px solid #E5E0D8">
+              <button onClick="{{ a.onClick }}" style="width:100%;display:flex;justify-content:space-between;padding:18px 0;font-size:11px;letter-spacing:0.16em;text-transform:uppercase"><span>{{ a.label }}</span><span>{{ a.sign }}</span></button>
+              <sc-if value="{{ a.open }}">
+                <p style="margin:0 0 20px;font-size:14px;line-height:1.65;color:#4A4741;text-wrap:pretty">{{ a.text }}</p>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+
+        <sc-if value="{{ showRail }}">
+          <section style="margin-top:36px">
+            <div style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase">Pairs well with</div>
+            <div style="display:flex;gap:10px;overflow-x:auto;margin-top:14px">
+              <sc-for list="{{ rail }}" as="r" hint-placeholder-count="3">
+                <button onClick="{{ r.onOpen }}" style="flex:0 0 104px;text-align:left;display:flex;flex-direction:column;gap:6px;min-width:0">
+                  <div style="width:100%;aspect-ratio:3/4;background:{{ r.bg }}"></div>
+                  <span style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:100%">{{ r.brand }}</span>
+                  <span style="font-size:12px;color:#5E5A54">{{ r.price }}</span>
+                </button>
+              </sc-for>
+            </div>
+          </section>
+        </sc-if>
+
+        <sc-if value="{{ showMoreLooks }}">
+          <section style="margin-top:48px">
+            <h2 style="margin:0 0 18px;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:28px">More looks for you</h2>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <sc-for list="{{ moreLooks }}" as="l" hint-placeholder-count="3">
+                <button onClick="{{ l.onOpen }}" style="text-align:left;display:grid;grid-template-columns:72px minmax(0,1fr);gap:16px;align-items:center;border:1px solid #E5E0D8;padding:10px;transition:border-color 250ms ease" style-hover="border-color:#8A857D">
+                  <div style="aspect-ratio:3/4;background:{{ l.bg }};outline:1px solid #E5E0D8"></div>
+                  <div style="display:flex;flex-direction:column;gap:6px;min-width:0">
+                    <div style="font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.1">{{ l.title }}</div>
+                    <div style="font-size:11px;color:#8A857D;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ l.sub }}</div>
+                    <div style="display:flex;gap:6px">
+                      <sc-for list="{{ l.thumbs }}" as="t" hint-placeholder-count="3">
+                        <div style="width:26px;aspect-ratio:3/4;background:{{ t.bg }};outline:1px solid #E5E0D8"></div>
+                      </sc-for>
+                    </div>
+                  </div>
+                </button>
+              </sc-for>
+            </div>
+          </section>
+        </sc-if>
+      </div>
+    </div>
+  </main>
+</sc-if>
+
+<sc-if value="{{ drawerOpen }}">
+  <div onClick="{{ closeDrawer }}" style="position:fixed;inset:0;background:rgba(26,26,26,0.22);z-index:60"></div>
+  <aside style="position:fixed;top:0;right:0;bottom:0;width:min(400px,100vw);background:#FAF8F5;z-index:61;display:flex;flex-direction:column;border-left:1px solid #E5E0D8">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;padding:28px 28px 20px;border-bottom:1px solid #E5E0D8">
+      <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:30px">{{ drawerTitle }}</h3>
+      <button onClick="{{ closeDrawer }}" style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase">Close</button>
+    </div>
+    <div style="flex:1;overflow-y:auto;padding:8px 28px">
+      <sc-for list="{{ drawerValues }}" as="v" hint-placeholder-count="5">
+        <button onClick="{{ v.onClick }}" style="width:100%;display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid #EFEBE5;font-size:14px;text-align:left">
+          <span style="width:14px;height:14px;border:1px solid #1A1A1A;background:{{ v.box }};flex:none"></span>
+          <span style="flex:1">{{ v.label }}</span>
+          <span style="font-size:12px;color:#8A857D">{{ v.count }}</span>
+        </button>
+      </sc-for>
+    </div>
+    <div style="padding:20px 28px 28px">
+      <button onClick="{{ closeDrawer }}" style="width:100%;height:52px;background:#1A1A1A;color:#FAF8F5;font-size:12px;letter-spacing:0.18em;text-transform:uppercase">{{ drawerCta }}</button>
+    </div>
+  </aside>
+</sc-if>
+
+<button onClick="{{ toggleBts }}" style="position:fixed;right:0;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;background:#141312;color:#EDE8E0;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;padding:18px 9px;z-index:45">Behind the scenes</button>
+
+<aside style="position:fixed;top:0;right:0;bottom:0;width:min(440px,94vw);background:#141312;color:#EDE8E0;z-index:70;overflow-y:auto;font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:1.5;transform:{{ btsTransform }};opacity:{{ btsOpacity }};pointer-events:{{ btsPointer }};transition:transform 300ms ease,opacity 300ms ease;border-left:1px solid #2A2826">
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid #2A2826;position:sticky;top:0;background:#141312">
+    <span style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase">Behind the scenes · {{ personaName }}</span>
+    <button onClick="{{ toggleBts }}" style="color:#9C968C;font-size:12px">Close ✕</button>
+  </div>
+  <div style="padding:22px 24px;border-bottom:1px solid #2A2826">
+    <div style="font-size:11px;color:#9C968C;letter-spacing:0.12em;text-transform:uppercase">Intent</div>
+    <div style="font-size:26px;margin-top:6px;color:#D9B98A">{{ intentBig }}</div>
+    <div style="color:#C8C2B8;margin-top:4px">{{ intentRule }}</div>
+    <sc-if value="{{ intentPending }}"><div style="color:#D9B98A;margin-top:8px">Next page loads as high intent</div></sc-if>
+  </div>
+  <div style="padding:22px 24px;border-bottom:1px solid #2A2826">
+    <div style="font-size:11px;color:#9C968C;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:14px">Taste profile</div>
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <sc-for list="{{ profileDims }}" as="d" hint-placeholder-count="4">
+        <div>
+          <div style="color:#9C968C;margin-bottom:6px">{{ d.label }}</div>
+          <sc-if value="{{ d.empty }}"><div style="color:#6E6962">No signal yet</div></sc-if>
+          <sc-for list="{{ d.rows }}" as="r" hint-placeholder-count="3">
+            <div style="display:grid;grid-template-columns:96px 1fr 36px;gap:10px;align-items:center;margin-top:4px">
+              <span>{{ r.label }}</span>
+              <span style="height:6px;background:#2A2826;position:relative"><span style="position:absolute;left:0;top:0;bottom:0;width:{{ r.width }};background:#D9B98A;transition:width 300ms ease"></span></span>
+              <span style="text-align:right;color:#9C968C">{{ r.pct }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </sc-for>
+    </div>
+    <div style="color:#6E6962;margin-top:16px;font-size:12px">Starting history is simulated</div>
+  </div>
+  <div style="padding:22px 24px;border-bottom:1px solid #2A2826">
+    <div style="font-size:11px;color:#9C968C;letter-spacing:0.12em;text-transform:uppercase">Looks for you</div>
+    <div style="font-size:20px;margin-top:6px;color:#D9B98A">{{ eligState }}</div>
+    <div style="color:#C8C2B8;margin-top:4px">{{ eligWhy }}</div>
+    <sc-if value="{{ eligPending }}"><div style="color:#D9B98A;margin-top:8px">Threshold reached. First look card appears on the next page load</div></sc-if>
+    <sc-if value="{{ eligSince }}"><div style="color:#9C968C;margin-top:8px">{{ eligSince }}</div></sc-if>
+  </div>
+  <div style="padding:22px 24px;border-bottom:1px solid #2A2826">
+    <div style="font-size:11px;color:#9C968C;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:12px">Last five events</div>
+    <sc-if value="{{ noEvents }}"><div style="color:#6E6962">Nothing yet this session</div></sc-if>
+    <sc-for list="{{ events }}" as="e" hint-placeholder-count="3">
+      <div style="padding:9px 0;border-top:1px solid #23211F">
+        <div>{{ e.text }}</div>
+        <div style="color:#D9B98A;font-size:12px">{{ e.delta }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <sc-if value="{{ isPDP }}">
+    <div style="padding:22px 24px 40px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+        <span style="font-size:11px;color:#9C968C;letter-spacing:0.12em;text-transform:uppercase">Product tags</span>
+        <sc-if value="{{ pdpSample }}"><span style="border:1px solid #D9B98A;color:#D9B98A;padding:2px 8px;font-size:11px;letter-spacing:0.1em;text-transform:uppercase">Sample</span></sc-if>
+      </div>
+      <div style="color:#C8C2B8;margin-bottom:10px">{{ pdp.brand }} · {{ pdp.name }}</div>
+      <sc-for list="{{ tags }}" as="t" hint-placeholder-count="6">
+        <div style="display:grid;grid-template-columns:110px 1fr 40px;gap:10px;padding:5px 0;border-top:1px solid #23211F">
+          <span style="color:#9C968C">{{ t.k }}</span><span>{{ t.v }}</span><span style="text-align:right;color:#9C968C">{{ t.conf }}</span>
+        </div>
+      </sc-for>
+      <sc-if value="{{ pdpSample }}"><div style="color:#6E6962;margin-top:10px;font-size:12px">Loaded as sample data; tagged by hand, not by the tagger</div></sc-if>
+    </div>
+  </sc-if>
+</aside>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  static OCC = {
+    evening: { label: 'Evening event', chip: 'Evening', phrase: 'an evening event', line: 'evening event', short: 'evening', form: 'formal' },
+    engagement: { label: 'Engagement', chip: 'Engagement', phrase: 'an engagement', line: 'engagement', short: 'engagement', form: 'formal' },
+    dinner: { label: 'Dinner', chip: 'Dinner', phrase: 'a dinner', line: 'dinner', short: 'dinner', form: 'smart' },
+    daytime: { label: 'Daytime', chip: 'Daytime', phrase: 'the daytime', line: 'daytime', short: 'daytime', form: 'casual' },
+    work: { label: 'Work', chip: 'Work', phrase: 'work', line: 'work', short: 'workday', form: 'smart' },
+    travel: { label: 'Travel', chip: 'Travel', phrase: 'travel', line: 'travel', short: 'travel', form: 'casual' }
+  };
+  static TONES = { black: '#2E2C2A', ivory: '#E9E2D6', camel: '#C4A27A', grey: '#A8A49D', white: '#F1EEE8', navy: '#33405A', gold: '#C9AE6E', silver: '#C3C4C2', emerald: '#3F5E4E', burgundy: '#6C3239', blush: '#E2C7BD', sage: '#A9B39C', brown: '#6B5040', amber: '#B98A55' };
+  static DARK = ['black', 'navy', 'emerald', 'burgundy', 'brown'];
+  static NEUTRAL = ['black', 'ivory', 'camel', 'grey', 'white', 'navy', 'brown'];
+  static METAL = ['gold', 'silver'];
+  static PAIRS = ['classic:minimalist', 'classic:romantic', 'romantic:statement', 'classic:statement'];
+  static RAW = `
+w1|women|dress|Oriel|Column crepe gown|6800|black|minimalist|formal|evening,engagement|covered|All year|Long|Maxi|
+w2|women|dress|Sefa|Draped satin midi dress|4200|emerald|romantic|formal|evening,engagement|moderate|Autumn/Winter|Sleeveless|Midi|
+w3|women|dress|Maison Alder|Bias-cut slip dress|3100|ivory|minimalist|smart|evening,dinner|open|Spring/Summer|Sleeveless|Midi|
+w4|women|dress|Hessa Studio|Embellished kaftan|7900|gold|statement|formal|engagement,evening|covered|All year|Long|Maxi|
+w5|women|dress|Noemi|Pleated chiffon gown|5400|blush|romantic|formal|engagement,evening|covered|Spring/Summer|Long|Maxi|
+w6|women|dress|Calder & Wren|Wool shirt dress|2600|camel|classic|smart|work,daytime|covered|Autumn/Winter|Long|Midi|
+w7|women|dress|Vey|Linen wrap dress|1850|white|minimalist|casual|daytime,travel|moderate|Spring/Summer|Short|Midi|
+w8|women|dress|Atelier Ruh|Sculpted one-shoulder dress|5900|burgundy|statement|formal|evening|open|Autumn/Winter|Sleeveless|Midi|
+w9|women|dress|Oriel|Knit column dress|2900|grey|minimalist|smart|work,dinner,travel|covered|Autumn/Winter|Long|Midi|
+w10|women|dress|Sefa|Floral silk tea dress|2400|sage|romantic|smart|daytime,dinner|moderate|Spring/Summer|Short|Midi|
+w11|women|top|Maison Alder|Silk shell top|1200|ivory|minimalist|smart|work,dinner|moderate|All year|Sleeveless||
+w12|women|top|Hessa Studio|Sequin blouse|2700|black|statement|formal|evening|moderate|Autumn/Winter|Long||
+w13|women|top|Calder & Wren|Cotton poplin shirt|890|white|classic|casual|work,daytime,travel|covered|All year|Long||
+w14|women|top|Noemi|Ruffled organza blouse|1950|blush|romantic|smart|engagement,daytime|covered|Spring/Summer|Long||
+w15|women|dress|Vey|Abaya-cut maxi dress|3600|navy|minimalist|formal|engagement,evening|covered|All year|Long|Maxi|S
+w16|women|dress|Atelier Ruh|Cape-sleeve gown|8400|ivory|classic|formal|engagement,evening|covered|All year|Long|Maxi|
+w17|women|dress|Sefa|Velvet midi dress|3900|burgundy|romantic|formal|evening|moderate|Autumn/Winter|Long|Midi|X
+wb1|women|bottom|Maison Alder|Wide-leg wool trousers|1600|black|minimalist|smart|work,dinner,evening|covered|All year||Full|
+wb2|women|bottom|Calder & Wren|Pleated midi skirt|1400|camel|classic|smart|work,daytime|covered|Autumn/Winter||Midi|
+wb3|women|bottom|Noemi|Satin maxi skirt|1750|blush|romantic|formal|engagement,evening|covered|Spring/Summer||Maxi|
+wb4|women|bottom|Vey|Linen trousers|950|ivory|minimalist|casual|daytime,travel|covered|Spring/Summer||Full|
+ws1|women|shoes|Oriel|Leather slingback|2100|black|minimalist|smart|||All year|||
+ws2|women|shoes|Hessa Studio|Crystal strap sandal|3400|silver|statement|formal|||All year|||
+ws3|women|shoes|Maison Alder|Square-toe mule|1700|ivory|minimalist|smart|||Spring/Summer|||
+ws4|women|shoes|Noemi|Satin bow pump|2500|blush|romantic|formal|||All year|||
+ws5|women|shoes|Calder & Wren|Suede loafer|1500|camel|classic|casual|||Autumn/Winter|||
+ws6|women|shoes|Sefa|Gold kitten heel|2300|gold|statement|formal|||All year|||
+ws7|women|shoes|Oriel|Pointed satin pump|2400|black|minimalist|formal|||All year|||
+wg1|women|bag|Oriel|Structured top-handle bag|5600|black|minimalist|smart|||All year|||
+wg2|women|bag|Hessa Studio|Beaded minaudière|4300|gold|statement|formal|||All year|||
+wg3|women|bag|Maison Alder|Soft pouch clutch|2200|ivory|minimalist|formal|||All year|||
+wg4|women|bag|Calder & Wren|Leather tote|3100|camel|classic|casual|||All year|||
+wg5|women|bag|Noemi|Pearl-handle bag|2900|blush|romantic|formal|||Spring/Summer|||
+wg6|women|bag|Atelier Ruh|Velvet evening clutch|2600|burgundy|romantic|formal|||Autumn/Winter|||
+wj1|women|jewellery|Sefa|Gold statement earrings|1900|gold|statement|formal|||All year|||
+wj2|women|jewellery|Maison Alder|Fine silver hoops|850|silver|minimalist|smart|||All year|||
+wj3|women|jewellery|Noemi|Pearl drop earrings|1350|ivory|romantic|formal|||All year|||
+wj4|women|jewellery|Oriel|Sculpted cuff|2400|gold|minimalist|smart|||All year|||
+wj5|women|jewellery|Hessa Studio|Crystal collar necklace|3800|silver|statement|formal|||All year|||
+wj6|women|jewellery|Calder & Wren|Gold chain necklace|1700|gold|classic|smart|||All year|||
+wf1|women|fragrance|Atelier Ruh|Oud and iris eau de parfum|980|amber|classic|smart|||All year|||S
+m1|men|top|Calder & Wren|Oxford shirt|650|white|classic|smart|work,daytime,travel|covered|All year|Long||
+m2|men|top|Oriel|Fine merino polo|890|navy|minimalist|smart|work,dinner,travel|covered|All year|Short||
+m3|men|top|Vey|Linen camp shirt|720|ivory|minimalist|casual|daytime,travel|covered|Spring/Summer|Short||
+m4|men|top|Maison Alder|Silk-blend evening shirt|1450|black|minimalist|formal|evening,dinner|covered|All year|Long||
+m5|men|outerwear|Atelier Ruh|Tailored dinner jacket|4800|black|classic|formal|evening,engagement|covered|All year|Long||
+m6|men|top|Sefa|Embroidered band-collar shirt|1600|ivory|classic|formal|engagement,evening,dinner|covered|All year|Long||
+m7|men|outerwear|Hessa Studio|Velvet blazer|3200|burgundy|statement|formal|evening,engagement,dinner|covered|Autumn/Winter|Long||
+m8|men|outerwear|Calder & Wren|Cashmere overshirt|1900|camel|classic|smart|work,travel,dinner|covered|Autumn/Winter|Long||
+mb1|men|bottom|Calder & Wren|Wool trousers|980|grey|classic|smart|work,dinner|covered|All year||Full|
+mb2|men|bottom|Vey|Pleated chinos|650|camel|minimalist|casual|daytime,travel|covered|Spring/Summer||Full|
+mb3|men|bottom|Oriel|Tuxedo trousers|1700|black|classic|formal|evening,engagement|covered|All year||Full|
+ms1|men|shoes|Calder & Wren|Leather loafers|1400|brown|classic|smart|||All year|||
+ms2|men|shoes|Oriel|Patent derbies|1900|black|classic|formal|||All year|||
+ms3|men|shoes|Vey|Suede sneakers|950|ivory|minimalist|casual|||Spring/Summer|||
+mg1|men|bag|Calder & Wren|Leather weekender|3200|brown|classic|casual|||All year|||S
+mg2|men|bag|Oriel|Slim document case|2100|black|minimalist|smart|||All year|||
+mj1|men|jewellery|Atelier Ruh|Onyx cufflinks|780|black|classic|formal|||All year|||
+mj2|men|jewellery|Maison Alder|Silver signet ring|650|silver|minimalist|smart|||All year|||`;
+
+  static PERSONAS = {
+    layla: { name: 'Layla', full: 'Layla · the Wanderer', signals: ['Returning customer with a long history', 'Opened the app directly', 'No search or filter', 'Opened two products and closed each within seconds'], does: 'Leads with Looks for you', dept: 'women', intent: 'low', rule: 'No filter, size or search signal this session',
+      profile: { aes: { minimalist: .9, classic: .5, romantic: .2, statement: .1 }, col: { ivory: .9, black: .8, camel: .7, grey: .6, silver: .6, white: .5, gold: .2 }, form: { smart: .8, formal: .5, casual: .4 }, cov: { covered: .6, moderate: .6, open: .3 } },
+      events: [
+        { text: 'Viewed Hessa Studio sequin blouse briefly', delta: 'statement aesthetic down' },
+        { text: 'Purchased Maison Alder fine silver hoops', delta: 'silver up · minimalist aesthetic up' },
+        { text: 'Viewed Oriel leather slingback', delta: 'black up' },
+        { text: 'Saved Maison Alder silk shell top', delta: 'ivory up · smart up' },
+        { text: 'Purchased Oriel knit column dress', delta: 'minimalist aesthetic up · grey up' }] },
+    noor: { name: 'Noor', full: 'Noor · the Occasion-haver', signals: ['Arrived from an evening-edit notification', 'One past order', 'No search or filter', 'Browsing evening dresses without narrowing'], does: 'Leads with the occasion picker, evening suggested', dept: 'women', intent: 'low', rule: 'Short session, no filter or size selected',
+      profile: { aes: { romantic: .6, statement: .3 }, col: { blush: .6, gold: .5 }, form: { formal: .7 }, cov: { covered: .8 } },
+      events: [
+        { text: 'Viewed Hessa Studio embellished kaftan', delta: 'gold up · covered up' },
+        { text: 'Ordered Noemi ruffled organza blouse', delta: 'romantic aesthetic up · blush up' }] },
+    james: { name: 'James', full: 'James · the Newcomer', signals: ['First visit, no history', 'Arrived from a general web search', 'One page viewed', 'No high-intent signal yet'], does: 'Leads with the occasion picker and "Who is it for?"', dept: 'all', intent: 'low', rule: 'New shopper, no signals yet',
+      profile: { aes: {}, col: {}, form: {}, cov: {} }, events: [] },
+    sara: { name: 'Sara', full: 'Sara · the Hunter', signals: ['Arrived on a product page from a search for a specific bag', 'Selected a size', 'Past orders in bags'], does: 'Feature stays out of the way', dept: 'women', intent: 'high', rule: 'Arrived from a search for one item and selected a size',
+      profile: { aes: { minimalist: .6 }, col: { black: .7 }, form: { smart: .6 }, cov: {} },
+      events: [
+        { text: 'Selected size: one size', delta: 'intent high' },
+        { text: 'Arrived from search: structured top-handle bag', delta: 'intent high' }] }
+  };
+
+  static cat() {
+    if (!Component._cat) {
+      const roles = { dress: 'hero', top: 'hero', outerwear: 'hero', bottom: 'bottom', shoes: 'shoes', bag: 'bag', jewellery: 'jewellery' };
+      Component._cat = Component.RAW.trim().split('\n').map((l, i) => {
+        const [id, dept, cat, brand, name, price, col, aes, form, occ, cov, season, sleeve, length, flags = ''] = l.split('|').map(x => x.trim());
+        return { id, dept, cat, brand, name, price: +price, col, aes, form, occ: occ ? occ.split(',') : [], cov, season, sleeve, length, sample: flags.includes('S'), stock: !flags.includes('X'), idx: i, role: roles[cat] || null };
+      });
+      Component._byId = {};
+      Component._cat.forEach(p => { Component._byId[p.id] = p; });
+    }
+    return Component._cat;
+  }
+  byId(id) { Component.cat(); return Component._byId[id]; }
+
+  fresh(pid, keep = {}) {
+    const P = Component.PERSONAS[pid];
+    const s = { persona: pid, menuOpen: false, page: keep.page || 'plp', pdpId: keep.pdpId || null, dept: P.dept, occasion: null, carriedOcc: null, opener: null,
+      refine: {}, filters: {}, drawer: null, intent: P.intent, intentNext: P.intent, intentRule: P.rule,
+      profile: JSON.parse(JSON.stringify(P.profile)), events: P.events.map(e => ({ ...e })), learn: 0, saved: {}, bag: 0, toast: false, toastText: 'Added to bag',
+      ownOpen: false, ownText: '', ownMiss: false, btsOpen: !!keep.btsOpen, looksEligible: pid === 'layla' || pid === 'noor', eligSince: (pid === 'layla' || pid === 'noor') ? 'Eligible from the first page' : '', loading: true, slotIdx: {}, ctl: [], fading: {}, acc: {}, size: null };
+    if (s.page === 'pdp' && s.pdpId) { s.dept = this.byId(s.pdpId).dept; s.ctl = this.buildCtl(s, this.byId(s.pdpId), null); }
+    return s;
+  }
+  state = this.fresh('layla');
+
+  componentDidMount() { this.stopLoading(); }
+  stopLoading() { clearTimeout(this._lt); this._lt = setTimeout(() => this.setState({ loading: false }), 380); }
+  top() { try { window.scrollTo(0, 0); } catch (e) {} }
+
+  cap(x) { return x ? x.charAt(0).toUpperCase() + x.slice(1) : x; }
+  fmt(n) { return 'AED ' + n.toLocaleString('en-US'); }
+  noun(p) { return p.name.split(' ').pop().toLowerCase(); }
+  bg(p) {
+    const t = Component.TONES[p.col] || '#DDD6CB';
+    const dark = Component.DARK.includes(p.col);
+    return `repeating-linear-gradient(135deg, ${dark ? 'rgba(255,255,255,0.05)' : 'rgba(26,26,26,0.035)'} 0 1px, transparent 1px 12px), ${t}`;
+  }
+  ink(p) { return Component.DARK.includes(p.col) ? 'rgba(250,248,245,0.72)' : 'rgba(26,26,26,0.5)'; }
+
+  tw(s) { return { layla: 1.5, noor: .4, james: Math.min(1.2, s.learn * .3), sara: .3 }[s.persona]; }
+  taste(s, p) {
+    const ks = ['aes', 'col', 'form', 'cov'].filter(k => p[k]);
+    return ks.reduce((a, k) => a + (s.profile[k][p[k]] || 0), 0) / (ks.length || 1);
+  }
+  tasteChip(s, p) {
+    if (s.persona === 'sara') return null;
+    const pr = s.profile;
+    if ((pr.aes[p.aes] || 0) >= .45) return s.persona === 'layla' ? `Matches your ${p.aes} picks` : `Your kind of ${p.aes}`;
+    if ((pr.col[p.col] || 0) >= .45) return 'In your colours';
+    return null;
+  }
+
+  heroesFor(s, occ) {
+    return Component.cat().filter(p => p.role === 'hero' && p.stock && p.occ.includes(occ) && (s.dept === 'all' || p.dept === s.dept));
+  }
+  availableOccs(s) { return Object.keys(Component.OCC).filter(o => this.heroesFor(s, o).length >= 4); }
+
+  shortlist(s) {
+    const occ = s.occasion, O = Component.OCC[occ], t = this.tw(s), r = s.refine;
+    let pool = this.heroesFor(s, occ);
+    if (r.budget) pool = pool.filter(p => p.price < 3000);
+    if (r.neutral) pool = pool.filter(p => Component.NEUTRAL.includes(p.col));
+    if (r.covered) pool = pool.filter(p => p.cov !== 'open');
+    const sc = p => (p.occ[0] === occ ? 1 : .7) + (p.form === O.form ? .3 : 0) + (r.covered && p.cov === 'covered' ? .4 : 0) + t * this.taste(s, p) + p.idx * .0001;
+    const pen = s.persona === 'james' ? Math.max(0, .5 - s.learn * .1) : .08;
+    const picked = [], brands = {}, cols = {}, aes = {};
+    while (picked.length < 8) {
+      let best = null, bs = -1e9;
+      for (const p of pool) {
+        if (picked.includes(p) || (brands[p.brand] || 0) >= 2 || (cols[p.col] || 0) >= 2) continue;
+        const v = sc(p) - pen * (aes[p.aes] || 0);
+        if (v > bs) { bs = v; best = p; }
+      }
+      if (!best) break;
+      picked.push(best);
+      brands[best.brand] = (brands[best.brand] || 0) + 1; cols[best.col] = (cols[best.col] || 0) + 1; aes[best.aes] = (aes[best.aes] || 0) + 1;
+    }
+    return picked;
+  }
+  reasons(s, p, occ) {
+    const O = Component.OCC[occ], r = [];
+    r.push(s.persona === 'noor' ? `Right for ${O.phrase}` : O.chip);
+    const tc = this.tasteChip(s, p);
+    if (p.form === O.form) r.push(this.cap(p.form));
+    else if (p.cov === 'covered') r.push('Covered');
+    if (tc) r.push(tc); else if (p.cov === 'covered' && !r.includes('Covered')) r.push('Covered');
+    return r.slice(0, 3);
+  }
+
+  compat(a, c, occ) {
+    const F = { casual: 0, smart: 1, formal: 2 }, d = Math.abs(F[a.form] - F[c.form]);
+    let v = d === 0 ? 1 : d === 1 ? .45 : -.6;
+    if (a.aes === c.aes) v += .5; else if (Component.PAIRS.includes([a.aes, c.aes].sort().join(':'))) v += .2;
+    const N = Component.NEUTRAL;
+    if (c.col === a.col) v += .25; else if (N.includes(c.col) && N.includes(a.col)) v += .35; else if (N.includes(c.col) || Component.METAL.includes(c.col)) v += .25; else v -= .1;
+    if (occ) v += c.form === Component.OCC[occ].form ? .3 : 0;
+    if (c.occ.length && a.occ.length && c.occ.some(o => a.occ.includes(o))) v += .2;
+    return v;
+  }
+  slotsFor(a) {
+    if (!a.role) return [];
+    if (a.cat === 'dress') return ['shoes', 'bag', 'jewellery'];
+    if (a.role === 'hero') return ['bottom', 'shoes', 'bag', 'jewellery'];
+    if (a.role === 'bottom') return ['hero', 'shoes', 'bag'];
+    return ['hero', ...['shoes', 'bag', 'jewellery'].filter(x => x !== a.role)].slice(0, 3);
+  }
+  buildCtl(s, a, occ) {
+    const t = this.tw(s);
+    return this.slotsFor(a).map(slot => {
+      const items = Component.cat()
+        .filter(c => c.role === slot && c.stock && c.id !== a.id && c.dept === a.dept && (slot !== 'hero' || a.role !== 'bottom' || c.cat === 'top'))
+        .map(c => ({ c, k: this.compat(a, c, occ) }))
+        .filter(x => x.k >= .9)
+        .map(x => ({ c: x.c, v: x.k + t * this.taste(s, x.c) }))
+        .sort((x, y) => y.v - x.v).slice(0, 5).map(x => x.c.id);
+      return { slot, items };
+    }).filter(x => x.items.length);
+  }
+  slotReason(s, a, c, occ) {
+    const tc = this.tasteChip(s, c);
+    if (s.persona === 'sara') return null;
+    if (s.persona === 'james') return s.learn >= 3 && tc ? tc : `Goes with the ${this.noun(a)} you chose`;
+    if (s.persona === 'noor') return occ ? `Right for ${Component.OCC[occ].phrase}` : (tc || `Suits the ${this.noun(a)}`);
+    return tc || `Suits the ${this.noun(a)}`;
+  }
+
+  learnFrom(s, p, amt, keys, verb) {
+    const pr = JSON.parse(JSON.stringify(s.profile)), parts = [];
+    keys.forEach(k => {
+      const v = p[k]; if (!v) return;
+      pr[k][v] = Math.max(0, Math.min(1, (pr[k][v] || 0) + amt));
+      parts.push(`${v}${k === 'aes' ? ' aesthetic' : ''} ${amt > 0 ? 'up' : 'down'}`);
+    });
+    return { profile: pr, events: [{ text: `${verb} ${p.brand} ${p.name.toLowerCase()}`, delta: parts.join(' · ') }, ...s.events], learn: s.learn + 1 };
+  }
+  logEvent(s, text, delta) { return [{ text, delta }, ...s.events]; }
+
+  eligRule(s) {
+    if (s.persona === 'sara') return { ok: false, never: true, why: 'Never shown to a high-intent shopper' };
+    if (s.persona === 'layla') return { ok: true, why: 'Rich taste profile from her history' };
+    if (s.persona === 'noor') return { ok: true, why: 'Thin history, so looks are built for the engagement she arrived with' };
+    return s.learn >= 3 ? { ok: true, why: `${s.learn} signals this session (threshold 3)` } : { ok: false, why: `${s.learn} of 3 signals this session` };
+  }
+  applyElig(ns) {
+    const r = this.eligRule(ns);
+    if (r.ok && !ns.looksEligible) {
+      ns.looksEligible = true;
+      ns.eligSince = `Became eligible after ${ns.learn} signals`;
+      ns.events = this.logEvent(ns, 'Became eligible for Looks for you', r.why);
+    }
+    return ns;
+  }
+  buildLooks(s, n, excludeId, deptOverride) {
+    const OCC = Component.OCC;
+    const dept = deptOverride || (s.dept === 'all' ? 'women' : s.dept);
+    const fixed = s.persona === 'noor' ? 'engagement' : null;
+    const heroes = Component.cat().filter(p => p.role === 'hero' && p.stock && p.dept === dept && p.id !== excludeId && (!fixed || p.occ.includes(fixed)))
+      .sort((a, b) => this.taste(s, b) - this.taste(s, a) || b.idx - a.idx);
+    const out = [], used = new Set();
+    for (const pass of [0, 1]) for (const h of heroes) {
+      if (out.length >= n) break;
+      if (out.some(x => x.id === h.id)) continue;
+      const o = fixed || h.occ[0]; if (!o) continue;
+      if (pass === 0 && !fixed && used.has(o)) continue;
+      const items = this.buildCtl(s, h, o).slice(0, 3).map(x => this.byId(x.items[0]));
+      if (items.length < 2 || items.some(i => i.id === excludeId)) continue;
+      used.add(o);
+      out.push({ id: h.id, isLook: true, bg: this.bg(h), ink: this.ink(h), label: `${h.col} ${h.cat}`, thumbs: items.map(i => ({ bg: this.bg(i) })), title: `${this.cap(h.aes)} ${OCC[o].short}`, sub: `${h.brand} ${h.name.toLowerCase()}, with ${items.length} pieces`, onOpen: () => this.openPDP(h.id, o) });
+    }
+    return out;
+  }
+
+  switchPersona(pid) {
+    this.setState(s => this.fresh(pid, { page: s.page, pdpId: s.pdpId, btsOpen: s.btsOpen }));
+    this.stopLoading();
+  }
+  goPLP(extra = {}) {
+    this.setState(s => this.applyElig({ ...s, page: 'plp', intent: s.intentNext, loading: true, drawer: null, menuOpen: false, ownOpen: false, pickerOpen: !!extra.occasion, ...extra }));
+    this.stopLoading(); this.top();
+  }
+  openPDP(id, occ) {
+    this.setState(s => {
+      const p = this.byId(id);
+      const ns = { ...s, page: 'pdp', pdpId: id, carriedOcc: occ !== undefined ? occ : (s.page === 'plp' ? s.occasion : s.carriedOcc), intent: s.intentNext, acc: {}, size: null, fading: {}, slotIdx: {}, menuOpen: false };
+      Object.assign(ns, this.learnFrom(ns, p, .12, ['aes', 'col', 'form', 'cov'], 'Viewed'));
+      ns.ctl = this.buildCtl(ns, p, ns.carriedOcc);
+      return this.applyElig(ns);
+    });
+    this.top();
+  }
+  toast(text) {
+    this.setState({ toast: true, toastText: text });
+    clearTimeout(this._tt); this._tt = setTimeout(() => this.setState({ toast: false }), 1800);
+  }
+  save(id) {
+    this.setState(s => {
+      const on = !s.saved[id], p = this.byId(id);
+      const l = on ? this.learnFrom(s, p, .2, ['aes', 'col'], 'Saved') : {};
+      return { ...l, saved: { ...s.saved, [id]: on } };
+    });
+  }
+  chooseOcc(o) {
+    this.setState(s => {
+      const f = Component.OCC[o].form, pr = JSON.parse(JSON.stringify(s.profile));
+      pr.form[f] = Math.min(1, (pr.form[f] || 0) + .1);
+      return { occasion: o, refine: {}, profile: pr, learn: s.learn + 1, events: this.logEvent(s, `Chose occasion: ${Component.OCC[o].label}`, `${f} up`), ownOpen: false, ownText: '', ownMiss: false };
+    });
+  }
+  toggleRefine(k) {
+    this.setState(s => {
+      const on = !s.refine[k];
+      const labels = { budget: 'Under AED 3,000', neutral: 'Neutrals', covered: 'More covered' };
+      let extra = { events: this.logEvent(s, `Refined: ${labels[k]}${on ? '' : ' off'}`, 'refinement, not a filter · intent unchanged') };
+      if (k === 'covered' && on) { const pr = JSON.parse(JSON.stringify(s.profile)); pr.cov.covered = Math.min(1, (pr.cov.covered || 0) + .15); extra.profile = pr; extra.events = this.logEvent(s, 'Refined: More covered', 'covered up · intent unchanged'); }
+      return { refine: { ...s.refine, [k]: on }, ...extra };
+    });
+  }
+  toggleFilter(dim, val) {
+    this.setState(s => {
+      const cur = s.filters[dim] || [], on = !cur.includes(val);
+      const vals = on ? [...cur, val] : cur.filter(v => v !== val);
+      const filters = { ...s.filters, [dim]: vals };
+      if (!vals.length) delete filters[dim];
+      const ev = on ? this.logEvent(s, `Applied filter: ${this.dimLabel(dim).toLowerCase()} ${this.valLabel(dim, val)}`, 'filter used · next page loads as high intent') : s.events;
+      return { filters, events: ev, ...(on ? { intentNext: 'high', intentRule: 'Used a filter on the listing page' } : {}) };
+    });
+  }
+  dimLabel(d) { return { cat: 'Category', col: 'Colour', occ: 'Occasion', form: 'Formality', season: 'Season', aes: 'Aesthetic', sleeve: 'Sleeve length', length: 'Length' }[d]; }
+  valLabel(d, v) { return d === 'occ' ? Component.OCC[v].label : this.cap(v); }
+  matches(p, filters) {
+    return Object.keys(filters).every(d => { const vs = filters[d]; if (!vs || !vs.length) return true; return d === 'occ' ? p.occ.some(o => vs.includes(o)) : vs.includes(p[d]); });
+  }
+  swap(slot, dir) {
+    const s = this.state, sl = s.ctl.find(x => x.slot === slot), i = s.slotIdx[slot] || 0, j = i + dir;
+    if (!sl || j < 0 || j >= sl.items.length || s.fading[slot]) return;
+    this.setState({ fading: { ...s.fading, [slot]: true } });
+    setTimeout(() => this.setState(st => {
+      const l = dir > 0 ? this.learnFrom(st, this.byId(sl.items[i]), -.15, ['aes', 'col'], 'Swapped out') : {};
+      return { ...l, slotIdx: { ...st.slotIdx, [slot]: j }, fading: { ...st.fading, [slot]: false } };
+    }), 230);
+  }
+  ownSubmit() {
+    const t = (this.state.ownText || '').toLowerCase();
+    const map = [['engagement', /engag|wedding|nikah|henna|bride/], ['evening', /evening|gala|party|black tie|night|event/], ['dinner', /dinner|restaurant|supper/], ['work', /work|office|meeting|interview/], ['daytime', /day|brunch|lunch|garden|outdoor/], ['travel', /travel|trip|flight|holiday|weekend away/]];
+    const avail = this.availableOccs(this.state);
+    const hit = map.find(([o, re]) => re.test(t) && avail.includes(o));
+    if (hit) this.chooseOcc(hit[0]); else this.setState({ ownMiss: true });
+  }
+
+  renderVals() {
+    const s = this.state, P = Component.PERSONAS, OCC = Component.OCC, cat = Component.cat();
+    const isPLP = s.page === 'plp', isPDP = !isPLP;
+    const low = s.intent === 'low';
+    const card = p => ({ id: p.id, brand: p.brand, name: p.name, price: this.fmt(p.price), bg: this.bg(p), ink: this.ink(p), imgLabel: `${p.col} ${p.cat}`, heart: s.saved[p.id] ? '♥' : '♡', onOpen: () => this.openPDP(p.id), onSave: () => this.save(p.id) });
+    const deptName = { women: 'Women', men: 'Men', all: 'Shop all' };
+
+    const personas = Object.keys(P).map(k => {
+      const lo = P[k].intent === 'low';
+      return { full: P[k].full, signals: P[k].signals, does: P[k].does, badge: lo ? 'Low intent' : 'High intent', badgeBg: lo ? '#8C6A3F' : 'transparent', badgeBorder: lo ? '#8C6A3F' : '#6E6962', badgeColor: lo ? '#FAF8F5' : '#C8C2B8', bg: k === s.persona ? '#24221F' : 'transparent', onPick: () => this.switchPersona(k) };
+    });
+    const depts = ['women', 'men', 'all'].map(d => ({ label: deptName[d], line: isPLP && s.dept === d ? '#1A1A1A' : 'transparent', onClick: () => this.goPLP({ dept: d, occasion: null, filters: {}, refine: {} }) }));
+
+    // PLP
+    const showBand = isPLP && low && s.persona !== 'sara';
+    const lookOk = low && s.looksEligible && s.persona !== 'sara';
+    const leadLooks = isPLP && showBand && lookOk && (s.persona === 'layla' || s.persona === 'james') && !s.occasion;
+    const pickerVisible = !leadLooks || s.pickerOpen;
+    const showOpener = showBand && pickerVisible && s.persona === 'james' && !s.opener && !s.occasion;
+    const showPicker = showBand && pickerVisible && !showOpener && !s.occasion;
+    const showPickerToggle = leadLooks && !s.pickerOpen;
+    let occs = this.availableOccs(s);
+    const suggested = s.persona === 'noor' ? ['engagement', 'evening'] : [];
+    occs = [...suggested.filter(o => occs.includes(o)), ...occs.filter(o => !suggested.includes(o))];
+    const occChips = occs.map(o => ({ label: OCC[o].label, bg: suggested.includes(o) ? '#8C6A3F' : 'transparent', color: suggested.includes(o) ? '#FAF8F5' : '#8C6A3F', onClick: () => this.chooseOcc(o) }));
+    let pickerNote = '';
+    if (s.persona === 'noor') pickerNote = 'Evening occasions first, from your recent order';
+    if (s.persona === 'james' && s.opener) pickerNote = `Shopping ${s.opener.toLowerCase()}`;
+
+    const topLooks = leadLooks;
+    const allLooks = isPLP && lookOk ? this.buildLooks(s, topLooks ? 6 : 3) : [];
+    const looks = topLooks ? allLooks.slice(0, 3) : [];
+    const gridLooks = topLooks ? allLooks.slice(3, 6) : allLooks.slice(0, 3);
+
+    const showShortlist = showBand && !!s.occasion;
+    const sl = showShortlist ? this.shortlist(s) : [];
+    const shortlist = sl.map(p => ({ ...card(p), onOpen: () => this.openPDP(p.id, s.occasion), reasons: this.reasons(s, p, s.occasion) }));
+    const subBy = { layla: 'Chosen for the occasion and ranked by your taste', noor: 'Chosen for the occasion first', james: s.learn >= 3 ? 'Chosen for the occasion, now leaning towards what you have picked' : 'Chosen for the occasion, across a range of styles', sara: '' };
+    const refineChips = [['budget', 'Under AED 3,000'], ['neutral', 'Neutrals'], ['covered', 'More covered']].map(([k, l]) => ({ label: l, border: s.refine[k] ? '#8C6A3F' : '#D6CFC4', color: s.refine[k] ? '#8C6A3F' : '#1A1A1A', onClick: () => this.toggleRefine(k) }));
+
+    const deptProducts = cat.filter(p => s.dept === 'all' || p.dept === s.dept);
+    const dims = ['cat', 'col', 'occ', 'form', 'season', 'aes', 'sleeve', 'length'];
+    const filterDims = dims.map(d => { const n = (s.filters[d] || []).length; return { label: this.dimLabel(d) + (n ? ` · ${n}` : ''), border: n ? '#8C6A3F' : '#E5E0D8', color: n ? '#8C6A3F' : '#1A1A1A', onClick: () => this.setState({ drawer: d }) }; });
+    const applied = [];
+    Object.keys(s.filters).forEach(d => (s.filters[d] || []).forEach(v => applied.push({ label: `${this.dimLabel(d)}: ${this.valLabel(d, v)}`, onRemove: () => this.toggleFilter(d, v) })));
+    let gridItems = deptProducts.filter(p => this.matches(p, s.filters));
+    const personal = low && (s.persona === 'layla' || s.persona === 'noor' || (s.persona === 'james' && s.learn >= 3));
+    gridItems = personal ? gridItems.slice().sort((a, b) => this.taste(s, b) - this.taste(s, a) || b.idx - a.idx) : gridItems.slice().sort((a, b) => b.idx - a.idx);
+
+    let drawerValues = [];
+    if (s.drawer) {
+      const counts = {};
+      deptProducts.forEach(p => { const vs = s.drawer === 'occ' ? p.occ : [p[s.drawer]]; vs.forEach(v => { if (v) counts[v] = (counts[v] || 0) + 1; }); });
+      drawerValues = Object.keys(counts).map(v => ({ label: this.valLabel(s.drawer, v), count: counts[v], box: (s.filters[s.drawer] || []).includes(v) ? '#1A1A1A' : 'transparent', onClick: () => this.toggleFilter(s.drawer, v) }));
+    }
+
+    // PDP
+    const p = isPDP ? this.byId(s.pdpId) : null;
+    let pdpVals = { pdp: {}, gallery: [], sizes: [], slots: [], rail: [], aboutChips: [], accs: [], tags: [] };
+    if (p) {
+      const sizeSet = ['shoes'].includes(p.cat) ? (p.dept === 'men' ? ['41', '42', '43', '44'] : ['36', '37', '38', '39', '40']) : ['dress', 'top', 'outerwear', 'bottom'].includes(p.cat) ? (p.dept === 'men' ? ['S', 'M', 'L', 'XL'] : ['XS', 'S', 'M', 'L', 'XL']) : [];
+      const slots = s.ctl.map(x => {
+        const i = s.slotIdx[x.slot] || 0, c = this.byId(x.items[i]), n = x.items.length, last = i >= n - 1;
+        return { ...card(c), label: x.slot === 'hero' ? this.cap(c.cat) : this.cap(x.slot), reason: this.slotReason(s, p, c, s.carriedOcc), showSwap: n > 1, swapText: last ? 'No more options' : 'Swap ⇄', swapDisabled: last, swapColor: last ? '#B5AFA6' : '#8A857D', swapHoverColor: last ? '#B5AFA6' : '#1A1A1A', counter: `${i + 1} of ${n}`, backDisabled: i === 0, backOpacity: i === 0 ? .35 : 1, opacity: s.fading[x.slot] ? 0 : 1, onSwap: () => this.swap(x.slot, 1), onBack: () => this.swap(x.slot, -1), _p: c.price, _id: c.id };
+      });
+      const total = slots.reduce((a, x) => a + x._p, 0);
+      const occPhr = p.occ.map(o => OCC[o].phrase.replace(/^(an|a|the) /, '')).join(', ');
+      const tagRows = [['Category', p.cat], ['Colour', p.col], ['Aesthetic', p.aes], ['Formality', p.form], ['Occasion', p.occ.join(', ')], ['Coverage', p.cov], ['Season', p.season], ['Sleeve', p.sleeve], ['Length', p.length], ['Outfit role', p.role || 'none']].filter(r => r[1]);
+      pdpVals = {
+        pdp: { brand: p.brand, name: p.name, price: this.fmt(p.price) },
+        gallery: ['front', 'back', 'detail'].map(v => ({ bg: this.bg(p), ink: this.ink(p), label: `${p.col} ${p.cat} — ${v}` })),
+        hasSizes: sizeSet.length > 0,
+        sizeNote: s.size ? `Selected ${s.size}` : '',
+        sizes: sizeSet.map(z => ({ label: z, border: s.size === z ? '#1A1A1A' : '#E5E0D8', bg: s.size === z ? '#1A1A1A' : 'transparent', color: s.size === z ? '#FAF8F5' : '#1A1A1A', onClick: () => this.setState(st => ({ size: z, intentNext: 'high', intentRule: 'Selected a size on a product page', events: this.logEvent(st, `Selected size ${z}`, 'size chosen · next page loads as high intent') })) })),
+        hasCarried: !!s.carriedOcc,
+        carriedLine: s.carriedOcc ? OCC[s.carriedOcc].line : '',
+        showCtl: low && slots.length > 0,
+        ctlTitle: slots.length === 1 ? 'Pairs well with' : 'Complete the look',
+        ctlSub: s.carriedOcc ? `Built around this piece for ${OCC[s.carriedOcc].phrase}` : 'Built around this piece',
+        slots,
+        showTotal: slots.length > 1,
+        lookCount: `The look · ${slots.length} pieces`,
+        lookTotal: this.fmt(total),
+        showRail: !low && slots.length > 0,
+        rail: slots.map(x => ({ bg: x.bg, brand: x.brand, price: x.price, onOpen: x.onOpen })),
+        showAbout: low,
+        aboutChips: [['occ', p.occ], ['form', [p.form]], ['aes', [p.aes]], ['col', [p.col]], ['cov', p.cov ? [p.cov] : []], ['season', [p.season]]].flatMap(([d, vs]) => vs.filter(Boolean).map(v => ({ label: d === 'occ' ? OCC[v].label : this.cap(v), onClick: () => { this.setState(st => ({ intentNext: 'high', intentRule: 'Used a filter (from a product tag)', events: this.logEvent(st, `Opened tag: ${v}`, 'filter used · intent high') })); this.goPLP({ dept: p.dept, filters: { [d]: [v] }, occasion: null, intent: 'high', intentNext: 'high' }); } }))),
+        accs: [
+          ['desc', 'Description', `A ${p.aes} ${this.noun(p)} in ${p.col}${occPhr ? `, made for ${occPhr}` : ''}.`],
+          ['details', 'Details', [['Colour', p.col], ['Season', p.season], ['Sleeve', p.sleeve], ['Length', p.length]].filter(r => r[1]).map(r => `${r[0]}: ${this.cap(r[1])}`).join(' · ')],
+          ['delivery', 'Delivery and returns', 'Delivered in one to two days across the UAE. Returns are collected from your door within 14 days.']
+        ].map(([k, l, t]) => ({ label: l, text: t, open: !!s.acc[k], sign: s.acc[k] ? '–' : '+', onClick: () => this.setState(st => ({ acc: { ...st.acc, [k]: !st.acc[k] } })) })),
+        pdpSample: p.sample,
+        tags: tagRows.map(([k, v], i) => ({ k, v, conf: p.sample ? '' : (0.81 + ((p.idx * 7 + i * 13) % 18) / 100).toFixed(2) })),
+        addToBag: () => { this.setState(st => ({ bag: st.bag + 1, ...this.learnFrom(st, p, .2, ['aes', 'col'], 'Added to bag:') })); this.toast('Added to bag'); },
+        addLook: () => { this.setState(st => ({ bag: st.bag + slots.length, events: this.logEvent(st, `Added the look to bag (${slots.length} pieces)`, 'look accepted · current slots reinforced'), learn: st.learn + 1 })); this.toast('Look added to bag'); },
+        backLabel: deptName[s.dept] || 'Shop all',
+        backToPLP: () => this.goPLP({ occasion: null }),
+        backToShortlist: () => this.goPLP({ occasion: s.carriedOcc, dept: s.dept === 'all' ? 'all' : p.dept })
+      };
+    }
+
+    const dimsBts = [['aes', 'Aesthetic'], ['col', 'Colour'], ['form', 'Formality'], ['cov', 'Coverage']].map(([k, l]) => {
+      const rows = Object.entries(s.profile[k]).filter(e => e[1] > 0).sort((a, b) => b[1] - a[1]).slice(0, 3).map(([v, n]) => ({ label: v, width: Math.round(n * 100) + '%', pct: Math.round(n * 100) }));
+      return { label: l, rows, empty: rows.length === 0 };
+    });
+
+    return {
+      personaName: P[s.persona].name, menuOpen: s.menuOpen, personas,
+      toggleMenu: () => this.setState(st => ({ menuOpen: !st.menuOpen })),
+      reset: () => this.switchPersona(s.persona),
+      intentLabel: s.intent === 'high' ? 'High intent' : 'Low intent', intentBadgeColor: s.intent === 'high' ? '#C8C2B8' : '#D9B98A',
+      showPickerToggle, openPicker: () => this.setState({ pickerOpen: true }),
+      goShopAll: () => this.goPLP({ dept: P[s.persona].dept === 'all' ? 'all' : P[s.persona].dept, occasion: null }),
+      bagCount: s.bag, depts, toastOpacity: s.toast ? 1 : 0, toastText: s.toastText,
+      isPLP, isPDP,
+      showBand, showLooks: looks.length > 0, looks,
+      showOpener, openerChoices: [['For me', 'men'], ['For her', 'women'], ['For him', 'men']].map(([l, d]) => ({ label: l, onClick: () => this.setState(st => ({ opener: l, dept: d, learn: st.learn + 1, events: this.logEvent(st, `Answered: ${l.toLowerCase()}`, `department set to ${d}`) })) })),
+      showPicker, pickerNote, showOpenerChange: s.persona === 'james' && !!s.opener,
+      reopenOpener: () => this.setState({ opener: null, dept: 'all' }),
+      occChips,
+      ownClosed: !s.ownOpen, ownOpen: s.ownOpen, ownText: s.ownText,
+      ownHint: s.ownMiss ? 'Nothing matches that yet. Try one of the occasions above.' : 'Press enter',
+      openOwn: () => this.setState({ ownOpen: true }),
+      onOwnChange: e => this.setState({ ownText: e.target.value, ownMiss: false }),
+      onOwnKey: e => { if (e.key === 'Enter') this.ownSubmit(); },
+      showShortlist, shortlistTitle: s.occasion ? 'For ' + OCC[s.occasion].phrase : '',
+      shortlistSub: (sl.length ? `${sl.length} pieces. ` : '') + (subBy[s.persona] || ''),
+      changeOcc: () => this.setState({ occasion: null, refine: {} }),
+      refineChips, shortlist, shortlistEmpty: showShortlist && sl.length === 0,
+      clearRefine: () => this.setState({ refine: {} }),
+      filterDims, applied, hasApplied: applied.length > 0, clearFilters: () => this.setState({ filters: {} }),
+      gridLabel: personal ? 'Selected for you' : 'New in', gridCount: `${gridItems.length} pieces`,
+      loading: s.loading && isPLP, skeletons: [1, 2, 3, 4, 5, 6, 7, 8],
+      grid: s.loading ? [] : (() => {
+        const out = [];
+        gridItems.forEach((p, i) => {
+          out.push({ ...card(p), isProduct: true });
+          const li = Math.floor((i + 1) / 8) - 1;
+          if ((i + 1) % 8 === 0 && gridLooks[li]) out.push(gridLooks[li]);
+        });
+        return out;
+      })(),
+      ...(() => {
+        const r = this.eligRule(s);
+        return { eligState: r.never ? 'NEVER' : s.looksEligible ? 'ELIGIBLE' : 'NOT YET', eligWhy: r.why, eligPending: r.ok && !s.looksEligible, eligSince: s.looksEligible ? s.eligSince : '' };
+      })(),
+      showMoreLooks: isPDP && lookOk && !!p,
+      moreLooks: isPDP && lookOk && p ? this.buildLooks(s, 3, p.id, p.dept) : [],
+      drawerOpen: !!s.drawer, drawerTitle: s.drawer ? this.dimLabel(s.drawer) : '', drawerValues,
+      drawerCta: `Show ${gridItems.length} pieces`,
+      closeDrawer: () => this.setState({ drawer: null }),
+      ...pdpVals,
+      toggleBts: () => this.setState(st => ({ btsOpen: !st.btsOpen })),
+      btsTransform: s.btsOpen ? 'translateX(0)' : 'translateX(24px)', btsOpacity: s.btsOpen ? 1 : 0, btsPointer: s.btsOpen ? 'auto' : 'none',
+      intentBig: s.intent === 'high' ? 'HIGH' : 'LOW', intentRule: s.intentRule, intentPending: s.intentNext !== s.intent,
+      profileDims: dimsBts, events: s.events.slice(0, 5), noEvents: s.events.length === 0
+    };
+  }
+}
+</script>
+</body>
+</html>

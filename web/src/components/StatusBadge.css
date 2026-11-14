@@ -1,0 +1,14 @@
+.status-muted { color: var(--text-muted); }
+.status-inline {
+  display: inline-flex;
+  align-items: center;
+  height: var(--badge-height);
+  padding: 0 var(--s2);
+  border-radius: var(--radius-pill);
+  background: var(--flag-bg);
+  color: var(--flag);
+  font-size: var(--text-xs);
+  line-height: var(--badge-height);
+  font-weight: 500;
+  white-space: nowrap;
+}

@@ -1,0 +1,61 @@
+# Model profiles for the tagger. A run records the profile it used, with these prices as they were
+# when the run started, so editing a price here never changes the cost of a past run.
+#
+# Prices are USD per million tokens, checked on 13 Nov 2026 against
+# https://platform.claude.com/docs/en/about-claude/pricing.md  Confirm them before a full run.
+#
+# Fields:
+#   provider             adapter in src/tagger/providers/<provider>.py
+#   model_id             exact identifier the provider expects
+#   accepts_images       false = the step sends text only and says so in the run notes
+#   input_price, output_price                standard rate
+#   cached_input_price   cache hits (prompt caching)
+#   cache_write_price    5-minute cache writes (an addition to the PRD fields; the provider bills them)
+#   batch_input_price, batch_output_price    batch rate, used for projections only
+#   effort               optional; the provider's reasoning-effort setting
+#   max_tokens           optional; reply ceiling (thinking counts towards it)
+#   fallbacks            optional; "default" turns on the provider's server-side refusal fallback
+
+[profiles.haiku]
+provider = "anthropic"
+model_id = "claude-haiku-5-5"
+accepts_images = true
+input_price = 0.10          # prompts up to 100,000 tokens; above that the provider charges 0.50 / 2.50
+output_price = 0.50
+cached_input_price = 0.01
+cache_write_price = 0.125
+batch_input_price = 0.05
+batch_output_price = 0.25
+effort = "low"
+max_tokens = 8000
+prices_checked = 2026-11-13
+
+[profiles.sonnet]
+provider = "anthropic"
+model_id = "claude-sonnet-5-5"
+accepts_images = true
+input_price = 2.00
+output_price = 10.00
+cached_input_price = 0.10
+cache_write_price = 2.50
+batch_input_price = 1.00
+batch_output_price = 5.00
+effort = "medium"
+max_tokens = 32000
+fallbacks = "default"
+prices_checked = 2026-11-13
+
+[profiles.opus]
+provider = "anthropic"
+model_id = "claude-opus-5-5"
+accepts_images = true
+input_price = 4.00
+output_price = 20.00
+cached_input_price = 0.20
+cache_write_price = 5.00
+batch_input_price = 2.00
+batch_output_price = 10.00
+effort = "medium"
+max_tokens = 32000
+fallbacks = "default"
+prices_checked = 2026-11-13

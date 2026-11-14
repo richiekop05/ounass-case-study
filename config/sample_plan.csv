@@ -1,0 +1,80 @@
+spine_node_id,spine_path,listing_url,quota,area,placement_level,note
+,,https://www.ounass.ae/women/clothing/beachwear,5,Women: clothing,,Beachwear placement test set: saved with needs_placement
+,,https://www.ounass.ae/women/clothing/loungewear,5,Women: clothing,,Loungewear placement test set: saved with needs_placement
+W101002,Women / Clothing / Dresses,https://www.ounass.ae/women/clothing/dresses,3,Women: clothing,L3,
+W101009,Women / Clothing / Sleepwear,https://www.ounass.ae/women/clothing/sleepwear,3,Women: clothing,L3,not a leaf: products saved with needs_placement
+W101010,Women / Clothing / Shorts,https://www.ounass.ae/women/clothing/shorts,3,Women: clothing,L3,not a leaf: products saved with needs_placement
+W101005,Women / Clothing / Jeans,https://www.ounass.ae/women/clothing/jeans,3,Women: clothing,L3,
+W101019,Women / Clothing / Jumpsuits,https://www.ounass.ae/women/clothing/jumpsuits,3,Women: clothing,L3,not a leaf: products saved with needs_placement
+W101001-01,Women / Clothing / Tops / Shirts,https://www.ounass.ae/women/clothing/tops/shirts,3,Women: clothing,L4,
+W101016,Women / Clothing / Blazers & Suits,https://www.ounass.ae/women/clothing/coats-jackets/blazers,3,Women: clothing,L3,not a leaf: products saved with needs_placement
+W101020,Women / Clothing / Co-ord Sets,https://www.ounass.ae/women/clothing/co-ord-sets,3,Women: clothing,L3,
+W101021,Women / Clothing / Skirts,https://www.ounass.ae/women/clothing/skirts,3,Women: clothing,L3,
+W101007-01,Women / Clothing / Coats & Jackets / Capes & Ponchos,https://www.ounass.ae/women/clothing/coats-jackets/capes-poncho,3,Women: clothing,L4,
+W101022,Women / Clothing / Abayas,https://www.ounass.ae/women/clothing/abayas,3,Women: clothing,L3,
+W101018-01,Women / Clothing / Swimwear / One Piece Swimsuit,https://www.ounass.ae/women/clothing/swimwear/one-piece-swimsuit,3,Women: clothing,L4,
+W101012-02,Women / Clothing / Lingerie / Bras,https://www.ounass.ae/women/clothing/lingerie/bra,3,Women: clothing,L4,
+W101023,Women / Clothing / Kaftans,https://www.ounass.ae/women/clothing/kaftans,3,Women: clothing,L3,
+W101013-03,Women / Clothing / Shapewear / Waist Trainer,https://www.ounass.ae/women/clothing/shapewear/waist-trainer,3,Women: clothing,L4,
+W101008-02,Women / Clothing / Pants / Chinos,https://www.ounass.ae/women/clothing/pants/chino,3,Women: clothing,L4,
+W101015-02,Women / Clothing / Skiwear / Base Top,https://www.ounass.ae/women/clothing/skiwear/base-tops,3,Women: clothing,L4,
+W101006-04,Women / Clothing / Knitwear / Cardigans,https://www.ounass.ae/women/clothing/knitwear/cardigans,3,Women: clothing,L4,
+W101001-02,Women / Clothing / Tops / T-Shirts,https://www.ounass.ae/women/clothing/tops/t-shirts,3,Women: clothing,L4,
+W101007-02,Women / Clothing / Coats & Jackets / Jackets,https://www.ounass.ae/women/clothing/coats-jackets/jackets,3,Women: clothing,L4,
+W102024,Women / Shoes / Sneakers,https://www.ounass.ae/women/shoes/sneakers,3,Women: shoes,L3,
+W102025,Women / Shoes / Loafers,https://www.ounass.ae/women/shoes/loafers,3,Women: shoes,L3,
+W102026,Women / Shoes / Slides,https://www.ounass.ae/women/shoes/slides,3,Women: shoes,L3,
+W102027,Women / Shoes / Espadrilles,https://www.ounass.ae/women/shoes/espadrilles,3,Women: shoes,L3,
+W102029,Women / Shoes / Mules,https://www.ounass.ae/women/shoes/mules,3,Women: shoes,L3,
+W102030,Women / Shoes / Sandals,https://www.ounass.ae/women/shoes/sandals,3,Women: shoes,L3,
+W102031,Women / Shoes / Boots,https://www.ounass.ae/women/shoes/boots,3,Women: shoes,L3,
+W102032,Women / Shoes / Flip Flops,https://www.ounass.ae/women/shoes/flip-flops,3,Women: shoes,L3,
+W102034,Women / Shoes / Slippers,https://www.ounass.ae/women/shoes/slippers,3,Women: shoes,L3,
+W102035,Women / Shoes / Ballerinas,https://www.ounass.ae/women/shoes/ballerinas,3,Women: shoes,L3,
+W103038,Women / Bags / Top-Handle Bags,https://www.ounass.ae/women/bags/top-handle-bags,4,Women: bags,L3,
+W103041,Women / Bags / Shoulder Bags,https://www.ounass.ae/women/bags/shoulder-bags,3,Women: bags,L3,
+W103042,Women / Bags / Luggage,https://www.ounass.ae/women/bags/luggage,3,Women: bags,L3,not a leaf: products saved with needs_placement
+W103043,Women / Bags / Tote Bags,https://www.ounass.ae/women/bags/tote-bags,3,Women: bags,L3,
+W103044,Women / Bags / Bucket Bags,https://www.ounass.ae/women/bags/bucket-bags,3,Women: bags,L3,
+W103045,Women / Bags / Backpacks,https://www.ounass.ae/women/bags/backpacks,3,Women: bags,L3,
+W103046,Women / Bags / Belt Bags,https://www.ounass.ae/women/bags/belt-bags,3,Women: bags,L3,
+W103047,Women / Bags / Satchel Bags,https://www.ounass.ae/women/bags/satchel-bags,3,Women: bags,L3,
+W104050-03,Women / Accessories / Eyewear / Sunglasses,https://www.ounass.ae/women/accessories/sunglasses,3,Women: accessories,L4,v5 new-type L4
+W104053,Women / Accessories / Belts,https://www.ounass.ae/women/accessories/belts,3,Women: accessories,L3,
+W104054,Women / Accessories / Bag Accessories,https://www.ounass.ae/women/accessories/bag-accessories,3,Women: accessories,L3,not a leaf: products saved with needs_placement
+W104056,Women / Accessories / Hats,https://www.ounass.ae/women/accessories/hats,3,Women: accessories,L3,not a leaf: products saved with needs_placement
+W104052-02,Women / Accessories / Scarves & Soft Accessories / Gloves,https://www.ounass.ae/women/accessories/gloves,3,Women: accessories,L4,
+W105062-02,Women / Jewellery / Necklaces / Chains,https://www.ounass.ae/women/jewellery/fine-jewellery/necklaces/chain,3,Women: jewellery,L4,v5 new-type L4
+W105061-02,Women / Jewellery / Bracelets / Chain Bracelets,https://www.ounass.ae/women/jewellery/fine-jewellery/bracelets/chain,3,Women: jewellery,L4,v5 new-type L4
+W105064-01,Women / Jewellery / Earrings / Ear Cuffs,https://www.ounass.ae/women/jewellery/fine-jewellery/earrings/ear-cuffs,3,Women: jewellery,L4,v5 new-type L4
+W105063-01,Women / Jewellery / Rings / Bands,https://www.ounass.ae/women/jewellery/fine-jewellery/rings/band,3,Women: jewellery,L4,v5 new-type L4
+W105062-03,Women / Jewellery / Necklaces / Pendants,https://www.ounass.ae/women/jewellery/fine-jewellery/necklaces/pendant,3,Women: jewellery,L4,v5 new-type L4
+M201082,Men / Clothing / Knitwear,https://www.ounass.ae/men/clothing/knitwear,4,Men: clothing,L3,not a leaf: products saved with needs_placement
+M201083,Men / Clothing / Jeans,https://www.ounass.ae/men/clothing/jeans,3,Men: clothing,L3,
+M201088,Men / Clothing / Blazers & Suits,https://www.ounass.ae/men/clothing/blazers,3,Men: clothing,L3,not a leaf: products saved with needs_placement
+M201080-01,Men / Clothing / Tops / Shirts,https://www.ounass.ae/men/clothing/shirts,3,Men: clothing,L4,
+M201086,Men / Clothing / Sweatshirts,https://www.ounass.ae/men/clothing/sweats/sweatshirts,3,Men: clothing,L3,not a leaf: products saved with needs_placement
+M201091,Men / Clothing / Underwear & Socks,https://www.ounass.ae/men/clothing/underwear,3,Men: clothing,L3,not a leaf: products saved with needs_placement
+M201092,Men / Clothing / Swimwear,https://www.ounass.ae/men/clothing/swimwear,3,Men: clothing,L3,not a leaf: products saved with needs_placement
+M201090-01,Men / Clothing / Coats & Jackets / Gilets,https://www.ounass.ae/men/clothing/coats-jackets/gilets,3,Men: clothing,L4,
+M201085-02,Men / Clothing / Shorts / Chino Shorts,https://www.ounass.ae/men/clothing/shorts/chino-shorts,3,Men: clothing,L4,
+M201081-02,Men / Clothing / Pants / Chinos,https://www.ounass.ae/men/clothing/pants/chino,3,Men: clothing,L4,
+M201080-02,Men / Clothing / Tops / T-Shirts,https://www.ounass.ae/men/clothing/t-shirts,3,Men: clothing,L4,
+M201090-02,Men / Clothing / Coats & Jackets / Coats,https://www.ounass.ae/men/clothing/coats-jackets/coats,3,Men: clothing,L4,
+M201085-03,Men / Clothing / Shorts / Denim Shorts,https://www.ounass.ae/men/clothing/shorts/denim-shorts,3,Men: clothing,L4,
+M202095,Men / Shoes / Sneakers,https://www.ounass.ae/men/shoes/sneakers,3,Men: shoes,L3,
+M202096,Men / Shoes / Loafers,https://www.ounass.ae/men/shoes/loafers,3,Men: shoes,L3,
+M202099,Men / Shoes / Sandals,https://www.ounass.ae/men/shoes/sandals,3,Men: shoes,L3,
+M202101,Men / Shoes / Espadrilles,https://www.ounass.ae/men/shoes/espadrilles,3,Men: shoes,L3,
+M202103,Men / Shoes / Boots,https://www.ounass.ae/men/shoes/boots,3,Men: shoes,L3,
+M204116-02,Men / Accessories / Eyewear / Sunglasses,https://www.ounass.ae/men/accessories/sunglasses,3,Men: bags and accessories,L4,v5 new-type L4
+M204121-01,Men / Accessories / Hats / Bucket Hats,https://www.ounass.ae/men/accessories/hats/bucket-hats,3,Men: bags and accessories,L4,v5 new-type L4
+M205127,Men / Jewellery / Bracelets,https://www.ounass.ae/men/accessories/jewellery/bracelets,3,Men: bags and accessories,L3,not a leaf: products saved with needs_placement
+M203105,Men / Bags / Luggage,https://www.ounass.ae/men/bags/travel,3,Men: bags and accessories,L3,not a leaf: products saved with needs_placement
+M203106,Men / Bags / Tote Bags,https://www.ounass.ae/men/bags/tote-bags,3,Men: bags and accessories,L3,
+M206136-01,Men / Watches / Watches / Dress Watches,https://www.ounass.ae/men/watches/fashion-watches/dress-watches,5,Watches,L4,v5 new-type L4
+M207138,Men / Beauty / Skincare,https://www.ounass.ae/men/grooming/skincare,4,Beauty,L3,not a leaf: products saved with needs_placement
+M207139,Men / Beauty / Fragrance,https://www.ounass.ae/men/grooming/fragrance,3,Beauty,L3,not a leaf: products saved with needs_placement
+W107078,Women / Beauty / Fragrance,https://www.ounass.ae/women/beauty/fragrance,3,Beauty,L3,not a leaf: products saved with needs_placement
+A508252,All / Home / Home Accessories,https://www.ounass.ae/women/home/home-decor/decorative-accessories,5,Home,L3,not a leaf: products saved with needs_placement
+K304191-01,Kids / Accessories / Eyewear / Sunglasses,https://www.ounass.ae/kids/boy/accessories/sunglasses,5,Kids,L4,v5 new-type L4

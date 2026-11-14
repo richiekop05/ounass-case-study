@@ -1,0 +1,111 @@
+facet_id,status,source_policy,on_missing,auto_threshold,min_values,max_values,none_is_exclusive,note
+colour_primary,active,text_only,review_if_required,,1,1,false,
+hue_temperature,retired,derived,unknown,,1,1,false,Deleted on 12 Nov 2026
+material_composition,retired,text_only,unknown,,,,false,Deleted on 12 Nov 2026
+pattern,active,text_first,unknown,0.8,1,1,false,
+formality,active,judge,unknown,0.7,1,1,false,
+occasion,active,judge,unknown,0.7,1,3,false,
+season,active,judge,unknown,0.8,1,3,false,
+aesthetic,active,judge,unknown,0.7,1,2,false,
+modesty,retired,derived,unknown,,1,1,false,Deleted on 12 Nov 2026
+embellishment,active,judge,unknown,0.8,1,1,false,
+giftable,active,derived,default,,1,1,false,
+gift_occasion,active,derived,unknown,,,3,false,
+price_band,active,derived,unknown,,1,1,false,"Values are entry, mid, high; ultra is dropped"
+brand_tier,active,derived,unknown,,1,1,false,
+exclusivity,active,text_only,default,,,,true,
+recency,active,derived,unknown,,1,1,false,
+age_range,active,text_only,review_if_required,,,,false,
+kids_gender,active,text_only,review_if_required,,1,1,false,
+product_type,retired,derived,unknown,,1,1,false,Deleted on 12 Nov 2026
+function,active,judge,unknown,0.8,,,false,
+sleeve_length,active,judge,unknown,0.8,1,1,false,
+sleeve_style,active,judge,unknown,0.8,1,1,false,
+neckline,active,judge,unknown,0.8,1,1,false,
+length,active,judge,unknown,0.8,1,1,false,
+fit,active,text_first,unknown,0.8,1,1,false,
+silhouette,retired,judge,unknown,0.8,1,1,false,Deleted on 12 Nov 2026
+closure,active,judge,unknown,0.8,1,1,false,
+sheerness,active,judge,unknown,0.8,1,1,false,
+fabric_weight,retired,judge,unknown,,1,1,false,Deleted on 12 Nov 2026
+fabric_construction,active,text_first,unknown,0.8,1,1,false,
+carry_style,active,judge,unknown,0.8,,,false,
+bag_size,active,text_first,unknown,0.8,1,1,false,
+bag_dimensions_cm,retired,text_only,unknown,,1,1,false,Retired in the dictionary
+structure,retired,judge,unknown,0.8,1,1,false,Deleted on 12 Nov 2026
+strap_material,active,judge,unknown,0.8,1,1,false,
+convertible_strap,active,judge,unknown,0.8,1,1,false,
+hardware_colour,active,judge,unknown,0.8,1,1,false,
+finish,active,judge,unknown,0.8,1,1,false,
+heel_height,active,text_first,unknown,0.8,1,1,false,
+heel_style,active,judge,unknown,0.8,1,1,false,
+toe_shape,active,judge,unknown,0.8,1,1,false,
+shoe_closure,active,judge,unknown,0.8,1,1,false,
+shoe_fit_width,retired,text_only,unknown,,1,1,false,Retired 14 Nov 2026; past answers are kept
+frame_shape,active,judge,unknown,0.8,1,1,false,
+lens_tint,active,judge,unknown,0.8,1,1,false,
+belt_width,active,judge,unknown,0.8,1,1,false,
+scarf_size,active,judge,unknown,0.8,1,1,false,
+jewellery_tier,active,not_tagged,unknown,,1,1,false,
+metal,active,text_only,review_if_required,,1,1,false,
+metal_purity,active,text_only,review_if_required,,1,1,false,
+stone,active,text_only,review_if_required,,,,true,
+gemstone_carat_weight,active,text_only,review_if_required,,1,1,false,
+stone_size_mm,active,text_only,review_if_required,,1,1,false,
+chain_style,active,judge,unknown,0.8,1,1,false,
+ring_fit,active,judge,unknown,0.8,1,1,false,
+necklace_length,active,judge,unknown,0.8,1,1,false,
+jewellery_scale,retired,judge,unknown,0.75,1,1,false,Deleted on 12 Nov 2026
+watch_tier,active,not_tagged,unknown,,1,1,false,
+watch_style,active,judge,unknown,0.8,1,1,false,
+movement,active,text_only,review_if_required,,1,1,false,
+case_size_mm,active,text_only,review_if_required,,1,1,false,
+case_size_bucket,active,derived,review_if_required,,1,1,false,
+case_material,active,text_only,review_if_required,,1,1,false,
+watch_strap_material,active,text_first,unknown,0.8,1,1,false,
+dial_colour,active,text_first,unknown,0.8,1,1,false,
+concentration,active,text_only,unknown,,1,1,false,
+scent_family,active,judge,unknown,0.8,1,2,false,
+gender_positioning,active,text_only,unknown,,1,1,false,
+intensity,active,text_only,unknown,,1,1,false,
+concern,active,judge,unknown,0.8,,,false,
+hero_ingredient,active,judge,unknown,0.8,,,false,
+format,active,text_only,unknown,,1,1,false,
+skin_type,active,text_only,unknown,,,,false,
+hair_type,active,text_only,unknown,,,,false,
+makeup_finish,active,judge,unknown,0.8,1,1,false,
+shade_family,active,judge,unknown,0.8,1,1,false,
+coverage,active,text_only,unknown,,1,1,false,
+spf,active,text_only,unknown,,1,1,false,
+ingredients,active,text_only,unknown,,1,1,false,
+claims,active,text_only,unknown,,,,false,
+volume,active,text_only,unknown,,1,1,false,
+is_set,active,text_only,default,,1,1,false,
+home_material,active,text_only,unknown,,,,false,
+room,active,text_only,unknown,,,,false,
+set_size,active,text_only,unknown,,1,1,false,
+dimensions_cm,retired,text_only,unknown,,1,1,false,Retired in the dictionary
+design_style,active,text_first,unknown,0.8,1,2,false,
+use_occasion,active,text_only,unknown,,,,false,
+allergens_contains,active,text_only,unknown,,,,true,
+allergens_may_contain,active,text_only,unknown,,,,false,
+dietary,active,text_only,unknown,,,,false,
+pack_size,active,text_only,unknown,,1,1,false,
+bag_width_cm,active,text_only,review_if_required,,1,1,false,
+bag_height_cm,active,text_only,review_if_required,,1,1,false,
+bag_depth_cm,active,text_only,review_if_required,,1,1,false,
+width_cm,active,text_only,unknown,,1,1,false,
+height_cm,active,text_only,unknown,,1,1,false,
+depth_cm,active,text_only,unknown,,1,1,false,
+volume_unit,active,text_only,unknown,,1,1,false,
+pack_size_unit,active,text_only,unknown,,1,1,false,
+accessory_type,retired,not_tagged,unknown,,,,false,Retired in the dictionary; the category now carries the product type
+bag_type,retired,not_tagged,unknown,,,,false,Retired in the dictionary; the category now carries the product type
+eyewear_type,retired,not_tagged,unknown,,,,false,Retired in the dictionary; the category now carries the product type
+food_type,retired,not_tagged,unknown,,,,false,Retired in the dictionary; the category now carries the product type
+garment_type,retired,not_tagged,unknown,,,,false,Retired in the dictionary; the category now carries the product type
+hat_style,retired,not_tagged,unknown,,,,false,Retired in the dictionary; the category now carries the product type
+piece_style,retired,not_tagged,unknown,,,,false,Retired in the dictionary; the category now carries the product type
+slg_type,retired,not_tagged,unknown,,,,false,Retired in the dictionary; the category now carries the product type
+colour_secondary,active,text_first,unknown,0.8,1,1,false,"Changed 13 Nov 2026 from text_only to text_first: text if it names a second colour, otherwise the photos"
+is_metallic,active,derived,unknown,,1,1,false,"Added 13 Nov 2026. Code sets it from colour_primary. To drop it, set status to retired"

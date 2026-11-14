@@ -1,0 +1,126 @@
+/* top bar */
+.detail-top-left { display: flex; align-items: center; gap: var(--s4); min-width: 0; }
+.detail-top-left .btn-quiet { flex: none; }
+.detail-top-divider { flex: none; width: 1px; height: var(--chip-height); background: var(--border); }
+.detail-top-title { display: flex; align-items: baseline; gap: var(--s2); min-width: 0; }
+.detail-title { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.detail-brand { white-space: nowrap; }
+.detail-top-right { display: flex; align-items: center; gap: var(--s2); }
+.detail-step { width: var(--button-height); padding: 0; }
+.topbar-left:has(.detail-top-left) { align-items: center; flex: 1; }
+
+/* two columns, each scrolling on its own */
+.detail {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: var(--detail-left) var(--detail-right);
+  overflow: hidden;
+}
+.detail-left {
+  min-height: 0;
+  overflow: auto;
+  padding: var(--s5);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s5);
+}
+.detail-right { min-height: 0; min-width: 0; display: flex; flex-direction: column; }
+.detail-facets {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: var(--s5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+}
+
+.detail-locked {
+  padding: var(--s2) var(--s3);
+  border-radius: var(--radius);
+  background: var(--flag-bg);
+  color: var(--flag);
+}
+.detail-groups { display: flex; flex-direction: column; gap: var(--s2); transition: opacity var(--motion); }
+.detail-groups.is-locked { opacity: var(--disabled-opacity); pointer-events: none; }
+.detail-group-head { display: flex; align-items: baseline; gap: var(--s2); padding: var(--s4) 0 var(--s1); }
+.detail-group-head.is-first { padding-top: var(--s2); }
+.detail-group-label {
+  font-size: var(--text-xs);
+  line-height: var(--lh-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+  font-weight: 600;
+}
+.detail-group-count { font-size: var(--text-xs); color: var(--text-muted); }
+
+/* footer fixed under the right column */
+.detail-footer {
+  flex: none;
+  height: var(--footer-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s4);
+  padding: 0 var(--s5);
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border);
+}
+.detail-footer-msg { min-width: 0; }
+.detail-footer-link {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--flag);
+  text-align: left;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.detail-footer-buttons { display: flex; gap: var(--s2); flex: none; }
+
+/* save failed: a banner at the top of the right column (Design PRD 13) */
+.detail-banner { flex: none; margin: var(--s4) var(--s5) 0; }
+
+/* re-tag progress under the category card */
+.detail-retag {
+  padding: var(--s2) var(--s3);
+  border-radius: var(--radius);
+  background: var(--photo-bg);
+}
+
+/* error */
+.detail-error {
+  margin: var(--s5);
+  padding: var(--s3) var(--s4);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s4);
+  border-radius: var(--radius);
+  background: var(--error-bg);
+  color: var(--error);
+}
+.detail-error a { color: var(--error); }
+
+/* loading placeholders in the shape of the two columns */
+.detail-sk-photo { width: 100%; max-width: var(--evidence-max); aspect-ratio: 3 / 4; }
+.detail-sk-line { height: var(--s4); width: 60%; }
+.detail-sk-block { height: var(--thumb-height); }
+.detail-sk-card { height: calc(var(--row-height) + var(--s6)); margin-bottom: var(--s4); }
+.detail-sk-open { height: calc(var(--compact-row) * 3); }
+.detail-sk-row { height: var(--compact-row); }
+
+/* embedded under the Live tag tracker (Design PRD 7): a framed, fixed-height copy of the two columns */
+.detail.is-embedded {
+  flex: none;
+  height: var(--live-result-height);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-page);
+}
+.review-head { display: flex; align-items: center; gap: var(--s3); min-width: 0; padding-bottom: var(--s3); }
+.review-head-title { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.review-head-brand { white-space: nowrap; }
+.review-head-sk { height: var(--lh-lg); width: 40%; }
+.review-error { margin: 0; }

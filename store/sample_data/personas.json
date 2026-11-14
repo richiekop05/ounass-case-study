@@ -1,0 +1,306 @@
+{
+ "_note": "Starting histories DRAFTED from the approved catalogue; the owner chooses the final ones (engineering PRD 9). 'events' are the seed history; 'session_start' is the simulated starting session, written into every new session. Each starting signal names the check that ties it to those events (store/tests/test_lead.py), so the switcher's lines cannot drift from the data. 'note' fields are for reading only. No ages anywhere.",
+ "personas": [
+  {
+   "id": "layla",
+   "name": "Layla",
+   "full_name": "Layla · the Wanderer",
+   "archetype": "the Wanderer",
+   "description": "Dubai. A regular with no mission tonight; likes neutrals and clean lines",
+   "department_default": "women",
+   "starting_intent": "low",
+   "entry_source": "direct",
+   "entry_occasion": null,
+   "starting_signals": [
+    {
+     "text": "Returning customer with a long history",
+     "check": "history:10"
+    },
+    {
+     "text": "Opened the app directly",
+     "check": "entry:direct"
+    },
+    {
+     "text": "No search or filter",
+     "check": "no_search_or_filter"
+    },
+    {
+     "text": "Opened two products and closed each within seconds",
+     "check": "quick_views:2"
+    }
+   ],
+   "sort_order": 1,
+   "events": [
+    {
+     "type": "purchase",
+     "product_id": "218782204_26",
+     "note": "Prada · Embroidered-logo Shirt in Poplin (minimalist or classic, neutral)"
+    },
+    {
+     "type": "purchase",
+     "product_id": "218843094_2709",
+     "note": "Setre · V-neck Jumpsuit in Viscose Blend (minimalist or classic, neutral)"
+    },
+    {
+     "type": "purchase",
+     "product_id": "218945040_7762",
+     "note": "Soft Goat · Belted Cardigan in Brushed Cashmere (minimalist or classic, neutral)"
+    },
+    {
+     "type": "save",
+     "product_id": "219470998_15",
+     "note": "Sporty & Rich · Ivana S Logo Pants in Cashmere Blend (minimalist or classic, neutral)"
+    },
+    {
+     "type": "save",
+     "product_id": "219879519_15",
+     "note": "Marella · Senape Open-front Cape in Wool (minimalist or classic, neutral)"
+    },
+    {
+     "type": "save",
+     "product_id": "219887673_7762",
+     "note": "Orfa · Cape-style Blazer Abaya (minimalist or classic, neutral)"
+    },
+    {
+     "type": "save",
+     "product_id": "220091138_2709",
+     "note": "Rag & Bone · Brooke Scarf Poncho (minimalist or classic, neutral)"
+    },
+    {
+     "type": "view",
+     "product_id": "220120075_7864",
+     "note": "SKIMS · Cotton Jersey Long Sleeve T-shirt (minimalist or classic, neutral)"
+    },
+    {
+     "type": "view",
+     "product_id": "220143898_19",
+     "note": "COS · Zip-up Polo Shirt in Merino Wool (minimalist or classic, neutral)"
+    },
+    {
+     "type": "view",
+     "product_id": "220233345_13",
+     "note": "Bottega Veneta · Logo T-shirt in Cotton-jersey (minimalist or classic, neutral)"
+    },
+    {
+     "type": "view",
+     "product_id": "220301984_13",
+     "note": "COS · Double-breasted Blazer in Leather (minimalist or classic, neutral)"
+    },
+    {
+     "type": "view",
+     "product_id": "220333616_2709",
+     "note": "Rails · Jenner Shorts in Linen (minimalist or classic, neutral)"
+    },
+    {
+     "type": "view",
+     "product_id": "220339542_2709",
+     "note": "Khaite · Cindy Skirt in Nappa Leather (minimalist or classic, neutral)"
+    },
+    {
+     "type": "view",
+     "product_id": "215196625_26",
+     "note": "Messika · Move Uno Necklace in 18kt White Gold  (minimalist or classic, neutral)"
+    },
+    {
+     "type": "view",
+     "product_id": "215473109_13",
+     "note": "SAINT LAURENT · E/W Shopping Bag in Leather (minimalist or classic, neutral)"
+    }
+   ],
+   "session_start": [
+    {
+     "type": "entry",
+     "context": {
+      "source": "direct"
+     },
+     "note": "opened the app directly"
+    },
+    {
+     "type": "view",
+     "product_id": "220120075_7864",
+     "context": {
+      "dwell": "seconds"
+     },
+     "note": "opened and closed within seconds"
+    },
+    {
+     "type": "view",
+     "product_id": "220143898_19",
+     "context": {
+      "dwell": "seconds"
+     },
+     "note": "opened and closed within seconds"
+    }
+   ]
+  },
+  {
+   "id": "noor",
+   "name": "Noor",
+   "full_name": "Noor · the Occasion-haver",
+   "archetype": "the Occasion-haver",
+   "description": "Abu Dhabi. Needs an outfit for an engagement in three weeks",
+   "department_default": "women",
+   "starting_intent": "low",
+   "entry_source": "notification",
+   "entry_occasion": "evening",
+   "starting_signals": [
+    {
+     "text": "Arrived from an evening-edit notification",
+     "check": "entry:notification"
+    },
+    {
+     "text": "One past order",
+     "check": "orders:1"
+    },
+    {
+     "text": "No search or filter",
+     "check": "no_search_or_filter"
+    },
+    {
+     "text": "Browsing evening dresses without narrowing",
+     "check": "browsing:evening"
+    }
+   ],
+   "sort_order": 2,
+   "events": [
+    {
+     "type": "purchase",
+     "product_id": "218744125_174",
+     "note": "Latifa · Audra Detachable Corset Jumpsuit (formal one-piece)"
+    },
+    {
+     "type": "view",
+     "product_id": "219270970_7762",
+     "note": "Shaira Couture · Fringe-trim Cape Kaftan (formal one-piece)"
+    },
+    {
+     "type": "view",
+     "product_id": "219298016_2709",
+     "note": "Al Mraikn · 3-piece Embroidered Abaya Set (formal one-piece)"
+    }
+   ],
+   "session_start": [
+    {
+     "type": "entry",
+     "context": {
+      "source": "notification",
+      "occasion": "evening"
+     },
+     "note": "opened the evening-edit notification"
+    },
+    {
+     "type": "view",
+     "product_id": "219222724_2709",
+     "context": {
+      "browsing": "evening"
+     },
+     "note": "browsing evening pieces"
+    }
+   ]
+  },
+  {
+   "id": "james",
+   "name": "James",
+   "full_name": "James · the Newcomer",
+   "archetype": "the Newcomer",
+   "description": "Visiting from the UK. Buying something for his wife; first visit",
+   "department_default": "all",
+   "starting_intent": "low",
+   "entry_source": "web_search",
+   "entry_occasion": null,
+   "starting_signals": [
+    {
+     "text": "First visit, no history",
+     "check": "first_visit"
+    },
+    {
+     "text": "Arrived from a general web search",
+     "check": "entry:web_search"
+    },
+    {
+     "text": "One page viewed",
+     "check": "pages:1"
+    },
+    {
+     "text": "No high-intent signal yet",
+     "check": "low_intent"
+    }
+   ],
+   "sort_order": 3,
+   "events": [],
+   "session_start": [
+    {
+     "type": "entry",
+     "context": {
+      "source": "web_search"
+     },
+     "note": "arrived from a general web search"
+    }
+   ]
+  },
+  {
+   "id": "sara",
+   "name": "Sara",
+   "full_name": "Sara · the Hunter",
+   "archetype": "the Hunter",
+   "description": "Riyadh. Arrived from a search for one specific bag",
+   "department_default": "women",
+   "starting_intent": "high",
+   "entry_source": "product_search",
+   "entry_occasion": null,
+   "starting_signals": [
+    {
+     "text": "Arrived on a product page from a search for a specific bag",
+     "check": "search_referral"
+    },
+    {
+     "text": "Selected a size",
+     "check": "size_select"
+    },
+    {
+     "text": "Past orders in bags",
+     "check": "orders_in:bag"
+    }
+   ],
+   "sort_order": 4,
+   "events": [
+    {
+     "type": "purchase",
+     "product_id": "218496219_15",
+     "note": "Dolce & Gabbana · Medium Sicily Long Top-handle Bag in Suede (women's bag)"
+    },
+    {
+     "type": "purchase",
+     "product_id": "218914918_4067",
+     "note": "Stella McCartney · Mini Falabella Tote Bag in Alter Suede (women's bag)"
+    },
+    {
+     "type": "purchase",
+     "product_id": "219740446_15",
+     "note": "Balenciaga · Mini Le City Bag in Waxed Suede (women's bag)"
+    }
+   ],
+   "session_start": [
+    {
+     "type": "entry",
+     "context": {
+      "source": "product_search"
+     },
+     "note": "arrived from a product search"
+    },
+    {
+     "type": "search_referral",
+     "product_id": "219817248_195",
+     "note": "arrived from a search for this bag"
+    },
+    {
+     "type": "size_select",
+     "context": {
+      "size": "one size"
+     },
+     "note": "selected a size"
+    }
+   ]
+  }
+ ]
+}

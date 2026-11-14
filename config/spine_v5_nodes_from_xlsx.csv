@@ -1,0 +1,782 @@
+node_id,parent_id,level,audience,department,name,slug,path,is_leaf,definition,aliases,review_flag,source_count,v5_status
+W1,,L1,Women,,Women,women,Women,FALSE,,,,,
+W101,W1,L2,Women,Clothing,Clothing,clothing,Women / Clothing,FALSE,,,,,
+W101001,W101,L3,Women,Clothing,Tops,tops,Women / Clothing / Tops,FALSE,,Beachwear; Loungewear; Polos; Shirts; T Shirts; Tops,,48279,existing
+W101002,W101,L3,Women,Clothing,Dresses,dresses,Women / Clothing / Dresses,TRUE,,Beachwear; Cocktail Dress; Dresses; Evening Dress; Knitwear; Loungewear,,42579,existing
+W101017,W101,L3,Women,Clothing,Underwear & Socks,underwear-and-socks,Women / Clothing / Underwear & Socks,FALSE,,Loungewear; Soft Accessories; Underwear,,27402,existing
+W101008,W101,L3,Women,Clothing,Pants,pants,Women / Clothing / Pants,FALSE,,Beachwear; Loungewear; Trousers,,26436,existing
+W101007,W101,L3,Women,Clothing,Coats & Jackets,coats-and-jackets,Women / Clothing / Coats & Jackets,FALSE,,Loungewear; Outerwear; Sweatshirts,,25762,existing
+W101004,W101,L3,Women,Clothing,Activewear,activewear,Women / Clothing / Activewear,FALSE,,Activewear,,24935,existing
+W101009,W101,L3,Women,Clothing,Sleepwear,sleepwear,Women / Clothing / Sleepwear,FALSE,,Beachwear; Loungewear; Sleepwear,,23404,existing
+W101010,W101,L3,Women,Clothing,Shorts,shorts,Women / Clothing / Shorts,FALSE,,Beachwear; Denim; Loungewear; Shorts; Skirts,,23008,existing
+W101005,W101,L3,Women,Clothing,Jeans,jeans,Women / Clothing / Jeans,TRUE,,Denim,,21247,existing
+W101006,W101,L3,Women,Clothing,Knitwear,knitwear,Women / Clothing / Knitwear,FALSE,,Knitwear; Loungewear,,20121,existing
+W101013,W101,L3,Women,Clothing,Shapewear,shapewear,Women / Clothing / Shapewear,FALSE,,Lingerie; Shapewear,,17179,existing
+W101012,W101,L3,Women,Clothing,Lingerie,lingerie,Women / Clothing / Lingerie,FALSE,,Lingerie,,16365,existing
+W101019,W101,L3,Women,Clothing,Jumpsuits,jumpsuits,Women / Clothing / Jumpsuits,FALSE,,Beachwear; Jumpsuits,,12799,existing
+W101015,W101,L3,Women,Clothing,Skiwear,skiwear,Women / Clothing / Skiwear,FALSE,,Skiwear,,10369,existing
+W101016,W101,L3,Women,Clothing,Blazers & Suits,blazers-and-suits,Women / Clothing / Blazers & Suits,FALSE,,Blazers; Suits,,10231,existing
+W101018,W101,L3,Women,Clothing,Swimwear,swimwear,Women / Clothing / Swimwear,FALSE,,Beachwear,,9934,existing
+W101014,W101,L3,Women,Clothing,Sweatshirts,sweatshirts,Women / Clothing / Sweatshirts,FALSE,,Sweatshirts,,8506,existing
+W101020,W101,L3,Women,Clothing,Co-ord Sets,co-ord-sets,Women / Clothing / Co-ord Sets,TRUE,,Beachwear; Loungewear; Sets,,8148,existing
+W101021,W101,L3,Women,Clothing,Skirts,skirts,Women / Clothing / Skirts,TRUE,,Beachwear; Loungewear; Skirts,,7821,existing
+W101022,W101,L3,Women,Clothing,Abayas,abayas,Women / Clothing / Abayas,TRUE,,Abayas,,4243,existing
+W101023,W101,L3,Women,Clothing,Kaftans,kaftans,Women / Clothing / Kaftans,TRUE,,Beachwear; Dresses,,2872,existing
+W102,W1,L2,Women,Shoes,Shoes,shoes,Women / Shoes,FALSE,,,,,
+W102024,W102,L3,Women,Shoes,Sneakers,sneakers,Women / Shoes / Sneakers,TRUE,,Sneakers,,10285,existing
+W102025,W102,L3,Women,Shoes,Loafers,loafers,Women / Shoes / Loafers,TRUE,,Flats; Slip On,,7369,existing
+W102026,W102,L3,Women,Shoes,Slides,slides,Women / Shoes / Slides,TRUE,,Flats,,5923,existing
+W102027,W102,L3,Women,Shoes,Espadrilles,espadrilles,Women / Shoes / Espadrilles,TRUE,,Espadrilles; Flats; Slip On,,5711,existing
+W102028,W102,L3,Women,Shoes,Lace-Up Shoes,lace-up-shoes,Women / Shoes / Lace-Up Shoes,TRUE,,Lace Ups,,4859,existing
+W102029,W102,L3,Women,Shoes,Mules,mules,Women / Shoes / Mules,TRUE,,Heels,,4575,existing
+W102030,W102,L3,Women,Shoes,Sandals,sandals,Women / Shoes / Sandals,TRUE,,Flats; Heels; Sandals,,4440,existing
+W102031,W102,L3,Women,Shoes,Boots,boots,Women / Shoes / Boots,TRUE,,Boots,,3614,existing
+W102032,W102,L3,Women,Shoes,Flip Flops,flip-flops,Women / Shoes / Flip Flops,TRUE,,Flats,,3571,existing
+W102033,W102,L3,Women,Shoes,Shoe Accessories,shoe-accessories,Women / Shoes / Shoe Accessories,TRUE,,Shoe Accessories,,3516,existing
+W102034,W102,L3,Women,Shoes,Slippers,slippers,Women / Shoes / Slippers,TRUE,,Flats; Sleepwear; Slip On,,3231,existing
+W102035,W102,L3,Women,Shoes,Ballerinas,ballerinas,Women / Shoes / Ballerinas,TRUE,,Flats,,2633,existing
+W102036,W102,L3,Women,Shoes,Pumps,pumps,Women / Shoes / Pumps,TRUE,,Heels,,1938,existing
+W102037,W102,L3,Women,Shoes,Heels,heels,Women / Shoes / Heels,TRUE,,Heels,holding,688,existing
+W103,W1,L2,Women,Bags,Bags,bags,Women / Bags,FALSE,,,,,
+W103038,W103,L3,Women,Bags,Top-Handle Bags,top-handle-bags,Women / Bags / Top-Handle Bags,TRUE,,Top Handle,,19519,existing
+W103039,W103,L3,Women,Bags,Crossbody Bags,crossbody-bags,Women / Bags / Crossbody Bags,TRUE,,Camera; Cross Body; Messenger,,19268,existing
+W103040,W103,L3,Women,Bags,Clutches,clutches,Women / Bags / Clutches,TRUE,,Clutches,,16642,existing
+W103041,W103,L3,Women,Bags,Shoulder Bags,shoulder-bags,Women / Bags / Shoulder Bags,TRUE,,Shoulder Bags,,16393,existing
+W103042,W103,L3,Women,Bags,Luggage,luggage,Women / Bags / Luggage,FALSE,,Travel,,14181,existing
+W103043,W103,L3,Women,Bags,Tote Bags,tote-bags,Women / Bags / Tote Bags,TRUE,,Carryall; Tote Bags,,14078,existing
+W103044,W103,L3,Women,Bags,Bucket Bags,bucket-bags,Women / Bags / Bucket Bags,TRUE,,Bucket Bag,,12277,existing
+W103045,W103,L3,Women,Bags,Backpacks,backpacks,Women / Bags / Backpacks,TRUE,,Backpacks,,10175,existing
+W103046,W103,L3,Women,Bags,Belt Bags,belt-bags,Women / Bags / Belt Bags,TRUE,,Belt Bags,,6128,existing
+W103047,W103,L3,Women,Bags,Satchel Bags,satchel-bags,Women / Bags / Satchel Bags,TRUE,,Satchel,,4573,existing
+W103048,W103,L3,Women,Bags,Briefcases,briefcases,Women / Bags / Briefcases,TRUE,,Briefcases,,2610,existing
+W103049,W103,L3,Women,Bags,Washbags,washbags,Women / Bags / Washbags,TRUE,,Washbags,,1100,existing
+W104,W1,L2,Women,Accessories,Accessories,accessories,Women / Accessories,FALSE,,,,,
+W104050,W104,L3,Women,Accessories,Eyewear,eyewear,Women / Accessories / Eyewear,FALSE,,Eyeglasses; Sunglasses,,41520,existing
+W104051,W104,L3,Women,Accessories,Wallets & Small Leather Goods,wallets-and-small-leather-goods,Women / Accessories / Wallets & Small Leather Goods,FALSE,,Small Leather Goods,,34336,existing
+W104052,W104,L3,Women,Accessories,Scarves & Soft Accessories,scarves-and-soft-accessories,Women / Accessories / Scarves & Soft Accessories,FALSE,,Accessories; Soft Accessories,,23255,existing
+W104053,W104,L3,Women,Accessories,Belts,belts,Women / Accessories / Belts,TRUE,,Belts,,17653,existing
+W104054,W104,L3,Women,Accessories,Bag Accessories,bag-accessories,Women / Accessories / Bag Accessories,FALSE,,Bag Accessories,,12268,existing
+W104055,W104,L3,Women,Accessories,Lifestyle,lifestyle,Women / Accessories / Lifestyle,FALSE,,Lifestyle,,12046,existing
+W104056,W104,L3,Women,Accessories,Hats,hats,Women / Accessories / Hats,FALSE,,Hats; Sunglasses,,11883,existing
+W104080,W104,L3,Women,Accessories,Beach Accessories,beach-accessories,Women / Accessories / Beach Accessories,FALSE,,Beachwear; Soft Accessories,,4867,existing
+W104058,W104,L3,Women,Accessories,Hair Accessories,hair-accessories,Women / Accessories / Hair Accessories,FALSE,,Hair; Soft Accessories,,4309,existing
+W104059,W104,L3,Women,Accessories,Cosmetic Accessories,cosmetic-accessories,Women / Accessories / Cosmetic Accessories,FALSE,,Beauty,,1566,existing
+W104057,W104,L3,Women,Accessories,Other Accessories,other-accessories,Women / Accessories / Other Accessories,TRUE,,Generic,holding,1332,existing
+W104060,W104,L3,Women,Accessories,Tech,tech,Women / Accessories / Tech,FALSE,,Small Leather Goods,,1326,existing
+W105,W1,L2,Women,Jewellery,Jewellery,jewellery,Women / Jewellery,FALSE,,,,,
+W105061,W105,L3,Women,Jewellery,Bracelets,bracelets,Women / Jewellery / Bracelets,FALSE,,Bracelets; Jewellery; Small Leather Goods,,59001,existing
+W105062,W105,L3,Women,Jewellery,Necklaces,necklaces,Women / Jewellery / Necklaces,FALSE,,Jewellery; Necklaces,,56710,existing
+W105063,W105,L3,Women,Jewellery,Rings,rings,Women / Jewellery / Rings,FALSE,,Jewellery; Rings,,35374,existing
+W105064,W105,L3,Women,Jewellery,Earrings,earrings,Women / Jewellery / Earrings,FALSE,,Earrings; Jewellery,,31208,existing
+W105065,W105,L3,Women,Jewellery,Brooches,brooches,Women / Jewellery / Brooches,TRUE,,Brooches; Jewellery,,8743,existing
+W105066,W105,L3,Women,Jewellery,Charms,charms,Women / Jewellery / Charms,TRUE,,Charms; Jewellery,,6251,existing
+W105067,W105,L3,Women,Jewellery,Anklets,anklets,Women / Jewellery / Anklets,TRUE,,Anklets; Jewellery,,4794,existing
+W105068,W105,L3,Women,Jewellery,Jewellery Boxes,jewellery-boxes,Women / Jewellery / Jewellery Boxes,TRUE,,Jewellery Boxes,,4056,existing
+W105069,W105,L3,Women,Jewellery,Key Rings,key-rings,Women / Jewellery / Key Rings,TRUE,,Jewellery,,3970,existing
+W105070,W105,L3,Women,Jewellery,Head Jewellery,head-jewellery,Women / Jewellery / Head Jewellery,TRUE,,Head Jewellery,,3398,existing
+W105071,W105,L3,Women,Jewellery,Jewellery Sets,jewellery-sets,Women / Jewellery / Jewellery Sets,TRUE,,Jewellery,,2443,existing
+W106,W1,L2,Women,Watches,Watches,watches,Women / Watches,FALSE,,,,,
+W106072,W106,L3,Women,Watches,Watches,watches,Women / Watches / Watches,FALSE,,Chronograph; Diving; Dress; Smart; Sport; Watch Sets,,18675,existing
+W106073,W106,L3,Women,Watches,Watch Accessories,watch-accessories,Women / Watches / Watch Accessories,FALSE,,Watch Accessories,,9168,existing
+W107,W1,L2,Women,Beauty,Beauty,beauty,Women / Beauty,FALSE,,,,,
+W107074,W107,L3,Women,Beauty,Makeup,makeup,Women / Beauty / Makeup,FALSE,,Accessories And Tools; Brows; Eyes; Face; Lips; Make Up Removers; Nails,,100115,existing
+W107075,W107,L3,Women,Beauty,Skincare,skincare,Women / Beauty / Skincare,FALSE,,"Cleansers And Exfoliators; Creams, Moisturisers And Serums; Grooming; Mask; Sun Care; Tools And Accessories",,78665,existing
+W107076,W107,L3,Women,Beauty,Hair,hair,Women / Beauty / Hair,FALSE,,Hair Care; Hair Tools And Accessories; Styling,,38363,existing
+W107077,W107,L3,Women,Beauty,Bath & Body,bath-and-body,Women / Beauty / Bath & Body,FALSE,,Bath And Shower; Body Moisturiser And Oils; Hygiene,,26510,existing
+W107078,W107,L3,Women,Beauty,Fragrance,fragrance,Women / Beauty / Fragrance,FALSE,,Arabic Fragrance; Fragrance,,23846,existing
+W107079,W107,L3,Women,Beauty,Wellness,wellness,Women / Beauty / Wellness,FALSE,,Sleep; Supplements,,6142,existing
+M2,,L1,Men,,Men,men,Men,FALSE,,,,,
+M201,M2,L2,Men,Clothing,Clothing,clothing,Men / Clothing,FALSE,,,,,
+M201080,M201,L3,Men,Clothing,Tops,tops,Men / Clothing / Tops,FALSE,,Loungewear; Polos; Shirts; T Shirts,,33124,existing
+M201087,M201,L3,Men,Clothing,Sleepwear,sleepwear,Men / Clothing / Sleepwear,FALSE,,Beachwear; Loungewear; Sleepwear,,20938,existing
+M201081,M201,L3,Men,Clothing,Pants,pants,Men / Clothing / Pants,FALSE,,Loungewear; Trousers,,20717,existing
+M201085,M201,L3,Men,Clothing,Shorts,shorts,Men / Clothing / Shorts,FALSE,,Denim; Loungewear; Shorts,,20195,existing
+M201082,M201,L3,Men,Clothing,Knitwear,knitwear,Men / Clothing / Knitwear,FALSE,,Knitwear; Loungewear,,18612,existing
+M201083,M201,L3,Men,Clothing,Jeans,jeans,Men / Clothing / Jeans,TRUE,,Denim,,14113,existing
+M201088,M201,L3,Men,Clothing,Blazers & Suits,blazers-and-suits,Men / Clothing / Blazers & Suits,FALSE,,Blazers; Suits,,12345,existing
+M201090,M201,L3,Men,Clothing,Coats & Jackets,coats-and-jackets,Men / Clothing / Coats & Jackets,FALSE,,Outerwear; Sweatshirts,,11981,existing
+M201086,M201,L3,Men,Clothing,Sweatshirts,sweatshirts,Men / Clothing / Sweatshirts,FALSE,,Sweatshirts,,11809,existing
+M201089,M201,L3,Men,Clothing,Activewear,activewear,Men / Clothing / Activewear,FALSE,,Activewear,,11351,existing
+M201091,M201,L3,Men,Clothing,Underwear & Socks,underwear-and-socks,Men / Clothing / Underwear & Socks,FALSE,,Soft Accessories; Underwear,,11070,existing
+M201092,M201,L3,Men,Clothing,Swimwear,swimwear,Men / Clothing / Swimwear,FALSE,,Beachwear; Shorts,,6082,existing
+M201094,M201,L3,Men,Clothing,Co-ord Sets,co-ord-sets,Men / Clothing / Co-ord Sets,TRUE,,Loungewear; Multi Piece Sets,,3454,existing
+M202,M2,L2,Men,Shoes,Shoes,shoes,Men / Shoes,FALSE,,,,,
+M202095,M202,L3,Men,Shoes,Sneakers,sneakers,Men / Shoes / Sneakers,TRUE,,Sneakers,,6195,existing
+M202096,M202,L3,Men,Shoes,Loafers,loafers,Men / Shoes / Loafers,TRUE,,Slip On,,6060,existing
+M202097,M202,L3,Men,Shoes,Slippers,slippers,Men / Shoes / Slippers,TRUE,,Slip On,,4516,existing
+M202100,M202,L3,Men,Shoes,Flip Flops,flip-flops,Men / Shoes / Flip Flops,TRUE,,Beachwear; Sandals,,4143,existing
+M202098,M202,L3,Men,Shoes,Lace-Up Shoes,lace-up-shoes,Men / Shoes / Lace-Up Shoes,TRUE,,Lace Ups; Slip On,,2965,existing
+M202099,M202,L3,Men,Shoes,Sandals,sandals,Men / Shoes / Sandals,TRUE,,Sandals,,2698,existing
+M202101,M202,L3,Men,Shoes,Espadrilles,espadrilles,Men / Shoes / Espadrilles,TRUE,,Slip On,,1986,existing
+M202102,M202,L3,Men,Shoes,Other Shoes,other-shoes,Men / Shoes / Other Shoes,TRUE,,Generic,holding,1141,existing
+M202103,M202,L3,Men,Shoes,Boots,boots,Men / Shoes / Boots,TRUE,,Boots,,277,existing
+M203,M2,L2,Men,Bags,Bags,bags,Men / Bags,FALSE,,,,,
+M203104,M203,L3,Men,Bags,Crossbody Bags,crossbody-bags,Men / Bags / Crossbody Bags,TRUE,,Camera; Cross Body; Messenger,,37439,existing
+M203105,M203,L3,Men,Bags,Luggage,luggage,Men / Bags / Luggage,FALSE,,Travel,,21056,existing
+M203106,M203,L3,Men,Bags,Tote Bags,tote-bags,Men / Bags / Tote Bags,TRUE,,Carryall; Tote Bags,,19371,existing
+M203107,M203,L3,Men,Bags,Shoulder Bags,shoulder-bags,Men / Bags / Shoulder Bags,TRUE,,Shoulder Bags,,14996,existing
+M203108,M203,L3,Men,Bags,Backpacks,backpacks,Men / Bags / Backpacks,TRUE,,Backpacks,,14546,existing
+M203109,M203,L3,Men,Bags,Belt Bags,belt-bags,Men / Bags / Belt Bags,TRUE,,Belt Bags,,11351,existing
+M203110,M203,L3,Men,Bags,Top-Handle Bags,top-handle-bags,Men / Bags / Top-Handle Bags,TRUE,,Top Handle,,10915,existing
+M203111,M203,L3,Men,Bags,Clutches,clutches,Men / Bags / Clutches,TRUE,,Clutches,,8539,existing
+M203112,M203,L3,Men,Bags,Washbags,washbags,Men / Bags / Washbags,TRUE,,Washbags,,5964,existing
+M203113,M203,L3,Men,Bags,Briefcases,briefcases,Men / Bags / Briefcases,TRUE,,Briefcases,,4804,existing
+M203114,M203,L3,Men,Bags,Bucket Bags,bucket-bags,Men / Bags / Bucket Bags,TRUE,,Bucket Bag,,2506,existing
+M203115,M203,L3,Men,Bags,Other Bags,other-bags,Men / Bags / Other Bags,TRUE,,Generic,holding,439,existing
+M204,M2,L2,Men,Accessories,Accessories,accessories,Men / Accessories,FALSE,,,,,
+M204116,M204,L3,Men,Accessories,Eyewear,eyewear,Men / Accessories / Eyewear,FALSE,,Sunglasses,,32149,existing
+M204117,M204,L3,Men,Accessories,Wallets & Small Leather Goods,wallets-and-small-leather-goods,Men / Accessories / Wallets & Small Leather Goods,FALSE,,Small Leather Goods,,31234,existing
+M204118,M204,L3,Men,Accessories,Scarves & Soft Accessories,scarves-and-soft-accessories,Men / Accessories / Scarves & Soft Accessories,FALSE,,Soft Accessories,,21953,existing
+M204119,M204,L3,Men,Accessories,Lifestyle,lifestyle,Men / Accessories / Lifestyle,FALSE,,Lifestyle,,15266,existing
+M204120,M204,L3,Men,Accessories,Belts,belts,Men / Accessories / Belts,TRUE,,Belts,,13033,existing
+M204121,M204,L3,Men,Accessories,Hats,hats,Men / Accessories / Hats,FALSE,,Hats; Sunglasses,,11714,existing
+M204122,M204,L3,Men,Accessories,Bag Accessories,bag-accessories,Men / Accessories / Bag Accessories,FALSE,,Bag Accessories,,6363,existing
+M204123,M204,L3,Men,Accessories,Tech,tech,Men / Accessories / Tech,FALSE,,Lifestyle; Small Leather Goods,,4265,existing
+M204124,M204,L3,Men,Accessories,Other Accessories,other-accessories,Men / Accessories / Other Accessories,TRUE,,Generic,holding,3311,existing
+M204142,M204,L3,Men,Accessories,Beach Accessories,beach-accessories,Men / Accessories / Beach Accessories,FALSE,,Beachwear,,1508,existing
+M204125,M204,L3,Men,Accessories,Gift Sets,gift-sets,Men / Accessories / Gift Sets,TRUE,,Sets,,1220,existing
+M204126,M204,L3,Men,Accessories,Cosmetic Accessories,cosmetic-accessories,Men / Accessories / Cosmetic Accessories,FALSE,,Beauty,,963,existing
+M204143,M204,L3,Men,Accessories,Hair Accessories,hair-accessories,Men / Accessories / Hair Accessories,TRUE,,Soft Accessories,,123,new
+M205,M2,L2,Men,Jewellery,Jewellery,jewellery,Men / Jewellery,FALSE,,,,,
+M205127,M205,L3,Men,Jewellery,Bracelets,bracelets,Men / Jewellery / Bracelets,FALSE,,Bracelets; Jewellery; Small Leather Goods,,31585,existing
+M205128,M205,L3,Men,Jewellery,Rings,rings,Men / Jewellery / Rings,FALSE,,Jewellery; Rings,,12901,existing
+M205129,M205,L3,Men,Jewellery,Necklaces,necklaces,Men / Jewellery / Necklaces,FALSE,,Jewellery; Necklaces,,11936,existing
+M205130,M205,L3,Men,Jewellery,Earrings,earrings,Men / Jewellery / Earrings,TRUE,,Jewellery,,4736,existing
+M205131,M205,L3,Men,Jewellery,Cufflinks,cufflinks,Men / Jewellery / Cufflinks,TRUE,,Cufflinks; Jewellery,,3673,existing
+M205132,M205,L3,Men,Jewellery,Worry Beads,worry-beads,Men / Jewellery / Worry Beads,TRUE,,Jewellery,,2395,existing
+M205133,M205,L3,Men,Jewellery,Charms,charms,Men / Jewellery / Charms,TRUE,,Charms,,2149,existing
+M205134,M205,L3,Men,Jewellery,Key Rings,key-rings,Men / Jewellery / Key Rings,TRUE,,Jewellery,,1350,existing
+M205135,M205,L3,Men,Jewellery,Brooches,brooches,Men / Jewellery / Brooches,TRUE,,Jewellery,,469,existing
+M206,M2,L2,Men,Watches,Watches,watches,Men / Watches,FALSE,,,,,
+M206136,M206,L3,Men,Watches,Watches,watches,Men / Watches / Watches,FALSE,,Aviator; Chronograph; Diving; Dress; Smart; Sport; Watch Sets; Watches,,55786,existing
+M206137,M206,L3,Men,Watches,Watch Accessories,watch-accessories,Men / Watches / Watch Accessories,FALSE,,Watch Accessories,,9814,existing
+M207,M2,L2,Men,Beauty,Beauty,beauty,Men / Beauty,FALSE,,,,,
+M207138,M207,L3,Men,Beauty,Skincare,skincare,Men / Beauty / Skincare,FALSE,,"Cleansers And Exfoliators; Creams, Moisturisers And Serums; Grooming",,32193,existing
+M207139,M207,L3,Men,Beauty,Fragrance,fragrance,Men / Beauty / Fragrance,FALSE,,Arabic Fragrance; Fragrance,,24719,existing
+M207140,M207,L3,Men,Beauty,Hair,hair,Men / Beauty / Hair,FALSE,,Hair Care; Styling,,18417,existing
+M207141,M207,L3,Men,Beauty,Bath & Body,bath-and-body,Men / Beauty / Bath & Body,FALSE,,Bath And Shower; Body Moisturiser And Oils; Hygiene,,15530,existing
+K3,,L1,Kids,,Kids,kids,Kids,FALSE,,,,,
+K301,K3,L2,Kids,Clothing,Clothing,clothing,Kids / Clothing,FALSE,,,,,
+K301142,K301,L3,Kids,Clothing,Tops,tops,Kids / Clothing / Tops,FALSE,,Beachwear; Bodysuits; Polos; Shirts; T Shirts; Tops,,39962,existing
+K301143,K301,L3,Kids,Clothing,Coats & Jackets,coats-and-jackets,Kids / Clothing / Coats & Jackets,FALSE,,Outerwear; Pramsuits; Sweatshirts,,32565,existing
+K301145,K301,L3,Kids,Clothing,Co-ord Sets,co-ord-sets,Kids / Clothing / Co-ord Sets,TRUE,,Beachwear; Gift Sets; Loungewear; Multi Piece Sets,,25087,existing
+K301146,K301,L3,Kids,Clothing,Sleepwear,sleepwear,Kids / Clothing / Sleepwear,FALSE,,All In Ones; Beachwear; Loungewear; Sleepwear,,24457,existing
+K301147,K301,L3,Kids,Clothing,Underwear & Socks,underwear-and-socks,Kids / Clothing / Underwear & Socks,FALSE,,Kids & Baby Accessories; Multipacks; Underwear,,22884,existing
+K301149,K301,L3,Kids,Clothing,Shorts,shorts,Kids / Clothing / Shorts,FALSE,,Beachwear; Denim; Shorts; Skirts,,20421,existing
+K301150,K301,L3,Kids,Clothing,Pants,pants,Kids / Clothing / Pants,FALSE,,Trousers,,15249,existing
+K301152,K301,L3,Kids,Clothing,Jumpsuits,jumpsuits,Kids / Clothing / Jumpsuits,FALSE,,Beachwear; Dungarees; Jumpsuits; Rompers,,14328,existing
+K301148,K301,L3,Kids,Clothing,Knitwear,knitwear,Kids / Clothing / Knitwear,FALSE,,Knitwear,,14245,existing
+K301151,K301,L3,Kids,Clothing,Jeans,jeans,Kids / Clothing / Jeans,TRUE,,Denim,,11450,existing
+K301156,K301,L3,Kids,Clothing,Skirts,skirts,Kids / Clothing / Skirts,TRUE,,Beachwear; Skirts,,9687,existing
+K301154,K301,L3,Kids,Clothing,Swimwear,swimwear,Kids / Clothing / Swimwear,FALSE,,Beachwear,,8815,existing
+K301155,K301,L3,Kids,Clothing,Blazers & Suits,blazers-and-suits,Kids / Clothing / Blazers & Suits,FALSE,,Blazers,,8590,existing
+K301157,K301,L3,Kids,Clothing,Dresses,dresses,Kids / Clothing / Dresses,TRUE,,Beachwear; Dresses; Knitwear,,8498,existing
+K301153,K301,L3,Kids,Clothing,Sweatshirts,sweatshirts,Kids / Clothing / Sweatshirts,FALSE,,Sweatshirts,,8368,existing
+K301158,K301,L3,Kids,Clothing,Kaftans,kaftans,Kids / Clothing / Kaftans,TRUE,,Beachwear,,3484,existing
+K301161,K301,L3,Kids,Clothing,Activewear,activewear,Kids / Clothing / Activewear,FALSE,,Activewear; Tracksuits,,3438,existing
+K302,K3,L2,Kids,Shoes,Shoes,shoes,Kids / Shoes,FALSE,,,,,
+K302162,K302,L3,Kids,Shoes,Loafers,loafers,Kids / Shoes / Loafers,TRUE,,Flats; Slip On,,10011,existing
+K302164,K302,L3,Kids,Shoes,Flip Flops,flip-flops,Kids / Shoes / Flip Flops,TRUE,,Beachwear; Sandals,,8875,existing
+K302163,K302,L3,Kids,Shoes,Baby Shoes,baby-shoes,Kids / Shoes / Baby Shoes,FALSE,,Kids & Baby Accessories,,8800,existing
+K302165,K302,L3,Kids,Shoes,Other Shoes,other-shoes,Kids / Shoes / Other Shoes,TRUE,,Flats; Footwear,holding,6373,existing
+K302166,K302,L3,Kids,Shoes,Ballerinas,ballerinas,Kids / Shoes / Ballerinas,TRUE,,Flats,,5250,existing
+K302167,K302,L3,Kids,Shoes,Sneakers,sneakers,Kids / Shoes / Sneakers,TRUE,,Sneakers,,4852,existing
+K302168,K302,L3,Kids,Shoes,Boots,boots,Kids / Shoes / Boots,TRUE,,Boots,,3937,existing
+K302169,K302,L3,Kids,Shoes,Slippers,slippers,Kids / Shoes / Slippers,TRUE,,Slip On,,3660,existing
+K302170,K302,L3,Kids,Shoes,Sandals,sandals,Kids / Shoes / Sandals,TRUE,,Sandals,,2859,existing
+K302171,K302,L3,Kids,Shoes,Espadrilles,espadrilles,Kids / Shoes / Espadrilles,TRUE,,Slip On,,2285,existing
+K302172,K302,L3,Kids,Shoes,Slides,slides,Kids / Shoes / Slides,TRUE,,Flats,,1871,existing
+K302173,K302,L3,Kids,Shoes,Heels,heels,Kids / Shoes / Heels,TRUE,,Heels,holding,915,existing
+K302174,K302,L3,Kids,Shoes,Lace-Up Shoes,lace-up-shoes,Kids / Shoes / Lace-Up Shoes,TRUE,,Lace Ups,,899,existing
+K303,K3,L2,Kids,Bags,Bags,bags,Kids / Bags,FALSE,,,,,
+K303175,K303,L3,Kids,Bags,Backpacks,backpacks,Kids / Bags / Backpacks,FALSE,,Backpacks,,16269,existing
+K303176,K303,L3,Kids,Bags,Lunch Bags,lunch-bags,Kids / Bags / Lunch Bags,TRUE,,Lunch Bags; Lunch Boxes,,13581,existing
+K303177,K303,L3,Kids,Bags,Luggage,luggage,Kids / Bags / Luggage,FALSE,,Travel,,11829,existing
+K303178,K303,L3,Kids,Bags,Changing Bags,changing-bags,Kids / Bags / Changing Bags,TRUE,,Changing Bags,,11718,existing
+K303179,K303,L3,Kids,Bags,Crossbody Bags,crossbody-bags,Kids / Bags / Crossbody Bags,TRUE,,Cross Body,,7740,existing
+K303180,K303,L3,Kids,Bags,Top-Handle Bags,top-handle-bags,Kids / Bags / Top-Handle Bags,TRUE,,Top Handle,,6187,existing
+K303181,K303,L3,Kids,Bags,Shoulder Bags,shoulder-bags,Kids / Bags / Shoulder Bags,TRUE,,Shoulder Bags,,5792,existing
+K303182,K303,L3,Kids,Bags,Belt Bags,belt-bags,Kids / Bags / Belt Bags,TRUE,,Belt Bags,,5705,existing
+K303183,K303,L3,Kids,Bags,Bucket Bags,bucket-bags,Kids / Bags / Bucket Bags,TRUE,,Bucket Bag,,4426,existing
+K303184,K303,L3,Kids,Bags,Tote Bags,tote-bags,Kids / Bags / Tote Bags,TRUE,,Tote Bags,,2843,existing
+K303185,K303,L3,Kids,Bags,Washbags,washbags,Kids / Bags / Washbags,TRUE,,Washbags,,2682,existing
+K303186,K303,L3,Kids,Bags,Clutches,clutches,Kids / Bags / Clutches,TRUE,,Clutches,,1802,existing
+K304,K3,L2,Kids,Accessories,Accessories,accessories,Kids / Accessories,FALSE,,,,,
+K304187,K304,L3,Kids,Accessories,Baby Essentials,baby-essentials,Kids / Accessories / Baby Essentials,FALSE,,Kids & Baby Accessories,,37700,existing
+K304188,K304,L3,Kids,Accessories,Hats,hats,Kids / Accessories / Hats,FALSE,,Hats; Kids & Baby Accessories,,18848,existing
+K304209,K304,L3,Kids,Accessories,Beach Accessories,beach-accessories,Kids / Accessories / Beach Accessories,FALSE,,Beachwear,,13809,existing
+K304190,K304,L3,Kids,Accessories,Scarves & Soft Accessories,scarves-and-soft-accessories,Kids / Accessories / Scarves & Soft Accessories,FALSE,,Soft Accessories,,10101,existing
+K304191,K304,L3,Kids,Accessories,Eyewear,eyewear,Kids / Accessories / Eyewear,FALSE,,Sunglasses,,9524,existing
+K304189,K304,L3,Kids,Accessories,Baby Accessories,baby-accessories,Kids / Accessories / Baby Accessories,FALSE,,Kids & Baby Accessories,,9299,existing
+K304192,K304,L3,Kids,Accessories,Wallets & Small Leather Goods,wallets-and-small-leather-goods,Kids / Accessories / Wallets & Small Leather Goods,FALSE,,Small Leather Goods,,9043,existing
+K304193,K304,L3,Kids,Accessories,Lifestyle,lifestyle,Kids / Accessories / Lifestyle,FALSE,,Lifestyle,,3135,existing
+K304210,K304,L3,Kids,Accessories,Hair Accessories,hair-accessories,Kids / Accessories / Hair Accessories,TRUE,,Kids & Baby Accessories,,1594,new
+K304194,K304,L3,Kids,Accessories,Belts,belts,Kids / Accessories / Belts,TRUE,,Belts,,1076,existing
+K305,K3,L2,Kids,Jewellery,Jewellery,jewellery,Kids / Jewellery,FALSE,,,,,
+K305195,K305,L3,Kids,Jewellery,Necklaces,necklaces,Kids / Jewellery / Necklaces,FALSE,,Jewellery; Necklaces,,11100,existing
+K305196,K305,L3,Kids,Jewellery,Bracelets,bracelets,Kids / Jewellery / Bracelets,FALSE,,Bracelets,,10310,existing
+K305197,K305,L3,Kids,Jewellery,Earrings,earrings,Kids / Jewellery / Earrings,FALSE,,Earrings; Jewellery,,8407,existing
+K305198,K305,L3,Kids,Jewellery,Charms,charms,Kids / Jewellery / Charms,TRUE,,Charms,,2809,existing
+K305199,K305,L3,Kids,Jewellery,Rings,rings,Kids / Jewellery / Rings,FALSE,,Rings,,1311,existing
+K305200,K305,L3,Kids,Jewellery,Jewellery Sets,jewellery-sets,Kids / Jewellery / Jewellery Sets,TRUE,,Sets,,1235,existing
+K305201,K305,L3,Kids,Jewellery,Brooches,brooches,Kids / Jewellery / Brooches,TRUE,,Brooches,,975,existing
+K305202,K305,L3,Kids,Jewellery,Anklets,anklets,Kids / Jewellery / Anklets,TRUE,,Anklets,,712,existing
+K306,K3,L2,Kids,Watches,Watches,watches,Kids / Watches,FALSE,,,,,
+K306203,K306,L3,Kids,Watches,Watches,watches,Kids / Watches / Watches,FALSE,,Kids & Baby Accessories; Sport,,2397,existing
+K307,K3,L2,Kids,Beauty,Beauty,beauty,Kids / Beauty,FALSE,,,,,
+K307204,K307,L3,Kids,Beauty,Fragrance,fragrance,Kids / Beauty / Fragrance,FALSE,,Fragrance,,10913,existing
+K307205,K307,L3,Kids,Beauty,Skincare,skincare,Kids / Beauty / Skincare,FALSE,,"Creams, Moisturisers And Serums; Sun Care",,5198,existing
+K307206,K307,L3,Kids,Beauty,Wellness,wellness,Kids / Beauty / Wellness,FALSE,,Aromatherapy,,3162,existing
+K307207,K307,L3,Kids,Beauty,Hair,hair,Kids / Beauty / Hair,FALSE,,Hair Care,,2923,existing
+K307208,K307,L3,Kids,Beauty,Bath & Body,bath-and-body,Kids / Beauty / Bath & Body,FALSE,,Body Moisturiser And Oils,,1693,existing
+U4,,L1,Unisex,,Unisex,unisex,Unisex,FALSE,,,,,
+U401,U4,L2,Unisex,Clothing,Clothing,clothing,Unisex / Clothing,FALSE,,,,,
+U401209,U401,L3,Unisex,Clothing,Sweatshirts,sweatshirts,Unisex / Clothing / Sweatshirts,FALSE,,Sweatshirts,,7725,existing
+U401210,U401,L3,Unisex,Clothing,Knitwear,knitwear,Unisex / Clothing / Knitwear,FALSE,,Knitwear,,5097,existing
+U401211,U401,L3,Unisex,Clothing,Coats & Jackets,coats-and-jackets,Unisex / Clothing / Coats & Jackets,FALSE,,Outerwear,,3738,existing
+U401212,U401,L3,Unisex,Clothing,Tops,tops,Unisex / Clothing / Tops,FALSE,,Shirts; T Shirts,,3584,existing
+U401213,U401,L3,Unisex,Clothing,Pants,pants,Unisex / Clothing / Pants,FALSE,,Trousers,,2666,existing
+U401214,U401,L3,Unisex,Clothing,Shorts,shorts,Unisex / Clothing / Shorts,FALSE,,Shorts,,2530,existing
+U401251,U401,L3,Unisex,Clothing,Sleepwear,sleepwear,Unisex / Clothing / Sleepwear,FALSE,,Beachwear,,1006,existing
+U401216,U401,L3,Unisex,Clothing,Underwear & Socks,underwear-and-socks,Unisex / Clothing / Underwear & Socks,FALSE,,Underwear,,360,existing
+U402,U4,L2,Unisex,Shoes,Shoes,shoes,Unisex / Shoes,FALSE,,,,,
+U402217,U402,L3,Unisex,Shoes,Sneakers,sneakers,Unisex / Shoes / Sneakers,TRUE,,Sneakers,,4921,existing
+U403,U4,L2,Unisex,Bags,Bags,bags,Unisex / Bags,FALSE,,,,,
+U403218,U403,L3,Unisex,Bags,Luggage,luggage,Unisex / Bags / Luggage,FALSE,,Special Gifting; Travel,,13707,existing
+U403219,U403,L3,Unisex,Bags,Tote Bags,tote-bags,Unisex / Bags / Tote Bags,TRUE,,Carryall; Tote Bags,,6739,existing
+U403220,U403,L3,Unisex,Bags,Shoulder Bags,shoulder-bags,Unisex / Bags / Shoulder Bags,TRUE,,Shoulder Bags,,5900,existing
+U403221,U403,L3,Unisex,Bags,Backpacks,backpacks,Unisex / Bags / Backpacks,TRUE,,Backpacks,,5727,existing
+U403222,U403,L3,Unisex,Bags,Crossbody Bags,crossbody-bags,Unisex / Bags / Crossbody Bags,TRUE,,Camera; Cross Body,,5067,existing
+U403223,U403,L3,Unisex,Bags,Belt Bags,belt-bags,Unisex / Bags / Belt Bags,TRUE,,Belt Bags,,4912,existing
+U403224,U403,L3,Unisex,Bags,Top-Handle Bags,top-handle-bags,Unisex / Bags / Top-Handle Bags,TRUE,,Top Handle,,4359,existing
+U403225,U403,L3,Unisex,Bags,Briefcases,briefcases,Unisex / Bags / Briefcases,TRUE,,Briefcases,,3440,existing
+U403226,U403,L3,Unisex,Bags,Washbags,washbags,Unisex / Bags / Washbags,TRUE,,Washbags,,327,existing
+U404,U4,L2,Unisex,Accessories,Accessories,accessories,Unisex / Accessories,FALSE,,,,,
+U404227,U404,L3,Unisex,Accessories,Eyewear,eyewear,Unisex / Accessories / Eyewear,FALSE,,Eyeglasses; Sunglasses,,19157,existing
+U404228,U404,L3,Unisex,Accessories,Wallets & Small Leather Goods,wallets-and-small-leather-goods,Unisex / Accessories / Wallets & Small Leather Goods,FALSE,,Small Leather Goods,,18936,existing
+U404229,U404,L3,Unisex,Accessories,Lifestyle,lifestyle,Unisex / Accessories / Lifestyle,FALSE,,Lifestyle; Special Gifting,,14456,existing
+U404230,U404,L3,Unisex,Accessories,Hats,hats,Unisex / Accessories / Hats,FALSE,,Hats; Sunglasses,,8732,existing
+U404232,U404,L3,Unisex,Accessories,Belts,belts,Unisex / Accessories / Belts,TRUE,,Belts,,4040,existing
+U404233,U404,L3,Unisex,Accessories,Tech,tech,Unisex / Accessories / Tech,FALSE,,Lifestyle; Small Leather Goods,,3945,existing
+U404252,U404,L3,Unisex,Accessories,Hair Accessories,hair-accessories,Unisex / Accessories / Hair Accessories,TRUE,,Soft Accessories,,3287,new
+U404231,U404,L3,Unisex,Accessories,Scarves & Soft Accessories,scarves-and-soft-accessories,Unisex / Accessories / Scarves & Soft Accessories,FALSE,,Soft Accessories,,2360,existing
+U404234,U404,L3,Unisex,Accessories,Other Accessories,other-accessories,Unisex / Accessories / Other Accessories,TRUE,,Generic,holding,2031,existing
+U405,U4,L2,Unisex,Jewellery,Jewellery,jewellery,Unisex / Jewellery,FALSE,,,,,
+U405235,U405,L3,Unisex,Jewellery,Bracelets,bracelets,Unisex / Jewellery / Bracelets,FALSE,,Bracelets; Jewellery,,14661,existing
+U405236,U405,L3,Unisex,Jewellery,Cufflinks,cufflinks,Unisex / Jewellery / Cufflinks,TRUE,,Cufflinks,,3614,existing
+U405237,U405,L3,Unisex,Jewellery,Brooches,brooches,Unisex / Jewellery / Brooches,TRUE,,Jewellery,,3244,existing
+U405238,U405,L3,Unisex,Jewellery,Earrings,earrings,Unisex / Jewellery / Earrings,FALSE,,Earrings,,3097,existing
+U405239,U405,L3,Unisex,Jewellery,Charms,charms,Unisex / Jewellery / Charms,TRUE,,Charms,,2949,existing
+U405240,U405,L3,Unisex,Jewellery,Necklaces,necklaces,Unisex / Jewellery / Necklaces,TRUE,,Jewellery,,2915,existing
+U405241,U405,L3,Unisex,Jewellery,Rings,rings,Unisex / Jewellery / Rings,FALSE,,Jewellery; Rings,,1373,existing
+U405242,U405,L3,Unisex,Jewellery,Key Rings,key-rings,Unisex / Jewellery / Key Rings,TRUE,,Jewellery,,1244,existing
+U406,U4,L2,Unisex,Watches,Watches,watches,Unisex / Watches,FALSE,,,,,
+U406243,U406,L3,Unisex,Watches,Watches,watches,Unisex / Watches / Watches,FALSE,,Diving; Dress; Smart; Sport,,8626,existing
+U406244,U406,L3,Unisex,Watches,Watch Accessories,watch-accessories,Unisex / Watches / Watch Accessories,FALSE,,Watch Accessories,,5122,existing
+U407,U4,L2,Unisex,Beauty,Beauty,beauty,Unisex / Beauty,FALSE,,,,,
+U407245,U407,L3,Unisex,Beauty,Skincare,skincare,Unisex / Beauty / Skincare,FALSE,,"Cleansers And Exfoliators; Creams, Moisturisers And Serums; Grooming; Mask; Sun Care; Tools And Accessories",,69772,existing
+U407246,U407,L3,Unisex,Beauty,Hair,hair,Unisex / Beauty / Hair,FALSE,,Hair Care; Hair Tools And Accessories; Styling,,44096,existing
+U407247,U407,L3,Unisex,Beauty,Fragrance,fragrance,Unisex / Beauty / Fragrance,FALSE,,Arabic Fragrance; Fragrance,,29093,existing
+U407248,U407,L3,Unisex,Beauty,Bath & Body,bath-and-body,Unisex / Beauty / Bath & Body,FALSE,,Bath And Shower; Body Moisturiser And Oils; Hygiene; Special Gifting,,25091,existing
+U407249,U407,L3,Unisex,Beauty,Home Fragrance,home-fragrance,Unisex / Beauty / Home Fragrance,FALSE,,Home Care; Home Essence,,18506,existing
+U407250,U407,L3,Unisex,Beauty,Wellness,wellness,Unisex / Beauty / Wellness,FALSE,,Aromatherapy; Sleep; Supplements,,12096,existing
+A5,,L1,All,,All,all,All,FALSE,,,,,
+A508,A5,L2,All,Home,Home,home,All / Home,FALSE,,,,,
+A508251,A508,L3,All,Home,Dining,dining,All / Home / Dining,FALSE,,Crockery; Cutlery; Drinkware; Food Storage; Ramadan; Servingware; Utensils,,140353,existing
+A508252,A508,L3,All,Home,Home Accessories,home-accessories,All / Home / Home Accessories,FALSE,,Bathroom; Christmas; Decorative Accessories; Gifting; Silver Accessory; Special Gifting; Tabletop,,94915,existing
+A508253,A508,L3,All,Home,Textiles,textiles,All / Home / Textiles,FALSE,,Bathroom; Bedding,,32129,existing
+A508254,A508,L3,All,Home,Toys,toys,All / Home / Toys,FALSE,,Activity Toys,,6731,existing
+A508255,A508,L3,All,Home,Travel,travel,All / Home / Travel,FALSE,,Travel Accessories,,5958,existing
+A508256,A508,L3,All,Home,Tech & Appliances,tech-and-appliances,All / Home / Tech & Appliances,FALSE,,"Appliances, Tools & Gadgets",,5320,existing
+A508257,A508,L3,All,Home,Furniture,furniture,All / Home / Furniture,FALSE,,Living Room,,2516,existing
+A509,A5,L2,All,Food,Food,food,All / Food,FALSE,,,,,
+A509258,A509,L3,All,Food,Chocolates,chocolates,All / Food / Chocolates,FALSE,,Chocolates,,4791,existing
+A509259,A509,L3,All,Food,Baked Goods,baked-goods,All / Food / Baked Goods,FALSE,,Baked Goods,,3548,existing
+A509260,A509,L3,All,Food,Spreadables & Preserves,spreadables-and-preserves,All / Food / Spreadables & Preserves,FALSE,,Spreadables & Preserves,,2779,existing
+A509261,A509,L3,All,Food,Candies,candies,All / Food / Candies,FALSE,,Candies,,2338,existing
+A509262,A509,L3,All,Food,Beverage,beverage,All / Food / Beverage,FALSE,,Beverage,,2284,existing
+A509263,A509,L3,All,Food,Hampers & Gift Boxes,hampers-and-gift-boxes,All / Food / Hampers & Gift Boxes,FALSE,,Hampers & Gift Boxes,,1641,existing
+A508251-01,A508251,L4,All,Home,Drinkware,drinkware,All / Home / Dining / Drinkware,TRUE,,,,38066,existing
+A508251-02,A508251,L4,All,Home,Servingware,servingware,All / Home / Dining / Servingware,TRUE,,,,36375,existing
+A508251-03,A508251,L4,All,Home,Crockery,crockery,All / Home / Dining / Crockery,TRUE,,,,33363,existing
+A508251-04,A508251,L4,All,Home,Cutlery,cutlery,All / Home / Dining / Cutlery,TRUE,,,,19213,existing
+A508251-05,A508251,L4,All,Home,Utensils,utensils,All / Home / Dining / Utensils,TRUE,,,,7668,existing
+A508251-06,A508251,L4,All,Home,Serveware,serveware,All / Home / Dining / Serveware,TRUE,,,,3259,existing
+A508251-07,A508251,L4,All,Home,Food Storage,food-storage,All / Home / Dining / Food Storage,TRUE,,,,2409,existing
+A508252-01,A508252,L4,All,Home,Decorative Accessories,decorative-accessories,All / Home / Home Accessories / Decorative Accessories,TRUE,,,,62784,existing
+A508252-02,A508252,L4,All,Home,Tabletop,tabletop,All / Home / Home Accessories / Tabletop,TRUE,,,,12087,existing
+A508252-03,A508252,L4,All,Home,Bathroom,bathroom,All / Home / Home Accessories / Bathroom,TRUE,,,,4609,existing
+A508252-04,A508252,L4,All,Home,Trinket Boxes,trinket-boxes,All / Home / Home Accessories / Trinket Boxes,TRUE,,,,4256,existing
+A508252-05,A508252,L4,All,Home,Picture Frames,picture-frames,All / Home / Home Accessories / Picture Frames,TRUE,,,,3009,existing
+A508252-06,A508252,L4,All,Home,Photo Albums,photo-albums,All / Home / Home Accessories / Photo Albums,TRUE,,,,2409,existing
+A508252-07,A508252,L4,All,Home,Decorations,decorations,All / Home / Home Accessories / Decorations,TRUE,,,,1195,existing
+A508253-01,A508253,L4,All,Home,Bathroom,bathroom,All / Home / Textiles / Bathroom,TRUE,,,,22892,existing
+A508253-02,A508253,L4,All,Home,Bedding,bedding,All / Home / Textiles / Bedding,TRUE,,,,9237,existing
+A508254-01,A508254,L4,All,Home,Activity Toys,activity-toys,All / Home / Toys / Activity Toys,TRUE,,,,6731,existing
+A508255-01,A508255,L4,All,Home,Travel Accessories,travel-accessories,All / Home / Travel / Travel Accessories,TRUE,,,,5958,existing
+A508256-01,A508256,L4,All,Home,"Appliances, Tools & Gadgets",appliances-tools-and-gadgets,"All / Home / Tech & Appliances / Appliances, Tools & Gadgets",TRUE,,,,5320,existing
+A508257-01,A508257,L4,All,Home,Living Room,living-room,All / Home / Furniture / Living Room,TRUE,,,,2516,existing
+A509258-01,A509258,L4,All,Food,Pralines,pralines,All / Food / Chocolates / Pralines,TRUE,,,,2862,existing
+A509258-02,A509258,L4,All,Food,Squares,squares,All / Food / Chocolates / Squares,TRUE,,,,1587,existing
+A509258-03,A509258,L4,All,Food,Gianduiotto,gianduiotto,All / Food / Chocolates / Gianduiotto,TRUE,,,,342,existing
+A509259-01,A509259,L4,All,Food,Pandoro,pandoro,All / Food / Baked Goods / Pandoro,TRUE,,,,2280,existing
+A509259-02,A509259,L4,All,Food,Panettone,panettone,All / Food / Baked Goods / Panettone,TRUE,,,,1268,existing
+A509260-01,A509260,L4,All,Food,Creams,creams,All / Food / Spreadables & Preserves / Creams,TRUE,,,,2067,existing
+A509260-02,A509260,L4,All,Food,Jams,jams,All / Food / Spreadables & Preserves / Jams,TRUE,,,,712,existing
+A509261-01,A509261,L4,All,Food,Marron Glacé,marron-glac,All / Food / Candies / Marron Glacé,TRUE,,,,1875,existing
+A509261-02,A509261,L4,All,Food,Jellies,jellies,All / Food / Candies / Jellies,TRUE,,,,463,existing
+A509262-01,A509262,L4,All,Food,Tea,tea,All / Food / Beverage / Tea,TRUE,,,,2284,existing
+A509263-01,A509263,L4,All,Food,Gift Boxes,gift-boxes,All / Food / Hampers & Gift Boxes / Gift Boxes,TRUE,,,,1641,existing
+K301142-01,K301142,L4,Kids,Clothing,T-Shirts,t-shirts,Kids / Clothing / Tops / T-Shirts,TRUE,,,,9111,existing
+K301142-02,K301142,L4,Kids,Clothing,Shirts,shirts,Kids / Clothing / Tops / Shirts,TRUE,,,,7894,existing
+K301142-03,K301142,L4,Kids,Clothing,Bodysuits,bodysuits,Kids / Clothing / Tops / Bodysuits,TRUE,,,,5719,existing
+K301142-04,K301142,L4,Kids,Clothing,Polo Shirts,polo-shirts,Kids / Clothing / Tops / Polo Shirts,TRUE,,,,3829,existing
+K301142-05,K301142,L4,Kids,Clothing,Blouses,blouses,Kids / Clothing / Tops / Blouses,TRUE,,,,3433,existing
+K301143-01,K301143,L4,Kids,Clothing,Bombers & Blousons,bombers-and-blousons,Kids / Clothing / Coats & Jackets / Bombers & Blousons,TRUE,,,,4560,existing
+K301143-02,K301143,L4,Kids,Clothing,Capes & Ponchos,capes-and-ponchos,Kids / Clothing / Coats & Jackets / Capes & Ponchos,TRUE,,,,3562,existing
+K301143-03,K301143,L4,Kids,Clothing,Gilets,gilets,Kids / Clothing / Coats & Jackets / Gilets,TRUE,,,,3393,existing
+K301143-04,K301143,L4,Kids,Clothing,Pramsuits,pramsuits,Kids / Clothing / Coats & Jackets / Pramsuits,TRUE,,,,3268,existing
+K301143-05,K301143,L4,Kids,Clothing,Coats,coats,Kids / Clothing / Coats & Jackets / Coats,TRUE,,,,2631,existing
+K301143-06,K301143,L4,Kids,Clothing,Snowsuits,snowsuits,Kids / Clothing / Coats & Jackets / Snowsuits,TRUE,,,,2176,existing
+K301143-07,K301143,L4,Kids,Clothing,Parkas,parkas,Kids / Clothing / Coats & Jackets / Parkas,TRUE,,,,1840,existing
+K301143-08,K301143,L4,Kids,Clothing,Jackets,jackets,Kids / Clothing / Coats & Jackets / Jackets,TRUE,,,,1401,existing
+K301143-09,K301143,L4,Kids,Clothing,Trench Coats,trench-coats,Kids / Clothing / Coats & Jackets / Trench Coats,TRUE,,,,584,existing
+K301146-01,K301146,L4,Kids,Clothing,Pyjama Sets,pyjama-sets,Kids / Clothing / Sleepwear / Pyjama Sets,TRUE,,,,6724,existing
+K301146-02,K301146,L4,Kids,Clothing,Onesies,onesies,Kids / Clothing / Sleepwear / Onesies,TRUE,,,,5729,existing
+K301146-03,K301146,L4,Kids,Clothing,Robes & Dressing Gowns,robes-and-dressing-gowns,Kids / Clothing / Sleepwear / Robes & Dressing Gowns,TRUE,,,,5442,existing
+K301147-01,K301147,L4,Kids,Clothing,Socks,socks,Kids / Clothing / Underwear & Socks / Socks,TRUE,,,,10362,existing
+K301147-02,K301147,L4,Kids,Clothing,Briefs,briefs,Kids / Clothing / Underwear & Socks / Briefs,TRUE,,,,3309,existing
+K301147-03,K301147,L4,Kids,Clothing,Bottoms,bottoms,Kids / Clothing / Underwear & Socks / Bottoms,TRUE,,,,3042,existing
+K301147-04,K301147,L4,Kids,Clothing,Boxers,boxers,Kids / Clothing / Underwear & Socks / Boxers,TRUE,,,,3019,existing
+K301147-05,K301147,L4,Kids,Clothing,Basic Tops,basic-tops,Kids / Clothing / Underwear & Socks / Basic Tops,TRUE,,,,929,existing
+K301148-01,K301148,L4,Kids,Clothing,Jumpers,jumpers,Kids / Clothing / Knitwear / Jumpers,TRUE,,,,7657,existing
+K301148-02,K301148,L4,Kids,Clothing,Hoodies,hoodies,Kids / Clothing / Knitwear / Hoodies,TRUE,,,,2521,existing
+K301148-03,K301148,L4,Kids,Clothing,Knit Polos,knit-polos,Kids / Clothing / Knitwear / Knit Polos,TRUE,,,,661,existing
+K301148-04,K301148,L4,Kids,Clothing,Cardigans,cardigans,Kids / Clothing / Knitwear / Cardigans,TRUE,,,,174,existing
+K301149-01,K301149,L4,Kids,Clothing,Denim Shorts,denim-shorts,Kids / Clothing / Shorts / Denim Shorts,TRUE,,,,3174,existing
+K301149-02,K301149,L4,Kids,Clothing,Sweatshorts,sweatshorts,Kids / Clothing / Shorts / Sweatshorts,TRUE,,,,3022,existing
+K301149-03,K301149,L4,Kids,Clothing,Cargo Shorts,cargo-shorts,Kids / Clothing / Shorts / Cargo Shorts,TRUE,,,,2715,existing
+K301149-04,K301149,L4,Kids,Clothing,Chino Shorts,chino-shorts,Kids / Clothing / Shorts / Chino Shorts,TRUE,,,,2671,existing
+K301150-01,K301150,L4,Kids,Clothing,Leggings,leggings,Kids / Clothing / Pants / Leggings,TRUE,,,,3452,existing
+K301150-02,K301150,L4,Kids,Clothing,Joggers & Sweatpants,joggers-and-sweatpants,Kids / Clothing / Pants / Joggers & Sweatpants,TRUE,,,,2117,existing
+K301150-03,K301150,L4,Kids,Clothing,Cargo Pants,cargo-pants,Kids / Clothing / Pants / Cargo Pants,TRUE,,,,1598,existing
+K301150-04,K301150,L4,Kids,Clothing,Chinos,chinos,Kids / Clothing / Pants / Chinos,TRUE,,,,1042,existing
+K301152-01,K301152,L4,Kids,Clothing,Rompers,rompers,Kids / Clothing / Jumpsuits / Rompers,TRUE,,,,6044,existing
+K301152-02,K301152,L4,Kids,Clothing,Dungarees,dungarees,Kids / Clothing / Jumpsuits / Dungarees,TRUE,,,,2583,existing
+K301153-01,K301153,L4,Kids,Clothing,Sweatshirts,sweatshirts,Kids / Clothing / Sweatshirts / Sweatshirts,TRUE,,,,3001,existing
+K301153-02,K301153,L4,Kids,Clothing,Hoodies,hoodies,Kids / Clothing / Sweatshirts / Hoodies,TRUE,,,,146,existing
+K301154-01,K301154,L4,Kids,Clothing,Bikini Bottoms,bikini-bottoms,Kids / Clothing / Swimwear / Bikini Bottoms,TRUE,,,,1621,existing
+K301154-02,K301154,L4,Kids,Clothing,Swim Shorts,swim-shorts,Kids / Clothing / Swimwear / Swim Shorts,TRUE,,,,1575,existing
+K301154-03,K301154,L4,Kids,Clothing,Bikini,bikini,Kids / Clothing / Swimwear / Bikini,TRUE,,,,1204,existing
+K301154-04,K301154,L4,Kids,Clothing,Bikini Tops,bikini-tops,Kids / Clothing / Swimwear / Bikini Tops,TRUE,,,,1181,existing
+K301154-05,K301154,L4,Kids,Clothing,One Piece Swimsuit,one-piece-swimsuit,Kids / Clothing / Swimwear / One Piece Swimsuit,TRUE,,,,914,existing
+K301155-01,K301155,L4,Kids,Clothing,Waistcoats,waistcoats,Kids / Clothing / Blazers & Suits / Waistcoats,TRUE,,,,1505,existing
+K301161-01,K301161,L4,Kids,Clothing,Tracksuits,tracksuits,Kids / Clothing / Activewear / Tracksuits,TRUE,,,,1731,existing
+K302163-01,K302163,L4,Kids,Shoes,Booties,booties,Kids / Shoes / Baby Shoes / Booties,TRUE,,,,5865,existing
+K303175-01,K303175,L4,Kids,Bags,Swim Bags,swim-bags,Kids / Bags / Backpacks / Swim Bags,TRUE,,,,135,existing
+K303177-01,K303177,L4,Kids,Bags,Duffle,duffle,Kids / Bags / Luggage / Duffle,TRUE,,,,8744,existing
+K303177-02,K303177,L4,Kids,Bags,Suitcases,suitcases,Kids / Bags / Luggage / Suitcases,TRUE,,,,2050,existing
+K304187-01,K304187,L4,Kids,Accessories,Changing Mats,changing-mats,Kids / Accessories / Baby Essentials / Changing Mats,TRUE,,,,5995,existing
+K304187-02,K304187,L4,Kids,Accessories,Toy,toy,Kids / Accessories / Baby Essentials / Toy,TRUE,,,,4020,existing
+K304187-03,K304187,L4,Kids,Accessories,Bags,bags,Kids / Accessories / Baby Essentials / Bags,TRUE,,,,3925,existing
+K304187-04,K304187,L4,Kids,Accessories,Sleeping Bag,sleeping-bag,Kids / Accessories / Baby Essentials / Sleeping Bag,TRUE,,,,3619,existing
+K304187-05,K304187,L4,Kids,Accessories,Pacifier,pacifier,Kids / Accessories / Baby Essentials / Pacifier,TRUE,,,,3194,existing
+K304187-06,K304187,L4,Kids,Accessories,Nursery Accessories,nursery-accessories,Kids / Accessories / Baby Essentials / Nursery Accessories,TRUE,,,,2831,existing
+K304187-07,K304187,L4,Kids,Accessories,Bottles,bottles,Kids / Accessories / Baby Essentials / Bottles,TRUE,,,,2808,existing
+K304187-08,K304187,L4,Kids,Accessories,Food Jars,food-jars,Kids / Accessories / Baby Essentials / Food Jars,TRUE,,,,2423,existing
+K304187-09,K304187,L4,Kids,Accessories,Stroller,stroller,Kids / Accessories / Baby Essentials / Stroller,TRUE,,,,2378,existing
+K304187-10,K304187,L4,Kids,Accessories,Bibs,bibs,Kids / Accessories / Baby Essentials / Bibs,TRUE,,,,2215,existing
+K304187-11,K304187,L4,Kids,Accessories,Blankets,blankets,Kids / Accessories / Baby Essentials / Blankets,TRUE,,,,2196,existing
+K304187-12,K304187,L4,Kids,Accessories,Burping Cloth,burping-cloth,Kids / Accessories / Baby Essentials / Burping Cloth,TRUE,,,,1116,existing
+K304187-13,K304187,L4,Kids,Accessories,Towels,towels,Kids / Accessories / Baby Essentials / Towels,TRUE,,,,980,existing
+K304188-01,K304188,L4,Kids,Accessories,Caps,caps,Kids / Accessories / Hats / Caps,TRUE,,,,5211,existing
+K304188-02,K304188,L4,Kids,Accessories,Bucket Hats,bucket-hats,Kids / Accessories / Hats / Bucket Hats,TRUE,,,,4210,existing
+K304188-03,K304188,L4,Kids,Accessories,Beanie,beanie,Kids / Accessories / Hats / Beanie,TRUE,,,,2120,existing
+K304188-04,K304188,L4,Kids,Accessories,Cold Weather,cold-weather,Kids / Accessories / Hats / Cold Weather,TRUE,,,,2009,existing
+K304189-02,K304189,L4,Kids,Accessories,Baby Hat,baby-hat,Kids / Accessories / Baby Accessories / Baby Hat,TRUE,,,,2698,existing
+K304189-04,K304189,L4,Kids,Accessories,Cold Weather Accessories,cold-weather-accessories,Kids / Accessories / Baby Accessories / Cold Weather Accessories,TRUE,,,,1367,existing
+K304189-05,K304189,L4,Kids,Accessories,Pencil Case,pencil-case,Kids / Accessories / Baby Accessories / Pencil Case,TRUE,,,,1167,existing
+K304190-01,K304190,L4,Kids,Accessories,Bowties,bowties,Kids / Accessories / Scarves & Soft Accessories / Bowties,TRUE,,,,3465,existing
+K304190-02,K304190,L4,Kids,Accessories,Gloves,gloves,Kids / Accessories / Scarves & Soft Accessories / Gloves,TRUE,,,,2700,existing
+K304190-03,K304190,L4,Kids,Accessories,Ties,ties,Kids / Accessories / Scarves & Soft Accessories / Ties,TRUE,,,,1746,existing
+K304190-04,K304190,L4,Kids,Accessories,Face Masks,face-masks,Kids / Accessories / Scarves & Soft Accessories / Face Masks,TRUE,,,,1191,existing
+K304190-05,K304190,L4,Kids,Accessories,Scarves,scarves,Kids / Accessories / Scarves & Soft Accessories / Scarves,TRUE,,,,999,existing
+K304191-01,K304191,L4,Kids,Accessories,Sunglasses,sunglasses,Kids / Accessories / Eyewear / Sunglasses,TRUE,,,,9524,new
+K304192-01,K304192,L4,Kids,Accessories,Card Holders,card-holders,Kids / Accessories / Wallets & Small Leather Goods / Card Holders,TRUE,,,,3477,existing
+K304192-02,K304192,L4,Kids,Accessories,Key Rings,key-rings,Kids / Accessories / Wallets & Small Leather Goods / Key Rings,TRUE,,,,3257,existing
+K304192-03,K304192,L4,Kids,Accessories,Wallets,wallets,Kids / Accessories / Wallets & Small Leather Goods / Wallets,TRUE,,,,1653,existing
+K304192-04,K304192,L4,Kids,Accessories,Pouches,pouches,Kids / Accessories / Wallets & Small Leather Goods / Pouches,TRUE,,,,656,existing
+K304193-01,K304193,L4,Kids,Accessories,Stationery,stationery,Kids / Accessories / Lifestyle / Stationery,TRUE,,,,3135,existing
+K304209-01,K304209,L4,Kids,Accessories,Towels,towels,Kids / Accessories / Beach Accessories / Towels,TRUE,,,,5722,existing
+K304209-02,K304209,L4,Kids,Accessories,Pareo,pareo,Kids / Accessories / Beach Accessories / Pareo,TRUE,,,,2730,existing
+K304209-03,K304209,L4,Kids,Accessories,Swim Hats,swim-hats,Kids / Accessories / Beach Accessories / Swim Hats,TRUE,,,,409,existing
+K305195-01,K305195,L4,Kids,Jewellery,Pendants,pendants,Kids / Jewellery / Necklaces / Pendants,TRUE,,,,3341,new
+K305195-02,K305195,L4,Kids,Jewellery,Chains,chains,Kids / Jewellery / Necklaces / Chains,TRUE,,,,2416,new
+K305196-02,K305196,L4,Kids,Jewellery,Chain Bracelets,chain-bracelets,Kids / Jewellery / Bracelets / Chain Bracelets,TRUE,,,,3170,new
+K305196-01,K305196,L4,Kids,Jewellery,Charms,charms,Kids / Jewellery / Bracelets / Charms,TRUE,,,,1605,existing
+K305196-03,K305196,L4,Kids,Jewellery,Bangles,bangles,Kids / Jewellery / Bracelets / Bangles,TRUE,,,,1249,new
+K305197-01,K305197,L4,Kids,Jewellery,Drop Earrings,drop-earrings,Kids / Jewellery / Earrings / Drop Earrings,TRUE,,,,1621,new
+K305197-02,K305197,L4,Kids,Jewellery,Studs,studs,Kids / Jewellery / Earrings / Studs,TRUE,,,,1417,new
+K305197-03,K305197,L4,Kids,Jewellery,Huggies,huggies,Kids / Jewellery / Earrings / Huggies,TRUE,,,,226,new
+K305199-01,K305199,L4,Kids,Jewellery,Bands,bands,Kids / Jewellery / Rings / Bands,TRUE,,,,1311,new
+K306203-01,K306203,L4,Kids,Watches,Sport Watches,sport-watches,Kids / Watches / Watches / Sport Watches,TRUE,,,,1279,new
+K307204-01,K307204,L4,Kids,Beauty,Fragrance,fragrance,Kids / Beauty / Fragrance / Fragrance,TRUE,,,,10913,existing
+K307205-01,K307205,L4,Kids,Beauty,"Creams, Moisturisers And Serums",creams-moisturisers-and-serums,"Kids / Beauty / Skincare / Creams, Moisturisers And Serums",TRUE,,,,4047,existing
+K307205-02,K307205,L4,Kids,Beauty,Sun Care,sun-care,Kids / Beauty / Skincare / Sun Care,TRUE,,,,1151,existing
+K307206-01,K307206,L4,Kids,Beauty,Aromatherapy,aromatherapy,Kids / Beauty / Wellness / Aromatherapy,TRUE,,,,3162,existing
+K307207-01,K307207,L4,Kids,Beauty,Hair Care,hair-care,Kids / Beauty / Hair / Hair Care,TRUE,,,,2923,existing
+K307208-01,K307208,L4,Kids,Beauty,Body Moisturiser And Oils,body-moisturiser-and-oils,Kids / Beauty / Bath & Body / Body Moisturiser And Oils,TRUE,,,,1693,existing
+M201080-01,M201080,L4,Men,Clothing,Shirts,shirts,Men / Clothing / Tops / Shirts,TRUE,,,,11992,existing
+M201080-02,M201080,L4,Men,Clothing,T-Shirts,t-shirts,Men / Clothing / Tops / T-Shirts,TRUE,,,,10881,existing
+M201080-03,M201080,L4,Men,Clothing,Polo Shirts,polo-shirts,Men / Clothing / Tops / Polo Shirts,TRUE,,,,7376,existing
+M201081-01,M201081,L4,Men,Clothing,Joggers & Sweatpants,joggers-and-sweatpants,Men / Clothing / Pants / Joggers & Sweatpants,TRUE,,,,4279,existing
+M201081-02,M201081,L4,Men,Clothing,Chinos,chinos,Men / Clothing / Pants / Chinos,TRUE,,,,1133,existing
+M201081-03,M201081,L4,Men,Clothing,Cargo Pants,cargo-pants,Men / Clothing / Pants / Cargo Pants,TRUE,,,,484,existing
+M201082-01,M201082,L4,Men,Clothing,Jumpers,jumpers,Men / Clothing / Knitwear / Jumpers,TRUE,,,,10304,existing
+M201082-02,M201082,L4,Men,Clothing,Hoodies,hoodies,Men / Clothing / Knitwear / Hoodies,TRUE,,,,3160,existing
+M201082-03,M201082,L4,Men,Clothing,Cardigans,cardigans,Men / Clothing / Knitwear / Cardigans,TRUE,,,,2866,existing
+M201082-04,M201082,L4,Men,Clothing,Knit Polos,knit-polos,Men / Clothing / Knitwear / Knit Polos,TRUE,,,,1704,existing
+M201085-01,M201085,L4,Men,Clothing,Sweatshorts,sweatshorts,Men / Clothing / Shorts / Sweatshorts,TRUE,,,,5248,existing
+M201085-02,M201085,L4,Men,Clothing,Chino Shorts,chino-shorts,Men / Clothing / Shorts / Chino Shorts,TRUE,,,,2378,existing
+M201085-03,M201085,L4,Men,Clothing,Denim Shorts,denim-shorts,Men / Clothing / Shorts / Denim Shorts,TRUE,,,,1379,existing
+M201085-04,M201085,L4,Men,Clothing,Cargo Shorts,cargo-shorts,Men / Clothing / Shorts / Cargo Shorts,TRUE,,,,184,existing
+M201086-01,M201086,L4,Men,Clothing,Sweatshirts,sweatshirts,Men / Clothing / Sweatshirts / Sweatshirts,TRUE,,,,7139,existing
+M201086-02,M201086,L4,Men,Clothing,Hoodies,hoodies,Men / Clothing / Sweatshirts / Hoodies,TRUE,,,,2911,existing
+M201087-01,M201087,L4,Men,Clothing,Robes & Dressing Gowns,robes-and-dressing-gowns,Men / Clothing / Sleepwear / Robes & Dressing Gowns,TRUE,,,,11572,existing
+M201087-02,M201087,L4,Men,Clothing,Pyjama Sets,pyjama-sets,Men / Clothing / Sleepwear / Pyjama Sets,TRUE,,,,2843,existing
+M201087-03,M201087,L4,Men,Clothing,Pyjama Shorts,pyjama-shorts,Men / Clothing / Sleepwear / Pyjama Shorts,TRUE,,,,2387,existing
+M201087-04,M201087,L4,Men,Clothing,Pyjama Bottoms,pyjama-bottoms,Men / Clothing / Sleepwear / Pyjama Bottoms,TRUE,,,,2250,existing
+M201087-05,M201087,L4,Men,Clothing,Pyjama Tops,pyjama-tops,Men / Clothing / Sleepwear / Pyjama Tops,TRUE,,,,1886,existing
+M201088-01,M201088,L4,Men,Clothing,Waistcoats,waistcoats,Men / Clothing / Blazers & Suits / Waistcoats,TRUE,,,,3027,existing
+M201089-01,M201089,L4,Men,Clothing,Tops,tops,Men / Clothing / Activewear / Tops,TRUE,,,,3379,existing
+M201089-02,M201089,L4,Men,Clothing,Shorts,shorts,Men / Clothing / Activewear / Shorts,TRUE,,,,2987,existing
+M201089-03,M201089,L4,Men,Clothing,Leggings,leggings,Men / Clothing / Activewear / Leggings,TRUE,,,,2592,existing
+M201089-04,M201089,L4,Men,Clothing,Tracksuits,tracksuits,Men / Clothing / Activewear / Tracksuits,TRUE,,,,1967,existing
+M201089-05,M201089,L4,Men,Clothing,Jackets,jackets,Men / Clothing / Activewear / Jackets,TRUE,,,,361,existing
+M201089-06,M201089,L4,Men,Clothing,Trousers,trousers,Men / Clothing / Activewear / Trousers,TRUE,,,,65,existing
+M201090-01,M201090,L4,Men,Clothing,Gilets,gilets,Men / Clothing / Coats & Jackets / Gilets,TRUE,,,,3417,existing
+M201090-02,M201090,L4,Men,Clothing,Coats,coats,Men / Clothing / Coats & Jackets / Coats,TRUE,,,,2286,existing
+M201090-03,M201090,L4,Men,Clothing,Jackets,jackets,Men / Clothing / Coats & Jackets / Jackets,TRUE,,,,2158,existing
+M201090-04,M201090,L4,Men,Clothing,Bombers & Blousons,bombers-and-blousons,Men / Clothing / Coats & Jackets / Bombers & Blousons,TRUE,,,,1531,existing
+M201090-05,M201090,L4,Men,Clothing,Trench Coats,trench-coats,Men / Clothing / Coats & Jackets / Trench Coats,TRUE,,,,1077,existing
+M201091-02,M201091,L4,Men,Clothing,Socks,socks,Men / Clothing / Underwear & Socks / Socks,TRUE,,,,6436,existing
+M201091-01,M201091,L4,Men,Clothing,Boxers,boxers,Men / Clothing / Underwear & Socks / Boxers,TRUE,,,,2277,existing
+M201091-03,M201091,L4,Men,Clothing,Basic Tops,basic-tops,Men / Clothing / Underwear & Socks / Basic Tops,TRUE,,,,952,existing
+M201091-04,M201091,L4,Men,Clothing,Briefs,briefs,Men / Clothing / Underwear & Socks / Briefs,TRUE,,,,528,existing
+M201091-05,M201091,L4,Men,Clothing,Trunks,trunks,Men / Clothing / Underwear & Socks / Trunks,TRUE,,,,390,existing
+M201092-01,M201092,L4,Men,Clothing,Swim Shorts,swim-shorts,Men / Clothing / Swimwear / Swim Shorts,TRUE,,,,4625,existing
+M201092-02,M201092,L4,Men,Clothing,Swim Briefs,swim-briefs,Men / Clothing / Swimwear / Swim Briefs,TRUE,,,,1457,existing
+M203105-01,M203105,L4,Men,Bags,Duffle,duffle,Men / Bags / Luggage / Duffle,TRUE,,,,5694,existing
+M203105-02,M203105,L4,Men,Bags,Suitcases,suitcases,Men / Bags / Luggage / Suitcases,TRUE,,,,4894,existing
+M203105-03,M203105,L4,Men,Bags,Vanity,vanity,Men / Bags / Luggage / Vanity,TRUE,,,,4601,existing
+M203105-04,M203105,L4,Men,Bags,Beauty Case,beauty-case,Men / Bags / Luggage / Beauty Case,TRUE,,,,1512,existing
+M204116-02,M204116,L4,Men,Accessories,Sunglasses,sunglasses,Men / Accessories / Eyewear / Sunglasses,TRUE,,,,32149,new
+M204117-01,M204117,L4,Men,Accessories,Document Case,document-case,Men / Accessories / Wallets & Small Leather Goods / Document Case,TRUE,,,,5608,existing
+M204117-02,M204117,L4,Men,Accessories,Wallets,wallets,Men / Accessories / Wallets & Small Leather Goods / Wallets,TRUE,,,,3708,existing
+M204117-03,M204117,L4,Men,Accessories,Key Rings,key-rings,Men / Accessories / Wallets & Small Leather Goods / Key Rings,TRUE,,,,3483,existing
+M204117-04,M204117,L4,Men,Accessories,Passport Holders,passport-holders,Men / Accessories / Wallets & Small Leather Goods / Passport Holders,TRUE,,,,3398,existing
+M204117-05,M204117,L4,Men,Accessories,Travel Wallets,travel-wallets,Men / Accessories / Wallets & Small Leather Goods / Travel Wallets,TRUE,,,,3186,existing
+M204117-06,M204117,L4,Men,Accessories,Portfolio,portfolio,Men / Accessories / Wallets & Small Leather Goods / Portfolio,TRUE,,,,2523,existing
+M204117-07,M204117,L4,Men,Accessories,Card Holders,card-holders,Men / Accessories / Wallets & Small Leather Goods / Card Holders,TRUE,,,,2448,existing
+M204117-08,M204117,L4,Men,Accessories,Pouches,pouches,Men / Accessories / Wallets & Small Leather Goods / Pouches,TRUE,,,,2287,existing
+M204117-09,M204117,L4,Men,Accessories,Travel Kit/Organizer,travel-kit-organizer,Men / Accessories / Wallets & Small Leather Goods / Travel Kit/Organizer,TRUE,,,,2226,existing
+M204117-10,M204117,L4,Men,Accessories,Lanyards,lanyards,Men / Accessories / Wallets & Small Leather Goods / Lanyards,TRUE,,,,1204,existing
+M204117-11,M204117,L4,Men,Accessories,Money Clips,money-clips,Men / Accessories / Wallets & Small Leather Goods / Money Clips,TRUE,,,,1163,existing
+M204118-01,M204118,L4,Men,Accessories,Scarves,scarves,Men / Accessories / Scarves & Soft Accessories / Scarves,TRUE,,,,4953,existing
+M204118-03,M204118,L4,Men,Accessories,Handkerchiefs,handkerchiefs,Men / Accessories / Scarves & Soft Accessories / Handkerchiefs,TRUE,,,,2978,existing
+M204118-04,M204118,L4,Men,Accessories,Gloves,gloves,Men / Accessories / Scarves & Soft Accessories / Gloves,TRUE,,,,2957,existing
+M204118-05,M204118,L4,Men,Accessories,Cummerbunds,cummerbunds,Men / Accessories / Scarves & Soft Accessories / Cummerbunds,TRUE,,,,2616,existing
+M204118-06,M204118,L4,Men,Accessories,Ties,ties,Men / Accessories / Scarves & Soft Accessories / Ties,TRUE,,,,2612,existing
+M204118-07,M204118,L4,Men,Accessories,Bowties,bowties,Men / Accessories / Scarves & Soft Accessories / Bowties,TRUE,,,,2264,existing
+M204118-08,M204118,L4,Men,Accessories,Face Masks,face-masks,Men / Accessories / Scarves & Soft Accessories / Face Masks,TRUE,,,,986,existing
+M204119-01,M204119,L4,Men,Accessories,Lighter,lighter,Men / Accessories / Lifestyle / Lighter,TRUE,,,,3172,existing
+M204119-02,M204119,L4,Men,Accessories,Stationery,stationery,Men / Accessories / Lifestyle / Stationery,TRUE,,,,2427,existing
+M204119-03,M204119,L4,Men,Accessories,Eye Masks,eye-masks,Men / Accessories / Lifestyle / Eye Masks,TRUE,,,,2424,existing
+M204119-04,M204119,L4,Men,Accessories,Storage,storage,Men / Accessories / Lifestyle / Storage,TRUE,,,,2351,existing
+M204119-05,M204119,L4,Men,Accessories,Home,home,Men / Accessories / Lifestyle / Home,TRUE,,,,2028,existing
+M204119-06,M204119,L4,Men,Accessories,Games,games,Men / Accessories / Lifestyle / Games,TRUE,,,,842,existing
+M204119-07,M204119,L4,Men,Accessories,Water Bottle,water-bottle,Men / Accessories / Lifestyle / Water Bottle,TRUE,,,,549,existing
+M204119-08,M204119,L4,Men,Accessories,Product Care,product-care,Men / Accessories / Lifestyle / Product Care,TRUE,,,,478,existing
+M204119-09,M204119,L4,Men,Accessories,Travel,travel,Men / Accessories / Lifestyle / Travel,TRUE,,,,419,existing
+M204119-10,M204119,L4,Men,Accessories,Cigar Cutter,cigar-cutter,Men / Accessories / Lifestyle / Cigar Cutter,TRUE,,,,378,existing
+M204119-11,M204119,L4,Men,Accessories,Pens,pens,Men / Accessories / Lifestyle / Pens,TRUE,,,,198,existing
+M204121-01,M204121,L4,Men,Accessories,Bucket Hats,bucket-hats,Men / Accessories / Hats / Bucket Hats,TRUE,,,,4746,existing
+M204121-02,M204121,L4,Men,Accessories,Caps,caps,Men / Accessories / Hats / Caps,TRUE,,,,3921,existing
+M204121-03,M204121,L4,Men,Accessories,Fedora,fedora,Men / Accessories / Hats / Fedora,TRUE,,,,1460,existing
+M204121-04,M204121,L4,Men,Accessories,Cold Weather,cold-weather,Men / Accessories / Hats / Cold Weather,TRUE,,,,911,existing
+M204121-05,M204121,L4,Men,Accessories,Visors,visors,Men / Accessories / Hats / Visors,TRUE,,,,377,new
+M204122-01,M204122,L4,Men,Accessories,Scarf,scarf,Men / Accessories / Bag Accessories / Scarf,TRUE,,,,3132,existing
+M204122-02,M204122,L4,Men,Accessories,Strap,strap,Men / Accessories / Bag Accessories / Strap,TRUE,,,,1733,existing
+M204122-03,M204122,L4,Men,Accessories,Charms,charms,Men / Accessories / Bag Accessories / Charms,TRUE,,,,1498,existing
+M204123-02,M204123,L4,Men,Accessories,Tech Accessories,tech-accessories,Men / Accessories / Tech / Tech Accessories,TRUE,,,,4265,existing
+M204126-01,M204126,L4,Men,Accessories,Cosmetic Accessories,cosmetic-accessories,Men / Accessories / Cosmetic Accessories / Cosmetic Accessories,TRUE,,,,963,existing
+M204142-01,M204142,L4,Men,Accessories,Towels,towels,Men / Accessories / Beach Accessories / Towels,TRUE,,,,1508,existing
+M205127-01,M205127,L4,Men,Jewellery,Bangles,bangles,Men / Jewellery / Bracelets / Bangles,TRUE,,,,9496,new
+M205127-02,M205127,L4,Men,Jewellery,Chain Bracelets,chain-bracelets,Men / Jewellery / Bracelets / Chain Bracelets,TRUE,,,,4106,new
+M205128-01,M205128,L4,Men,Jewellery,Bands,bands,Men / Jewellery / Rings / Bands,TRUE,,,,6413,new
+M205128-02,M205128,L4,Men,Jewellery,Signet Rings,signet-rings,Men / Jewellery / Rings / Signet Rings,TRUE,,,,3873,new
+M205129-01,M205129,L4,Men,Jewellery,Charms,charms,Men / Jewellery / Necklaces / Charms,TRUE,,,,3109,existing
+M205129-02,M205129,L4,Men,Jewellery,Chains,chains,Men / Jewellery / Necklaces / Chains,TRUE,,,,2822,new
+M205129-03,M205129,L4,Men,Jewellery,Pendants,pendants,Men / Jewellery / Necklaces / Pendants,TRUE,,,,2577,new
+M206136-01,M206136,L4,Men,Watches,Dress Watches,dress-watches,Men / Watches / Watches / Dress Watches,TRUE,,,,13586,new
+M206136-02,M206136,L4,Men,Watches,Chronographs,chronographs,Men / Watches / Watches / Chronographs,TRUE,,,,9266,new
+M206136-03,M206136,L4,Men,Watches,Sport Watches,sport-watches,Men / Watches / Watches / Sport Watches,TRUE,,,,8114,new
+M206136-04,M206136,L4,Men,Watches,Smartwatches,smartwatches,Men / Watches / Watches / Smartwatches,TRUE,,,,7670,new
+M206136-05,M206136,L4,Men,Watches,Dive Watches,dive-watches,Men / Watches / Watches / Dive Watches,TRUE,,,,5976,new
+M206137-01,M206137,L4,Men,Watches,Watch Strap,watch-strap,Men / Watches / Watch Accessories / Watch Strap,TRUE,,,,5156,existing
+M206137-02,M206137,L4,Men,Watches,Watch Covers,watch-covers,Men / Watches / Watch Accessories / Watch Covers,TRUE,,,,4658,existing
+M207138-01,M207138,L4,Men,Beauty,"Creams, Moisturisers And Serums",creams-moisturisers-and-serums,"Men / Beauty / Skincare / Creams, Moisturisers And Serums",TRUE,,,,17116,existing
+M207138-02,M207138,L4,Men,Beauty,Cleansers And Exfoliators,cleansers-and-exfoliators,Men / Beauty / Skincare / Cleansers And Exfoliators,TRUE,,,,9217,existing
+M207138-03,M207138,L4,Men,Beauty,Grooming,grooming,Men / Beauty / Skincare / Grooming,TRUE,,,,5860,existing
+M207139-01,M207139,L4,Men,Beauty,Fragrance,fragrance,Men / Beauty / Fragrance / Fragrance,TRUE,,,,24719,existing
+M207140-01,M207140,L4,Men,Beauty,Styling,styling,Men / Beauty / Hair / Styling,TRUE,,,,9610,existing
+M207140-02,M207140,L4,Men,Beauty,Hair Care,hair-care,Men / Beauty / Hair / Hair Care,TRUE,,,,8807,existing
+M207141-01,M207141,L4,Men,Beauty,Bath And Shower,bath-and-shower,Men / Beauty / Bath & Body / Bath And Shower,TRUE,,,,9567,existing
+M207141-02,M207141,L4,Men,Beauty,Hygiene,hygiene,Men / Beauty / Bath & Body / Hygiene,TRUE,,,,3359,existing
+M207141-03,M207141,L4,Men,Beauty,Body Moisturiser And Oils,body-moisturiser-and-oils,Men / Beauty / Bath & Body / Body Moisturiser And Oils,TRUE,,,,2604,existing
+U401209-01,U401209,L4,Unisex,Clothing,Sweatshirts,sweatshirts,Unisex / Clothing / Sweatshirts / Sweatshirts,TRUE,,,,4710,existing
+U401209-02,U401209,L4,Unisex,Clothing,Hoodies,hoodies,Unisex / Clothing / Sweatshirts / Hoodies,TRUE,,,,2702,existing
+U401210-01,U401210,L4,Unisex,Clothing,Cardigans,cardigans,Unisex / Clothing / Knitwear / Cardigans,TRUE,,,,2997,existing
+U401210-02,U401210,L4,Unisex,Clothing,Knit Polos,knit-polos,Unisex / Clothing / Knitwear / Knit Polos,TRUE,,,,2100,existing
+U401211-01,U401211,L4,Unisex,Clothing,Capes & Ponchos,capes-and-ponchos,Unisex / Clothing / Coats & Jackets / Capes & Ponchos,TRUE,,,,3020,existing
+U401212-01,U401212,L4,Unisex,Clothing,T-Shirts,t-shirts,Unisex / Clothing / Tops / T-Shirts,TRUE,,,,1927,existing
+U401212-02,U401212,L4,Unisex,Clothing,Shirts,shirts,Unisex / Clothing / Tops / Shirts,TRUE,,,,1657,existing
+U401213-01,U401213,L4,Unisex,Clothing,Joggers & Sweatpants,joggers-and-sweatpants,Unisex / Clothing / Pants / Joggers & Sweatpants,TRUE,,,,2309,existing
+U401214-01,U401214,L4,Unisex,Clothing,Sweatshorts,sweatshorts,Unisex / Clothing / Shorts / Sweatshorts,TRUE,,,,2530,existing
+U401216-01,U401216,L4,Unisex,Clothing,Socks,socks,Unisex / Clothing / Underwear & Socks / Socks,TRUE,,,,360,existing
+U401251-01,U401251,L4,Unisex,Clothing,Robes & Dressing Gowns,robes-and-dressing-gowns,Unisex / Clothing / Sleepwear / Robes & Dressing Gowns,TRUE,,,,1006,existing
+U403218-01,U403218,L4,Unisex,Bags,Duffle,duffle,Unisex / Bags / Luggage / Duffle,TRUE,,,,3452,existing
+U403218-02,U403218,L4,Unisex,Bags,Suitcases,suitcases,Unisex / Bags / Luggage / Suitcases,TRUE,,,,3247,existing
+U403218-03,U403218,L4,Unisex,Bags,Beauty Case,beauty-case,Unisex / Bags / Luggage / Beauty Case,TRUE,,,,2990,existing
+U403218-04,U403218,L4,Unisex,Bags,Vanity,vanity,Unisex / Bags / Luggage / Vanity,TRUE,,,,1692,existing
+U404227-03,U404227,L4,Unisex,Accessories,Sunglasses,sunglasses,Unisex / Accessories / Eyewear / Sunglasses,TRUE,,,,18070,new
+U404227-04,U404227,L4,Unisex,Accessories,Eyewear Accessories,eyewear-accessories,Unisex / Accessories / Eyewear / Eyewear Accessories,TRUE,,,,785,new
+U404227-05,U404227,L4,Unisex,Accessories,Optical Glasses,optical-glasses,Unisex / Accessories / Eyewear / Optical Glasses,TRUE,,,,302,new
+U404228-01,U404228,L4,Unisex,Accessories,Wallets,wallets,Unisex / Accessories / Wallets & Small Leather Goods / Wallets,TRUE,,,,3261,existing
+U404228-02,U404228,L4,Unisex,Accessories,Travel Wallets,travel-wallets,Unisex / Accessories / Wallets & Small Leather Goods / Travel Wallets,TRUE,,,,3134,existing
+U404228-03,U404228,L4,Unisex,Accessories,Pouches,pouches,Unisex / Accessories / Wallets & Small Leather Goods / Pouches,TRUE,,,,2870,existing
+U404228-04,U404228,L4,Unisex,Accessories,Card Holders,card-holders,Unisex / Accessories / Wallets & Small Leather Goods / Card Holders,TRUE,,,,2321,existing
+U404228-05,U404228,L4,Unisex,Accessories,Key Rings,key-rings,Unisex / Accessories / Wallets & Small Leather Goods / Key Rings,TRUE,,,,2110,existing
+U404228-06,U404228,L4,Unisex,Accessories,Document Case,document-case,Unisex / Accessories / Wallets & Small Leather Goods / Document Case,TRUE,,,,2020,existing
+U404228-07,U404228,L4,Unisex,Accessories,Lanyards,lanyards,Unisex / Accessories / Wallets & Small Leather Goods / Lanyards,TRUE,,,,1570,existing
+U404228-08,U404228,L4,Unisex,Accessories,Passport Holders,passport-holders,Unisex / Accessories / Wallets & Small Leather Goods / Passport Holders,TRUE,,,,1048,existing
+U404228-09,U404228,L4,Unisex,Accessories,Notebooks,notebooks,Unisex / Accessories / Wallets & Small Leather Goods / Notebooks,TRUE,,,,602,existing
+U404229-01,U404229,L4,Unisex,Accessories,Stationery,stationery,Unisex / Accessories / Lifestyle / Stationery,TRUE,,,,5875,existing
+U404229-02,U404229,L4,Unisex,Accessories,Games,games,Unisex / Accessories / Lifestyle / Games,TRUE,,,,3284,existing
+U404229-03,U404229,L4,Unisex,Accessories,Product Care,product-care,Unisex / Accessories / Lifestyle / Product Care,TRUE,,,,2810,existing
+U404229-04,U404229,L4,Unisex,Accessories,Pens,pens,Unisex / Accessories / Lifestyle / Pens,TRUE,,,,909,existing
+U404229-05,U404229,L4,Unisex,Accessories,Books,books,Unisex / Accessories / Lifestyle / Books,TRUE,,,,851,existing
+U404229-06,U404229,L4,Unisex,Accessories,Travel,travel,Unisex / Accessories / Lifestyle / Travel,TRUE,,,,727,existing
+U404230-01,U404230,L4,Unisex,Accessories,Caps,caps,Unisex / Accessories / Hats / Caps,TRUE,,,,2679,existing
+U404230-02,U404230,L4,Unisex,Accessories,Cold Weather,cold-weather,Unisex / Accessories / Hats / Cold Weather,TRUE,,,,2101,existing
+U404230-03,U404230,L4,Unisex,Accessories,Fedora,fedora,Unisex / Accessories / Hats / Fedora,TRUE,,,,2030,existing
+U404230-05,U404230,L4,Unisex,Accessories,Visors,visors,Unisex / Accessories / Hats / Visors,TRUE,,,,1372,new
+U404230-04,U404230,L4,Unisex,Accessories,Bucket Hats,bucket-hats,Unisex / Accessories / Hats / Bucket Hats,TRUE,,,,550,existing
+U404231-02,U404231,L4,Unisex,Accessories,Scarves,scarves,Unisex / Accessories / Scarves & Soft Accessories / Scarves,TRUE,,,,1858,existing
+U404231-03,U404231,L4,Unisex,Accessories,Ties,ties,Unisex / Accessories / Scarves & Soft Accessories / Ties,TRUE,,,,502,existing
+U404233-01,U404233,L4,Unisex,Accessories,Tech Accessories,tech-accessories,Unisex / Accessories / Tech / Tech Accessories,TRUE,,,,2599,existing
+U404233-02,U404233,L4,Unisex,Accessories,Audio,audio,Unisex / Accessories / Tech / Audio,TRUE,,,,1346,existing
+U405235-02,U405235,L4,Unisex,Jewellery,Bangles,bangles,Unisex / Jewellery / Bracelets / Bangles,TRUE,,,,3812,new
+U405235-01,U405235,L4,Unisex,Jewellery,Charms,charms,Unisex / Jewellery / Bracelets / Charms,TRUE,,,,2769,existing
+U405235-03,U405235,L4,Unisex,Jewellery,Chain Bracelets,chain-bracelets,Unisex / Jewellery / Bracelets / Chain Bracelets,TRUE,,,,2725,new
+U405238-01,U405238,L4,Unisex,Jewellery,Studs,studs,Unisex / Jewellery / Earrings / Studs,TRUE,,,,3097,new
+U405241-01,U405241,L4,Unisex,Jewellery,Bands,bands,Unisex / Jewellery / Rings / Bands,TRUE,,,,926,new
+U406243-01,U406243,L4,Unisex,Watches,Dress Watches,dress-watches,Unisex / Watches / Watches / Dress Watches,TRUE,,,,3797,new
+U406243-02,U406243,L4,Unisex,Watches,Sport Watches,sport-watches,Unisex / Watches / Watches / Sport Watches,TRUE,,,,3128,new
+U406243-03,U406243,L4,Unisex,Watches,Smartwatches,smartwatches,Unisex / Watches / Watches / Smartwatches,TRUE,,,,1205,new
+U406243-04,U406243,L4,Unisex,Watches,Dive Watches,dive-watches,Unisex / Watches / Watches / Dive Watches,TRUE,,,,496,new
+U406244-01,U406244,L4,Unisex,Watches,Watch Covers,watch-covers,Unisex / Watches / Watch Accessories / Watch Covers,TRUE,,,,5122,existing
+U407245-01,U407245,L4,Unisex,Beauty,"Creams, Moisturisers And Serums",creams-moisturisers-and-serums,"Unisex / Beauty / Skincare / Creams, Moisturisers And Serums",TRUE,,,,23194,existing
+U407245-02,U407245,L4,Unisex,Beauty,Cleansers And Exfoliators,cleansers-and-exfoliators,Unisex / Beauty / Skincare / Cleansers And Exfoliators,TRUE,,,,19841,existing
+U407245-03,U407245,L4,Unisex,Beauty,Tools And Accessories,tools-and-accessories,Unisex / Beauty / Skincare / Tools And Accessories,TRUE,,,,11506,existing
+U407245-04,U407245,L4,Unisex,Beauty,Sun Care,sun-care,Unisex / Beauty / Skincare / Sun Care,TRUE,,,,9959,existing
+U407245-05,U407245,L4,Unisex,Beauty,Mask,mask,Unisex / Beauty / Skincare / Mask,TRUE,,,,4765,existing
+U407245-06,U407245,L4,Unisex,Beauty,Grooming,grooming,Unisex / Beauty / Skincare / Grooming,TRUE,,,,507,existing
+U407246-01,U407246,L4,Unisex,Beauty,Hair Care,hair-care,Unisex / Beauty / Hair / Hair Care,TRUE,,,,19916,existing
+U407246-02,U407246,L4,Unisex,Beauty,Hair Tools And Accessories,hair-tools-and-accessories,Unisex / Beauty / Hair / Hair Tools And Accessories,TRUE,,,,14785,existing
+U407246-03,U407246,L4,Unisex,Beauty,Styling,styling,Unisex / Beauty / Hair / Styling,TRUE,,,,9395,existing
+U407247-01,U407247,L4,Unisex,Beauty,Fragrance,fragrance,Unisex / Beauty / Fragrance / Fragrance,TRUE,,,,29093,existing
+U407248-01,U407248,L4,Unisex,Beauty,Bath And Shower,bath-and-shower,Unisex / Beauty / Bath & Body / Bath And Shower,TRUE,,,,10802,existing
+U407248-02,U407248,L4,Unisex,Beauty,Body Moisturiser And Oils,body-moisturiser-and-oils,Unisex / Beauty / Bath & Body / Body Moisturiser And Oils,TRUE,,,,8112,existing
+U407248-03,U407248,L4,Unisex,Beauty,Hygiene,hygiene,Unisex / Beauty / Bath & Body / Hygiene,TRUE,,,,3180,existing
+U407248-04,U407248,L4,Unisex,Beauty,Gift Sets,gift-sets,Unisex / Beauty / Bath & Body / Gift Sets,TRUE,,,,2997,existing
+U407249-01,U407249,L4,Unisex,Beauty,Home Essence,home-essence,Unisex / Beauty / Home Fragrance / Home Essence,TRUE,,,,17106,existing
+U407249-02,U407249,L4,Unisex,Beauty,Home Care,home-care,Unisex / Beauty / Home Fragrance / Home Care,TRUE,,,,1400,existing
+U407250-01,U407250,L4,Unisex,Beauty,Aromatherapy,aromatherapy,Unisex / Beauty / Wellness / Aromatherapy,TRUE,,,,4467,existing
+U407250-02,U407250,L4,Unisex,Beauty,Sleep,sleep,Unisex / Beauty / Wellness / Sleep,TRUE,,,,4187,existing
+U407250-03,U407250,L4,Unisex,Beauty,Supplements,supplements,Unisex / Beauty / Wellness / Supplements,TRUE,,,,3442,existing
+W101001-01,W101001,L4,Women,Clothing,Shirts,shirts,Women / Clothing / Tops / Shirts,TRUE,,,,11735,existing
+W101001-02,W101001,L4,Women,Clothing,T-Shirts,t-shirts,Women / Clothing / Tops / T-Shirts,TRUE,,,,6261,existing
+W101001-03,W101001,L4,Women,Clothing,Bodysuits,bodysuits,Women / Clothing / Tops / Bodysuits,TRUE,,,,3163,existing
+W101001-04,W101001,L4,Women,Clothing,Polo Shirts,polo-shirts,Women / Clothing / Tops / Polo Shirts,TRUE,,,,3034,existing
+W101001-05,W101001,L4,Women,Clothing,Tank Tops,tank-tops,Women / Clothing / Tops / Tank Tops,TRUE,,,,2678,existing
+W101004-01,W101004,L4,Women,Clothing,Dresses,dresses,Women / Clothing / Activewear / Dresses,TRUE,,,,4956,existing
+W101004-02,W101004,L4,Women,Clothing,Trousers,trousers,Women / Clothing / Activewear / Trousers,TRUE,,,,3343,existing
+W101004-03,W101004,L4,Women,Clothing,Skirts,skirts,Women / Clothing / Activewear / Skirts,TRUE,,,,3152,existing
+W101004-04,W101004,L4,Women,Clothing,Leggings,leggings,Women / Clothing / Activewear / Leggings,TRUE,,,,2845,existing
+W101004-05,W101004,L4,Women,Clothing,Tracksuits,tracksuits,Women / Clothing / Activewear / Tracksuits,TRUE,,,,2026,existing
+W101004-06,W101004,L4,Women,Clothing,Jumpsuits,jumpsuits,Women / Clothing / Activewear / Jumpsuits,TRUE,,,,1672,existing
+W101004-07,W101004,L4,Women,Clothing,Accessories,accessories,Women / Clothing / Activewear / Accessories,TRUE,,,,1424,existing
+W101004-08,W101004,L4,Women,Clothing,Sports Bras,sports-bras,Women / Clothing / Activewear / Sports Bras,TRUE,,,,1317,existing
+W101004-09,W101004,L4,Women,Clothing,Tank Tops,tank-tops,Women / Clothing / Activewear / Tank Tops,TRUE,,,,1230,existing
+W101004-10,W101004,L4,Women,Clothing,Sweatshirts,sweatshirts,Women / Clothing / Activewear / Sweatshirts,TRUE,,,,927,existing
+W101004-11,W101004,L4,Women,Clothing,Shorts,shorts,Women / Clothing / Activewear / Shorts,TRUE,,,,868,existing
+W101004-12,W101004,L4,Women,Clothing,Jackets,jackets,Women / Clothing / Activewear / Jackets,TRUE,,,,771,existing
+W101004-13,W101004,L4,Women,Clothing,Tops,tops,Women / Clothing / Activewear / Tops,TRUE,,,,404,existing
+W101006-01,W101006,L4,Women,Clothing,Jumpers,jumpers,Women / Clothing / Knitwear / Jumpers,TRUE,,,,7450,existing
+W101006-02,W101006,L4,Women,Clothing,Hoodies,hoodies,Women / Clothing / Knitwear / Hoodies,TRUE,,,,3346,existing
+W101006-03,W101006,L4,Women,Clothing,Knit Polos,knit-polos,Women / Clothing / Knitwear / Knit Polos,TRUE,,,,2208,existing
+W101006-04,W101006,L4,Women,Clothing,Cardigans,cardigans,Women / Clothing / Knitwear / Cardigans,TRUE,,,,1392,existing
+W101007-01,W101007,L4,Women,Clothing,Capes & Ponchos,capes-and-ponchos,Women / Clothing / Coats & Jackets / Capes & Ponchos,TRUE,,,,4611,existing
+W101007-02,W101007,L4,Women,Clothing,Jackets,jackets,Women / Clothing / Coats & Jackets / Jackets,TRUE,,,,3984,existing
+W101007-03,W101007,L4,Women,Clothing,Gilets,gilets,Women / Clothing / Coats & Jackets / Gilets,TRUE,,,,2875,existing
+W101007-04,W101007,L4,Women,Clothing,Bombers & Blousons,bombers-and-blousons,Women / Clothing / Coats & Jackets / Bombers & Blousons,TRUE,,,,2154,existing
+W101007-05,W101007,L4,Women,Clothing,Trench Coats,trench-coats,Women / Clothing / Coats & Jackets / Trench Coats,TRUE,,,,1630,existing
+W101007-06,W101007,L4,Women,Clothing,Coats,coats,Women / Clothing / Coats & Jackets / Coats,TRUE,,,,1485,existing
+W101007-07,W101007,L4,Women,Clothing,Biker Jackets,biker-jackets,Women / Clothing / Coats & Jackets / Biker Jackets,TRUE,,,,77,existing
+W101008-01,W101008,L4,Women,Clothing,Joggers & Sweatpants,joggers-and-sweatpants,Women / Clothing / Pants / Joggers & Sweatpants,TRUE,,,,6420,existing
+W101008-02,W101008,L4,Women,Clothing,Chinos,chinos,Women / Clothing / Pants / Chinos,TRUE,,,,2083,existing
+W101008-03,W101008,L4,Women,Clothing,Cargo Pants,cargo-pants,Women / Clothing / Pants / Cargo Pants,TRUE,,,,1054,existing
+W101008-04,W101008,L4,Women,Clothing,Leggings,leggings,Women / Clothing / Pants / Leggings,TRUE,,,,641,existing
+W101009-01,W101009,L4,Women,Clothing,Robes & Dressing Gowns,robes-and-dressing-gowns,Women / Clothing / Sleepwear / Robes & Dressing Gowns,TRUE,,,,7257,existing
+W101009-02,W101009,L4,Women,Clothing,Chemises & Slips,chemises-and-slips,Women / Clothing / Sleepwear / Chemises & Slips,TRUE,,,,4418,existing
+W101009-03,W101009,L4,Women,Clothing,Nightgowns,nightgowns,Women / Clothing / Sleepwear / Nightgowns,TRUE,,,,2530,existing
+W101009-04,W101009,L4,Women,Clothing,Pyjama Tops,pyjama-tops,Women / Clothing / Sleepwear / Pyjama Tops,TRUE,,,,2281,existing
+W101009-05,W101009,L4,Women,Clothing,Pyjama Bottoms,pyjama-bottoms,Women / Clothing / Sleepwear / Pyjama Bottoms,TRUE,,,,2265,existing
+W101009-06,W101009,L4,Women,Clothing,Pyjama Sets,pyjama-sets,Women / Clothing / Sleepwear / Pyjama Sets,TRUE,,,,1911,existing
+W101009-07,W101009,L4,Women,Clothing,Onesies,onesies,Women / Clothing / Sleepwear / Onesies,TRUE,,,,1331,existing
+W101009-08,W101009,L4,Women,Clothing,Pyjama Shorts,pyjama-shorts,Women / Clothing / Sleepwear / Pyjama Shorts,TRUE,,,,613,existing
+W101010-01,W101010,L4,Women,Clothing,Chino Shorts,chino-shorts,Women / Clothing / Shorts / Chino Shorts,TRUE,,,,3145,existing
+W101010-02,W101010,L4,Women,Clothing,Denim Shorts,denim-shorts,Women / Clothing / Shorts / Denim Shorts,TRUE,,,,2996,existing
+W101010-03,W101010,L4,Women,Clothing,Sweatshorts,sweatshorts,Women / Clothing / Shorts / Sweatshorts,TRUE,,,,947,existing
+W101010-04,W101010,L4,Women,Clothing,Cargo Shorts,cargo-shorts,Women / Clothing / Shorts / Cargo Shorts,TRUE,,,,686,existing
+W101012-01,W101012,L4,Women,Clothing,Lingerie Accessories,lingerie-accessories,Women / Clothing / Lingerie / Lingerie Accessories,TRUE,,,,3309,existing
+W101012-02,W101012,L4,Women,Clothing,Bras,bras,Women / Clothing / Lingerie / Bras,TRUE,,,,3157,existing
+W101012-03,W101012,L4,Women,Clothing,Camisoles,camisoles,Women / Clothing / Lingerie / Camisoles,TRUE,,,,2973,existing
+W101012-04,W101012,L4,Women,Clothing,Briefs & Thongs,briefs-and-thongs,Women / Clothing / Lingerie / Briefs & Thongs,TRUE,,,,2859,existing
+W101013-01,W101013,L4,Women,Clothing,Shaping Tops,shaping-tops,Women / Clothing / Shapewear / Shaping Tops,TRUE,,,,3254,existing
+W101013-02,W101013,L4,Women,Clothing,Shaping Slips,shaping-slips,Women / Clothing / Shapewear / Shaping Slips,TRUE,,,,3189,existing
+W101013-03,W101013,L4,Women,Clothing,Waist Trainer,waist-trainer,Women / Clothing / Shapewear / Waist Trainer,TRUE,,,,2803,existing
+W101013-04,W101013,L4,Women,Clothing,Shaping Briefs,shaping-briefs,Women / Clothing / Shapewear / Shaping Briefs,TRUE,,,,1781,existing
+W101013-05,W101013,L4,Women,Clothing,Shaping Bodysuits,shaping-bodysuits,Women / Clothing / Shapewear / Shaping Bodysuits,TRUE,,,,1475,existing
+W101013-06,W101013,L4,Women,Clothing,Shaping Bras,shaping-bras,Women / Clothing / Shapewear / Shaping Bras,TRUE,,,,801,existing
+W101013-07,W101013,L4,Women,Clothing,Shaping Shorts,shaping-shorts,Women / Clothing / Shapewear / Shaping Shorts,TRUE,,,,374,existing
+W101013-08,W101013,L4,Women,Clothing,Shaping Leggings,shaping-leggings,Women / Clothing / Shapewear / Shaping Leggings,TRUE,,,,119,existing
+W101014-01,W101014,L4,Women,Clothing,Sweatshirts,sweatshirts,Women / Clothing / Sweatshirts / Sweatshirts,TRUE,,,,6224,existing
+W101014-02,W101014,L4,Women,Clothing,Hoodies,hoodies,Women / Clothing / Sweatshirts / Hoodies,TRUE,,,,289,existing
+W101015-01,W101015,L4,Women,Clothing,Ski Accessories,ski-accessories,Women / Clothing / Skiwear / Ski Accessories,TRUE,,,,3632,existing
+W101015-02,W101015,L4,Women,Clothing,Base Top,base-top,Women / Clothing / Skiwear / Base Top,TRUE,,,,1739,existing
+W101015-03,W101015,L4,Women,Clothing,Ski Pants,ski-pants,Women / Clothing / Skiwear / Ski Pants,TRUE,,,,1148,existing
+W101015-04,W101015,L4,Women,Clothing,Base Pants,base-pants,Women / Clothing / Skiwear / Base Pants,TRUE,,,,953,existing
+W101015-05,W101015,L4,Women,Clothing,Ski Sweaters,ski-sweaters,Women / Clothing / Skiwear / Ski Sweaters,TRUE,,,,821,existing
+W101015-06,W101015,L4,Women,Clothing,Ski Suits,ski-suits,Women / Clothing / Skiwear / Ski Suits,TRUE,,,,811,existing
+W101015-07,W101015,L4,Women,Clothing,Ski Jackets,ski-jackets,Women / Clothing / Skiwear / Ski Jackets,TRUE,,,,722,existing
+W101015-08,W101015,L4,Women,Clothing,Base Jumpsuits,base-jumpsuits,Women / Clothing / Skiwear / Base Jumpsuits,TRUE,,,,543,existing
+W101016-01,W101016,L4,Women,Clothing,Waistcoats,waistcoats,Women / Clothing / Blazers & Suits / Waistcoats,TRUE,,,,2421,existing
+W101017-02,W101017,L4,Women,Clothing,Socks,socks,Women / Clothing / Underwear & Socks / Socks,TRUE,,,,13214,existing
+W101017-01,W101017,L4,Women,Clothing,Basic Tops,basic-tops,Women / Clothing / Underwear & Socks / Basic Tops,TRUE,,,,5983,existing
+W101017-04,W101017,L4,Women,Clothing,Tights,tights,Women / Clothing / Underwear & Socks / Tights,TRUE,,,,4034,existing
+W101017-03,W101017,L4,Women,Clothing,Boxers,boxers,Women / Clothing / Underwear & Socks / Boxers,TRUE,,,,3274,existing
+W101018-01,W101018,L4,Women,Clothing,One Piece Swimsuit,one-piece-swimsuit,Women / Clothing / Swimwear / One Piece Swimsuit,TRUE,,,,3414,existing
+W101018-02,W101018,L4,Women,Clothing,Bikini Tops,bikini-tops,Women / Clothing / Swimwear / Bikini Tops,TRUE,,,,2824,existing
+W101018-03,W101018,L4,Women,Clothing,Rashguard,rashguard,Women / Clothing / Swimwear / Rashguard,TRUE,,,,2135,existing
+W101018-04,W101018,L4,Women,Clothing,Bikini,bikini,Women / Clothing / Swimwear / Bikini,TRUE,,,,826,existing
+W101018-05,W101018,L4,Women,Clothing,Bikini Bottoms,bikini-bottoms,Women / Clothing / Swimwear / Bikini Bottoms,TRUE,,,,735,existing
+W101019-01,W101019,L4,Women,Clothing,Rompers,rompers,Women / Clothing / Jumpsuits / Rompers,TRUE,,,,400,existing
+W103042-01,W103042,L4,Women,Bags,Duffle,duffle,Women / Bags / Luggage / Duffle,TRUE,,,,5663,existing
+W103042-02,W103042,L4,Women,Bags,Vanity,vanity,Women / Bags / Luggage / Vanity,TRUE,,,,3436,existing
+W103042-03,W103042,L4,Women,Bags,Beauty Case,beauty-case,Women / Bags / Luggage / Beauty Case,TRUE,,,,1913,existing
+W104050-03,W104050,L4,Women,Accessories,Sunglasses,sunglasses,Women / Accessories / Eyewear / Sunglasses,TRUE,,,,22221,new
+W104050-04,W104050,L4,Women,Accessories,Optical Glasses,optical-glasses,Women / Accessories / Eyewear / Optical Glasses,TRUE,,,,14437,new
+W104050-05,W104050,L4,Women,Accessories,Eyewear Accessories,eyewear-accessories,Women / Accessories / Eyewear / Eyewear Accessories,TRUE,,,,4862,new
+W104051-01,W104051,L4,Women,Accessories,Wallet On Chain,wallet-on-chain,Women / Accessories / Wallets & Small Leather Goods / Wallet On Chain,TRUE,,,,8131,existing
+W104051-02,W104051,L4,Women,Accessories,Wallets,wallets,Women / Accessories / Wallets & Small Leather Goods / Wallets,TRUE,,,,5878,existing
+W104051-03,W104051,L4,Women,Accessories,Passport Holders,passport-holders,Women / Accessories / Wallets & Small Leather Goods / Passport Holders,TRUE,,,,3608,existing
+W104051-04,W104051,L4,Women,Accessories,Card Holders,card-holders,Women / Accessories / Wallets & Small Leather Goods / Card Holders,TRUE,,,,3373,existing
+W104051-05,W104051,L4,Women,Accessories,Travel Wallets,travel-wallets,Women / Accessories / Wallets & Small Leather Goods / Travel Wallets,TRUE,,,,3355,existing
+W104051-06,W104051,L4,Women,Accessories,Key Rings,key-rings,Women / Accessories / Wallets & Small Leather Goods / Key Rings,TRUE,,,,3314,existing
+W104051-07,W104051,L4,Women,Accessories,Lanyards,lanyards,Women / Accessories / Wallets & Small Leather Goods / Lanyards,TRUE,,,,2950,existing
+W104051-08,W104051,L4,Women,Accessories,Pouches,pouches,Women / Accessories / Wallets & Small Leather Goods / Pouches,TRUE,,,,2803,existing
+W104051-09,W104051,L4,Women,Accessories,Document Case,document-case,Women / Accessories / Wallets & Small Leather Goods / Document Case,TRUE,,,,924,existing
+W104052-02,W104052,L4,Women,Accessories,Gloves,gloves,Women / Accessories / Scarves & Soft Accessories / Gloves,TRUE,,,,6091,existing
+W104052-03,W104052,L4,Women,Accessories,Scarves,scarves,Women / Accessories / Scarves & Soft Accessories / Scarves,TRUE,,,,5262,existing
+W104052-04,W104052,L4,Women,Accessories,Head Covers,head-covers,Women / Accessories / Scarves & Soft Accessories / Head Covers,TRUE,,,,4108,existing
+W104052-05,W104052,L4,Women,Accessories,Ear Muff,ear-muff,Women / Accessories / Scarves & Soft Accessories / Ear Muff,TRUE,,,,2950,existing
+W104052-07,W104052,L4,Women,Accessories,Ties,ties,Women / Accessories / Scarves & Soft Accessories / Ties,TRUE,,,,1160,existing
+W104052-08,W104052,L4,Women,Accessories,Face Masks,face-masks,Women / Accessories / Scarves & Soft Accessories / Face Masks,TRUE,,,,960,existing
+W104054-01,W104054,L4,Women,Accessories,Charms,charms,Women / Accessories / Bag Accessories / Charms,TRUE,,,,5395,existing
+W104054-02,W104054,L4,Women,Accessories,Strap,strap,Women / Accessories / Bag Accessories / Strap,TRUE,,,,3854,existing
+W104054-03,W104054,L4,Women,Accessories,Scarf,scarf,Women / Accessories / Bag Accessories / Scarf,TRUE,,,,1784,existing
+W104054-04,W104054,L4,Women,Accessories,Pom Pom,pom-pom,Women / Accessories / Bag Accessories / Pom Pom,TRUE,,,,1235,existing
+W104055-01,W104055,L4,Women,Accessories,Travel,travel,Women / Accessories / Lifestyle / Travel,TRUE,,,,3576,existing
+W104055-02,W104055,L4,Women,Accessories,Water Bottle,water-bottle,Women / Accessories / Lifestyle / Water Bottle,TRUE,,,,3083,existing
+W104055-03,W104055,L4,Women,Accessories,Pens,pens,Women / Accessories / Lifestyle / Pens,TRUE,,,,2615,existing
+W104055-04,W104055,L4,Women,Accessories,Eye Masks,eye-masks,Women / Accessories / Lifestyle / Eye Masks,TRUE,,,,1439,existing
+W104055-05,W104055,L4,Women,Accessories,Stationery,stationery,Women / Accessories / Lifestyle / Stationery,TRUE,,,,1333,existing
+W104056-01,W104056,L4,Women,Accessories,Caps,caps,Women / Accessories / Hats / Caps,TRUE,,,,2933,existing
+W104056-02,W104056,L4,Women,Accessories,Cold Weather,cold-weather,Women / Accessories / Hats / Cold Weather,TRUE,,,,1442,existing
+W104056-03,W104056,L4,Women,Accessories,Bucket Hats,bucket-hats,Women / Accessories / Hats / Bucket Hats,TRUE,,,,1033,existing
+W104056-04,W104056,L4,Women,Accessories,Fedora,fedora,Women / Accessories / Hats / Fedora,TRUE,,,,785,existing
+W104056-05,W104056,L4,Women,Accessories,Headband,headband,Women / Accessories / Hats / Headband,TRUE,,,,734,existing
+W104056-06,W104056,L4,Women,Accessories,Visors,visors,Women / Accessories / Hats / Visors,TRUE,,,,26,new
+W104058-01,W104058,L4,Women,Accessories,Hair Clip,hair-clip,Women / Accessories / Hair Accessories / Hair Clip,TRUE,,,,366,existing
+W104059-01,W104059,L4,Women,Accessories,Cosmetic Accessories,cosmetic-accessories,Women / Accessories / Cosmetic Accessories / Cosmetic Accessories,TRUE,,,,1566,existing
+W104060-01,W104060,L4,Women,Accessories,Tech Accessories,tech-accessories,Women / Accessories / Tech / Tech Accessories,TRUE,,,,1326,existing
+W104080-01,W104080,L4,Women,Accessories,Towels,towels,Women / Accessories / Beach Accessories / Towels,TRUE,,,,1738,existing
+W104080-02,W104080,L4,Women,Accessories,Pareo,pareo,Women / Accessories / Beach Accessories / Pareo,TRUE,,,,1663,existing
+W105061-02,W105061,L4,Women,Jewellery,Chain Bracelets,chain-bracelets,Women / Jewellery / Bracelets / Chain Bracelets,TRUE,,,,12125,new
+W105061-03,W105061,L4,Women,Jewellery,Bangles,bangles,Women / Jewellery / Bracelets / Bangles,TRUE,,,,9214,new
+W105061-04,W105061,L4,Women,Jewellery,Cuffs,cuffs,Women / Jewellery / Bracelets / Cuffs,TRUE,,,,6974,new
+W105061-01,W105061,L4,Women,Jewellery,Charms,charms,Women / Jewellery / Bracelets / Charms,TRUE,,,,2867,existing
+W105061-05,W105061,L4,Women,Jewellery,Strand Bracelets,strand-bracelets,Women / Jewellery / Bracelets / Strand Bracelets,TRUE,,,,1935,new
+W105061-06,W105061,L4,Women,Jewellery,Hand Chains,hand-chains,Women / Jewellery / Bracelets / Hand Chains,TRUE,,,,533,new
+W105062-02,W105062,L4,Women,Jewellery,Chains,chains,Women / Jewellery / Necklaces / Chains,TRUE,,,,14873,new
+W105062-03,W105062,L4,Women,Jewellery,Pendants,pendants,Women / Jewellery / Necklaces / Pendants,TRUE,,,,11154,new
+W105062-04,W105062,L4,Women,Jewellery,Chokers,chokers,Women / Jewellery / Necklaces / Chokers,TRUE,,,,5969,new
+W105062-05,W105062,L4,Women,Jewellery,Lariats,lariats,Women / Jewellery / Necklaces / Lariats,TRUE,,,,4855,new
+W105062-06,W105062,L4,Women,Jewellery,Statement Necklaces,statement-necklaces,Women / Jewellery / Necklaces / Statement Necklaces,TRUE,,,,1824,new
+W105062-01,W105062,L4,Women,Jewellery,Charms,charms,Women / Jewellery / Necklaces / Charms,TRUE,,,,376,existing
+W105062-07,W105062,L4,Women,Jewellery,Strand Necklaces,strand-necklaces,Women / Jewellery / Necklaces / Strand Necklaces,TRUE,,,,193,new
+W105063-01,W105063,L4,Women,Jewellery,Bands,bands,Women / Jewellery / Rings / Bands,TRUE,,,,3613,new
+W105063-02,W105063,L4,Women,Jewellery,Stacking Rings,stacking-rings,Women / Jewellery / Rings / Stacking Rings,TRUE,,,,3363,new
+W105063-03,W105063,L4,Women,Jewellery,Cocktail Rings,cocktail-rings,Women / Jewellery / Rings / Cocktail Rings,TRUE,,,,3287,new
+W105063-04,W105063,L4,Women,Jewellery,Solitaires,solitaires,Women / Jewellery / Rings / Solitaires,TRUE,,,,2812,new
+W105063-05,W105063,L4,Women,Jewellery,Signet Rings,signet-rings,Women / Jewellery / Rings / Signet Rings,TRUE,,,,2464,new
+W105064-01,W105064,L4,Women,Jewellery,Ear Cuffs,ear-cuffs,Women / Jewellery / Earrings / Ear Cuffs,TRUE,,,,4602,new
+W105064-02,W105064,L4,Women,Jewellery,Hoops,hoops,Women / Jewellery / Earrings / Hoops,TRUE,,,,3963,new
+W105064-03,W105064,L4,Women,Jewellery,Statement Earrings,statement-earrings,Women / Jewellery / Earrings / Statement Earrings,TRUE,,,,3517,new
+W105064-04,W105064,L4,Women,Jewellery,Studs,studs,Women / Jewellery / Earrings / Studs,TRUE,,,,2849,new
+W105064-05,W105064,L4,Women,Jewellery,Huggies,huggies,Women / Jewellery / Earrings / Huggies,TRUE,,,,2555,new
+W105064-06,W105064,L4,Women,Jewellery,Drop Earrings,drop-earrings,Women / Jewellery / Earrings / Drop Earrings,TRUE,,,,2334,new
+W105064-07,W105064,L4,Women,Jewellery,Ear Climbers,ear-climbers,Women / Jewellery / Earrings / Ear Climbers,TRUE,,,,1100,new
+W105064-08,W105064,L4,Women,Jewellery,Single Earrings,single-earrings,Women / Jewellery / Earrings / Single Earrings,TRUE,,,,795,new
+W106072-01,W106072,L4,Women,Watches,Dress Watches,dress-watches,Women / Watches / Watches / Dress Watches,TRUE,,,,9701,new
+W106072-02,W106072,L4,Women,Watches,Smartwatches,smartwatches,Women / Watches / Watches / Smartwatches,TRUE,,,,5690,new
+W106072-03,W106072,L4,Women,Watches,Chronographs,chronographs,Women / Watches / Watches / Chronographs,TRUE,,,,1236,new
+W106072-04,W106072,L4,Women,Watches,Sport Watches,sport-watches,Women / Watches / Watches / Sport Watches,TRUE,,,,1109,new
+W106072-05,W106072,L4,Women,Watches,Dive Watches,dive-watches,Women / Watches / Watches / Dive Watches,TRUE,,,,458,new
+W106073-01,W106073,L4,Women,Watches,Watch Winder,watch-winder,Women / Watches / Watch Accessories / Watch Winder,TRUE,,,,5050,existing
+W106073-02,W106073,L4,Women,Watches,Watch Strap,watch-strap,Women / Watches / Watch Accessories / Watch Strap,TRUE,,,,2113,existing
+W106073-03,W106073,L4,Women,Watches,Watch Covers,watch-covers,Women / Watches / Watch Accessories / Watch Covers,TRUE,,,,2005,existing
+W107074-01,W107074,L4,Women,Beauty,Accessories And Tools,accessories-and-tools,Women / Beauty / Makeup / Accessories And Tools,TRUE,,,,22917,existing
+W107074-02,W107074,L4,Women,Beauty,Face,face,Women / Beauty / Makeup / Face,TRUE,,,,22291,existing
+W107074-03,W107074,L4,Women,Beauty,Eyes,eyes,Women / Beauty / Makeup / Eyes,TRUE,,,,14571,existing
+W107074-04,W107074,L4,Women,Beauty,Brows,brows,Women / Beauty / Makeup / Brows,TRUE,,,,11994,existing
+W107074-05,W107074,L4,Women,Beauty,Lips,lips,Women / Beauty / Makeup / Lips,TRUE,,,,9962,existing
+W107074-06,W107074,L4,Women,Beauty,Nails,nails,Women / Beauty / Makeup / Nails,TRUE,,,,9388,existing
+W107074-07,W107074,L4,Women,Beauty,Make Up Removers,make-up-removers,Women / Beauty / Makeup / Make Up Removers,TRUE,,,,8992,existing
+W107075-01,W107075,L4,Women,Beauty,"Creams, Moisturisers And Serums",creams-moisturisers-and-serums,"Women / Beauty / Skincare / Creams, Moisturisers And Serums",TRUE,,,,22375,existing
+W107075-02,W107075,L4,Women,Beauty,Cleansers And Exfoliators,cleansers-and-exfoliators,Women / Beauty / Skincare / Cleansers And Exfoliators,TRUE,,,,16602,existing
+W107075-03,W107075,L4,Women,Beauty,Sun Care,sun-care,Women / Beauty / Skincare / Sun Care,TRUE,,,,15110,existing
+W107075-04,W107075,L4,Women,Beauty,Mask,mask,Women / Beauty / Skincare / Mask,TRUE,,,,13395,existing
+W107075-05,W107075,L4,Women,Beauty,Tools And Accessories,tools-and-accessories,Women / Beauty / Skincare / Tools And Accessories,TRUE,,,,10667,existing
+W107075-06,W107075,L4,Women,Beauty,Grooming,grooming,Women / Beauty / Skincare / Grooming,TRUE,,,,516,existing
+W107076-01,W107076,L4,Women,Beauty,Styling,styling,Women / Beauty / Hair / Styling,TRUE,,,,15310,existing
+W107076-02,W107076,L4,Women,Beauty,Hair Care,hair-care,Women / Beauty / Hair / Hair Care,TRUE,,,,13274,existing
+W107076-03,W107076,L4,Women,Beauty,Hair Tools And Accessories,hair-tools-and-accessories,Women / Beauty / Hair / Hair Tools And Accessories,TRUE,,,,9779,existing
+W107077-01,W107077,L4,Women,Beauty,Body Moisturiser And Oils,body-moisturiser-and-oils,Women / Beauty / Bath & Body / Body Moisturiser And Oils,TRUE,,,,13137,existing
+W107077-02,W107077,L4,Women,Beauty,Bath And Shower,bath-and-shower,Women / Beauty / Bath & Body / Bath And Shower,TRUE,,,,10243,existing
+W107077-03,W107077,L4,Women,Beauty,Hygiene,hygiene,Women / Beauty / Bath & Body / Hygiene,TRUE,,,,3130,existing
+W107078-01,W107078,L4,Women,Beauty,Fragrance,fragrance,Women / Beauty / Fragrance / Fragrance,TRUE,,,,23846,existing
+W107079-01,W107079,L4,Women,Beauty,Supplements,supplements,Women / Beauty / Wellness / Supplements,TRUE,,,,6072,existing
+W107079-02,W107079,L4,Women,Beauty,Sleep,sleep,Women / Beauty / Wellness / Sleep,TRUE,,,,70,existing

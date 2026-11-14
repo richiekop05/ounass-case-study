@@ -1,0 +1,41 @@
+/* Models tab (Design PRD 10). Tokens only. */
+.md { max-width: var(--metrics-width); margin: 0 auto; padding: var(--s5) var(--s5) var(--s7); display: flex; flex-direction: column; gap: var(--s6); }
+.md-section { display: flex; flex-direction: column; gap: var(--s2); }
+.md-h2 { margin: 0; font-size: var(--text-lg); line-height: var(--lh-lg); font-weight: 600; }
+.md-note { margin: 0; }
+.md-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(var(--model-card), 1fr)); gap: var(--s3); margin-top: var(--s2); }
+.md-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--s1);
+  padding: var(--s4);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font: inherit;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color var(--motion);
+}
+.md-card:hover { border-color: var(--text); }
+.md-card.is-selected { border: var(--hairline) solid var(--action); padding: calc(var(--s4) - 1px); }
+.md-head { display: flex; align-items: center; gap: var(--s2); }
+.md-name { font-size: var(--text-lg); line-height: var(--lh-lg); font-weight: 600; }
+.md-current { height: var(--badge-height); padding: 0 var(--s2); border-radius: var(--radius-pill); background: var(--ok-bg); color: var(--ok); font-size: var(--text-xs); line-height: var(--badge-height); }
+.md-flag { display: block; color: var(--flag); }
+.md-results { display: flex; flex-direction: column; margin-top: var(--s2); padding-top: var(--s2); border-top: 1px solid var(--border); width: 100%; }
+.md-footer {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  min-height: var(--footer-height);
+  padding: 0 var(--s5);
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border);
+}
+.md-footer > span { flex: 1; }
+.md-sk { height: var(--sk-card); }

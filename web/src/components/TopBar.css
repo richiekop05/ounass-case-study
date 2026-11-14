@@ -1,0 +1,13 @@
+.topbar {
+  height: var(--topbar-height);
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s4);
+  padding: 0 var(--s5);
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+}
+.topbar-left { display: flex; align-items: baseline; gap: var(--s4); min-width: 0; }
+.topbar-right { display: flex; align-items: center; gap: var(--s2); }

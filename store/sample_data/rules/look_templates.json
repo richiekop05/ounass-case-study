@@ -1,0 +1,11 @@
+{"_note": "Engineering PRD 6, default templates. Editable rows in store_look_templates.",
+ "templates": {
+  "one_piece": ["shoes", "bag", "jewellery"],
+  "top": ["bottom", "shoes", "bag"],
+  "bottom": ["top", "shoes", "bag"],
+  "outerwear": ["one_piece", "shoes", "bag"],
+  "shoes": ["one_piece", "bag", "jewellery"],
+  "bag": ["one_piece", "shoes", "jewellery"],
+  "jewellery": ["one_piece", "shoes", "bag"],
+  "accessory": ["one_piece", "shoes", "bag"]
+ }}

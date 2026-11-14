@@ -1,0 +1,26 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s1);
+  height: var(--chip-height);
+  padding: 0 var(--s2);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-sm);
+  line-height: var(--chip-height);
+  white-space: nowrap;
+}
+.chip-value { background: var(--bg-surface); border: 1px solid var(--border); }
+.chip-flag { background: var(--flag-bg); color: var(--flag); }
+.chip-removable { padding: 0 var(--s1) 0 var(--s3); }
+.chip-remove {
+  width: var(--badge-height);
+  height: var(--badge-height);
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: none;
+  color: var(--text-muted);
+  line-height: var(--badge-height);
+  cursor: pointer;
+}
+.chip-remove:hover { background: var(--photo-bg); color: var(--text); }

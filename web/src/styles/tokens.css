@@ -1,0 +1,137 @@
+/* Design tokens: Design PRD section 3 and the handoff README. Every colour, size and spacing used by a
+   component comes from here; components never write a hex value or a pixel size of their own. */
+:root {
+  /* colour */
+  --bg-page: #FAFAF8;
+  --bg-surface: #FFFFFF;
+  --border: #E6E4DF;
+  --text: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --action: #111111;
+  --flag: #9A6700;
+  --flag-bg: #FFF4D6;
+  --ok: #1F7A4D;
+  --ok-bg: #E8F5EE;
+  --error: #B42318;
+  --error-bg: #FDECEA;
+  --highlight: #FFE98A;
+  --focus: #2563EB;
+  --photo-bg: #F3F2EE;
+  --series-1: #1A1A1A;
+  --series-2: #2563EB;
+  --series-3: #9A6700;
+  /* helper shades the prototype uses (README) */
+  --placeholder-stripe: #ECEAE4;
+  --flag-track: #EBD9A6;
+  --line-quiet: #C9C6BE;
+  --switch-off: #D6D3CC;
+  --on-action: #FFFFFF;
+  --toast-bg: #1A1A1A;
+  --overlay: rgba(26, 26, 26, 0.32);
+  --overlay-strong: rgba(26, 26, 26, 0.6);
+  --shadow-pop: 0 8px 24px rgba(0, 0, 0, 0.18);
+  --shadow-dialog: 0 16px 48px rgba(0, 0, 0, 0.2);
+
+  /* type */
+  --font: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --text-xs: 12px;   --lh-xs: 16px;
+  --text-sm: 13px;   --lh-sm: 20px;
+  --text-base: 14px; --lh-base: 22px;
+  --text-lg: 18px;   --lh-lg: 26px;
+  --text-stat: 24px; --lh-stat: 32px;
+  --text-tile: 32px; --lh-tile: 40px;
+  --tracking-label: 0.04em;
+
+  /* spacing scale: 4, 8, 12, 16, 24, 32, 48 only */
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px; --s7: 48px;
+
+  /* shape and sizes */
+  --radius: 6px;
+  --radius-pill: 999px;
+  --rail-width: 200px;
+  --topbar-height: 56px;
+  --row-height: 72px;
+  --nav-row: 36px;
+  --button-height: 36px;
+  --button-small: 32px;
+  --chip-height: 24px;
+  --footer-height: 64px;
+  --motion: 150ms;
+  --min-width: 1280px;
+  --hairline: 2px;          /* inset of a segmented pill group */
+  --radius-sm: 4px;         /* thumbnails */
+  --badge-height: 20px;     /* small inline badges */
+  --segment-height: 28px;   /* a pill inside a segmented group */
+  --select-height: 32px;
+  --select-max: 220px;
+  --search-width: 240px;
+  --table-head: 40px;
+  --thumb-width: 48px;
+  --thumb-height: 64px;
+  --conf-bar-width: 40px;
+  --conf-bar-height: 4px;
+  /* list table columns (Design PRD 5) */
+  --col-photo: 64px;
+  --col-confidence: 140px;
+  --col-action: 160px;
+  /* detail page (Design PRD 6, handoff README "Detail page") */
+  --text-md: 16px;  --lh-md: 24px;   /* category breadcrumbs */
+  --radius-xs: 2px;                  /* highlighted quote mark */
+  --flag-bar: 3px;                   /* left bar on facet rows and the category card */
+  --detail-left: 42%;
+  --detail-right: 58%;
+  --evidence-max: 440px;             /* main photo width */
+  --compact-row: 40px;
+  --facet-name-width: 140px;
+  --number-input: 120px;
+  --search-results-max: 240px;
+  --lightbox-max-h: 90vh;
+  --lightbox-max-w: 90vw;
+  --disabled-opacity: 0.4;
+  --z-overlay: 50;
+  --z-toast: 30;
+  --z-dialog: 40;
+  --dialog-width: 420px;
+  /* live tag (Design PRD 7, handoff README "Live tag") */
+  --live-width: 960px;
+  --live-input-height: 48px;
+  --live-number-width: 72px;
+  --live-result-height: 860px;
+  --tracker-dot: 24px;
+  --col-pos: 32px;
+  --col-step: 140px;
+  --col-live-action: 112px;
+  --thumb-sm-width: 36px;
+  --thumb-sm-height: 48px;
+  --sk-line-long: 160px;
+  --sk-line-short: 96px;
+  /* metrics (Design PRD 11) */
+  --metrics-width: 1200px;
+  --chart-height: 240px;
+  --split-bar: 12px;
+  --col-metric: 104px;
+  --col-facet: 220px;
+  --col-facet-sm: 160px;
+  --col-sc: 56px;
+  --col-drift: 80px;
+  --point: 4px;
+  /* confidence and models (Design PRD 8 and 10) */
+  --col-confident: 170px;
+  --conf-track: 120px;
+  --row-compact-tall: 56px;
+  --model-card: 260px;
+  --col-reviewed: 200px;
+  --cf-facet: 150px;
+  --cf-level: 130px;
+  --cf-metric: 84px;
+  /* facets (Design PRD 9) */
+  --facet-pane: 320px;
+  --facet-detail: 880px;
+  --value-label: 180px;
+  --value-active: 120px;
+  --col-pos-wide: 72px;
+  --history-date: 150px;
+  --sk-card: 180px;
+  --sk-tile: 120px;
+  --sk-card-tall: 480px;
+}

@@ -1,0 +1,240 @@
+facet_id,value,definition,version
+colour_primary,,"One value. Text only: never take colour from a photo. Use the colour stated in Design Details or the product colour field, then the title, then the description. Map the stated colour word to the nearest value using the definitions. If two colours are named, the first is primary. If no colour is stated, or the colour name maps to no value (such as ""Sunset""), answer unknown.",v6
+colour_primary,black,"Black, noir, jet.",v6
+colour_primary,white,"White, optic white, ivory, off-white.",v6
+colour_primary,beige,"Beige, sand, oatmeal, ecru.",v6
+colour_primary,cream,"Cream, vanilla, butter, eggshell. Paler and warmer than beige; ivory and off-white stay under white.",v6
+colour_primary,neutral,"A pale neutral that is not clearly beige or cream: stone, nude, taupe.",v6
+colour_primary,grey,"Grey, charcoal, anthracite, slate. A brownish grey goes under mud grey.",v6
+colour_primary,mud grey,"A grey with a brown cast: mud, mushroom, greige, grey-brown.",v6
+colour_primary,brown,"Brown, tan, camel, chocolate, cognac.",v6
+colour_primary,blue,"Navy, cobalt, sky, indigo, denim blue, turquoise.",v6
+colour_primary,green,"Olive, khaki, sage, emerald, mint, teal.",v6
+colour_primary,red,"Red, scarlet, crimson.",v6
+colour_primary,burgundy,"Burgundy, wine, maroon, bordeaux, oxblood.",v6
+colour_primary,pink,"Pink, blush, rose, fuchsia, magenta.",v6
+colour_primary,purple,"Purple, lilac, lavender, violet, plum.",v6
+colour_primary,yellow,"Yellow, mustard, lemon.",v6
+colour_primary,orange,"Orange, coral, rust, terracotta.",v6
+colour_primary,gold,The text names gold as the colour.,v6
+colour_primary,silver,The text names silver as the colour.,v6
+colour_primary,rose gold,The text names rose gold as the colour.,v6
+colour_primary,metallic,"A metallic finish in another colour: bronze, copper, gunmetal, pewter.",v6
+colour_primary,multicolour,"The text says multicolour, or names three or more colours with none leading.",v6
+colour_primary,colourless,Clear or transparent.,v6
+dial_colour,,"One value. Use the dial colour stated in the text. If the text does not state it, read it from the photo and give a confidence. Map colour words using the definitions.",v6
+dial_colour,black,"Black, noir, jet.",v6
+dial_colour,white,"White, optic white, ivory, off-white.",v6
+dial_colour,neutral,"Beige, cream, ecru, sand, stone, nude, taupe, oatmeal.",v6
+dial_colour,grey,"Grey, charcoal, anthracite, slate.",v6
+dial_colour,brown,"Brown, tan, camel, chocolate, cognac.",v6
+dial_colour,blue,"Navy, cobalt, sky, indigo, denim blue, turquoise.",v6
+dial_colour,green,"Olive, khaki, sage, emerald, mint, teal.",v6
+dial_colour,red,"Red, scarlet, crimson.",v6
+dial_colour,burgundy,"Burgundy, wine, maroon, bordeaux, oxblood.",v6
+dial_colour,pink,"Pink, blush, rose, fuchsia, magenta.",v6
+dial_colour,purple,"Purple, lilac, lavender, violet, plum.",v6
+dial_colour,yellow,"Yellow, mustard, lemon.",v6
+dial_colour,orange,"Orange, coral, rust, terracotta.",v6
+dial_colour,gold,The text names gold as the colour.,v6
+dial_colour,silver,The text names silver as the colour.,v6
+dial_colour,rose gold,The text names rose gold as the colour.,v6
+dial_colour,metallic,"A metallic finish in another colour: bronze, copper, gunmetal, pewter.",v6
+dial_colour,multicolour,"The text says multicolour, or names three or more colours with none leading.",v6
+dial_colour,colourless,Clear or transparent.,v6
+pattern,,"One value. Use the text if it states the pattern; otherwise read the photo and give a confidence. If there is more than one pattern, pick the one that covers most of the piece.",v6
+pattern,solid,"One colour, no print. Tonal texture or jacquard still counts as solid, and so does a single small logo.",v6
+pattern,stripe,Parallel lines of any width.,v6
+pattern,check,"Crossing lines: plaid, tartan, gingham, houndstooth.",v6
+pattern,floral,Flowers or leaves.,v6
+pattern,animal,"Leopard, zebra, snake or similar print. Croc-embossed leather is a finish, not a pattern.",v6
+pattern,abstract,"Irregular shapes that do not repeat: painterly prints, tie-dye, marble.",v6
+pattern,geometric,"Regular repeating shapes other than stripes, checks and dots: chevrons, diamonds, tiles.",v6
+pattern,logo/monogram,A brand logo or monogram repeated across the piece.,v6
+pattern,polka dot,Evenly spaced dots.,v6
+pattern,colour-block,Large panels of two or more solid colours.,v6
+formality,,"One value. Test: what is the most formal setting where this item would not look out of place? Start from the anchor items for each level. Smart-casual is the default for polished daywear: a piece someone would wear to lunch, a cafe or a relaxed office is smart-casual even when it is comfortable. Choose casual only when the item is built for home, the gym, the beach or sport, or is deliberately relaxed streetwear (hoodie, graphic T-shirt, joggers, distressed denim, slides). When torn between casual and smart-casual, choose smart-casual. Move up one level for satin, silk, velvet, lace or heavy embellishment. Move down one level for fleece, distressing or a large logo; jersey or denim alone does not move an item down. Never move more than one level from the anchor. For an item that spans levels (a plain belt, sunglasses, a simple leather tote), pick the middle of the range and give medium confidence.",v6
+formality,1 casual,"Built for home, errands, the gym, the beach or sport, or deliberately relaxed. Clothing: hoodies, sweatshirts, graphic or logo T-shirts, joggers, denim shorts, distressed or baggy jeans, swimwear, activewear. Shoes and bags: sports and chunky trainers, slides, flip-flops, canvas totes, backpacks, belt bags.",v6
+formality,2 smart-casual,"Fits lunch with friends or a relaxed office. Clothing: plain fine-fabric T-shirts, polo shirts, knitwear, dark or clean-wash jeans, chinos, casual shirts, tailored shorts, day dresses, everyday kaftans. Shoes and bags: loafers, clean leather trainers, ballet flats, espadrilles, leather totes, shoulder and crossbody bags.",v6
+formality,3 smart,"Fits a business meeting or an upscale restaurant. Clothing: blazers, tailored trousers, shirting, pencil skirts, structured midi dresses, plain tailored abayas. Shoes, bags, jewellery: pumps, block heels, Oxfords, structured top-handle bags, fine everyday jewellery.",v6
+formality,4 formal,"Fits a wedding, an Eid gathering or a gala dinner. Clothing: suits, cocktail dresses, embellished kaftans and abayas, silk or satin occasion dresses. Shoes, bags, jewellery: stilettos, embellished sandals, clutches, statement jewellery.",v6
+formality,5 black-tie,"Fits an event with a black-tie dress code. Clothing: tuxedos, floor-length evening gowns. Shoes and bags: satin or crystal evening shoes, minaudieres, patent dress shoes.",v6
+occasion,,"One to three values, strongest first. Decide formality first. Test for each value: would a stylist reach for this item for that occasion without being told to? If it only ""could work"", leave it out. Everyday and work often go together: a smart-casual piece that is opaque and neat passes both tests, so give both. Evening describes time and mood, wedding guest a dress code, special occasion any celebration; a formal piece can carry all three only when each test passes on its own. Everyday never sits beside evening, wedding guest or special occasion. If no test passes clearly, answer unknown; do not fall back to everyday.",v6
+occasion,everyday,"Tag when formality is 1 or 2 and there is no occasion-specific design. Do not tag when formality is 4 or 5, or the piece is heavily embellished.",v6
+occasion,work,"Tag when formality is 2 or 3 and the piece is opaque and neat enough for a relaxed office. Clothing: tailoring, shirting, knitwear, polo shirts, dark jeans, chinos, plain day dresses, midi skirts. Shoes: loafers, flats, pumps, clean leather trainers, low to mid heels. Bags: totes, shoulder bags and structured bags that hold daily essentials. Accessories: watches, belts and fine everyday jewellery. Do not tag when sheer, heavily embellished, mini length, distressed, sportswear, or formality 1.",v6
+occasion,evening,"Tag when formality is 3 to 5 with evening cues: satin, velvet, sequins, metallics, dark or jewel tones, high heels, clutches. Do not tag daywear cotton or linen, even when smart.",v6
+occasion,wedding guest,"Tag when formality is 4, or 3 in a dressy fabric: occasion dresses, gowns, dressy kaftans, suits, dressy heels, clutches. Do not tag casual fabrics, or a piece that reads as bridal. A white dress is excluded only if it reads as bridal.",v6
+occasion,special occasion,"Tag when formality is 4 or 5, for any formal celebration. This is the broad value: use it when the piece is formal but no narrower value fits better. Do not tag when formality is 3 or below.",v6
+occasion,Ramadan/Eid,"Tag when the text names Ramadan or Eid, or the piece is a dressy kaftan, abaya or jalabiya: long, opaque, with rich fabric or embellishment. Do not tag a piece that is merely modest, and do not tag a plain everyday abaya.",v6
+occasion,National Day,"Tag when the text names a GCC national day, or the design deliberately uses a national flag's colours or emblems. Do not tag when colours match by coincidence, such as a plain red dress.",v6
+occasion,resort/beach,"Tag swimwear, cover-ups, linen, crochet, raffia, slides, espadrilles and straw bags. Do not tag a light summer item with no holiday cue.",v6
+occasion,travel,"Tag luggage, weekend bags, passport holders and travel accessories, or clothing the text describes as made for travel. Do not tag an item just because it is comfortable.",v6
+occasion,sport,"Tag performance activewear, performance trainers, sports bags and skiwear. Do not tag fashion trainers or athletic-looking streetwear.",v6
+season,,"One to three values, or all-season on its own. Judge by how heavy the fabric is first and by coverage second. In the Gulf a long loose garment in a light fabric is warm-weather clothing, so long sleeves alone never mean cold. Use all-season for anything worn or used all year: a plain T-shirt, jeans, leather trainers, and bags, jewellery and accessories whose material is not seasonal. All-season stands alone; never combine it with warm, transitional or cold, and never list all three of those in its place. Use warm, transitional or cold only when the item clearly belongs to one or two of them. If the fabric of a garment cannot be read from the text or the photo, answer unknown.",v6
+season,warm,"Light, breathable fabric or open construction: linen, cotton poplin, chiffon, light silk; sleeveless and short-sleeved pieces; light kaftans and abayas; sandals, slides, raffia bags.",v6
+season,transitional,"Medium weight, or an outer layer worn without a coat: denim, jersey, light knits, blazers, trench coats, leather jackets, loafers, ankle boots.",v6
+season,cold,"Heavy or insulating: wool coats, heavy cashmere knits, puffers, shearling, knee boots, gloves, skiwear.",v6
+season,all-season,"Not tied to a season: worn or used all year. A plain T-shirt, jeans, leather trainers; a leather bag, a watch, fine jewellery, sunglasses with no seasonal material. Stands alone.",v6
+aesthetic,,"One or two values. The first is the short answer to ""what style is this?""; add a second only when the piece is clearly both. To separate classic from minimalist, ask two questions in order. First, is the shape long-established and recognisable (see classic)? If yes, classic comes first. Second, is the piece stripped back: solid colour, no logo, no decoration, little visible hardware? If the shape is not a heritage shape and the piece is stripped back, it is minimalist. If both are true, give classic first and minimalist second. A pinstriped blazer is classic only; a plain column dress is minimalist only; a plain black blazer is classic then minimalist. Bold works in daylight; glamorous is for an occasion. Minimalist and bold/statement never go together.",v6
+aesthetic,minimalist,"A modern, stripped-back piece: clean lines, solid colour, no visible logo, no embellishment, little visible hardware. Examples: a column dress, a plain slip skirt, a seamless knit, an unbranded smooth leather tote. Not anything with a print, pattern or decoration, and not first choice for a heritage shape (that is classic first).",v6
+aesthetic,classic,"A long-established, recognisable shape: trench coat, blazer, white or Oxford shirt, straight-leg jeans, crew-neck cashmere knit, pumps, loafers, a top-handle bag, pearls, a round or rectangular dress watch. Stripes, checks and a small heritage logo are allowed. Not a classic shape in a loud colour or exaggerated cut.",v6
+aesthetic,romantic,"Soft and delicate: ruffles, lace, florals, bows, tulle, pastels, puff sleeves. Not a floral print on a sharp, tailored shape.",v6
+aesthetic,bold/statement,"One loud element that leads: saturated colour, oversized shape, large print, sculptural form. Not shine or sparkle on an occasion piece; that is glamorous.",v6
+aesthetic,bohemian,"Relaxed and crafted: crochet, fringe, embroidery, paisley, tiered maxi shapes, earthy tones, raffia. Not a plain maxi dress.",v6
+aesthetic,streetwear,"Hoodies, graphic T-shirts, oversized fits, cargo shapes, chunky trainers, prominent logos, caps. Not performance sportswear with no street styling.",v6
+aesthetic,glamorous,"Shine and drama: sequins, crystals, metallics, satin, body-defining cuts, high heels. Not a plain piece in a formal fabric.",v6
+aesthetic,modest-chic,"A fashion piece designed around coverage: abayas, kaftans, long-sleeved maxi dresses, layered sets, with coverage as the design idea. It is a style, not a measurement: an item that merely has long sleeves does not qualify.",v6
+aesthetic,sporty,"Athletic references: track stripes, technical fabrics, polos, trainers. Performance activewear counts. Not a hoodie with a large logo; that is streetwear.",v6
+embellishment,,"One value. A print is not embellishment; it belongs to pattern. Hardware that does a job (a zip, a plain clasp) does not count.",v6
+embellishment,none,"No beads, sequins, crystals, studs, embroidery or applique anywhere.",v6
+embellishment,light,"Decoration on one area only, such as a collar, cuffs, a hem or a buckle.",v6
+embellishment,heavy,"Decoration covers most of the piece, or is the first thing you notice.",v6
+function,,"One or more values. Tag only generic garments that are made or described for a setting. Most garments have no function: answer not applicable, not unknown. Products in the Activewear, Sleepwear, Swimwear, Skiwear and Shapewear categories get their value from the category.",v6
+function,beach,"The text says beach, resort or cover-up, or the piece is made to wear over swimwear. Not a summer dress with no beach cue.",v6
+function,lounge,"The text says lounge or loungewear, or it is a robe or soft set meant for home. Not a knit set styled for going out.",v6
+function,active,"The text says training, running, yoga or performance, or names a technical fabric. Not athletic-looking fashion pieces.",v6
+function,sleep,"Pyjamas, nightdresses and sleep sets. Not a slip dress sold as daywear.",v6
+function,swim,"Swimsuits, bikinis and swim shorts. Not a bodysuit.",v6
+function,ski,The text says ski or snow. Not a puffer jacket with no ski cue.,v6
+function,shapewear,Pieces built to shape the body under clothes. Not a fitted bodysuit worn as a top.,v6
+sleeve_length,,One value. Judge from the photo of the item worn on a model where there is one.,v6
+sleeve_length,sleeveless,"No sleeve: straps, strapless, or cut at the shoulder.",v6
+sleeve_length,cap,Covers the shoulder point only.,v6
+sleeve_length,short,Ends at or above the elbow.,v6
+sleeve_length,three-quarter,Ends between the elbow and the wrist.,v6
+sleeve_length,long,Reaches the wrist.,v6
+length,,"One value. Judge from the photo of the item worn on a model where there is one. Trousers take cropped (above the ankle), maxi (at the ankle) or floor. A thigh-length tunic takes mini.",v6
+length,cropped,Tops and jackets: ends above the natural waist. Trousers: ends above the ankle.,v6
+length,hip,Tops and jackets: ends at the hip.,v6
+length,mini,Hem at mid-thigh or higher.,v6
+length,knee,Hem within a hand's width of the knee.,v6
+length,midi,Hem from below the knee to mid-calf.,v6
+length,maxi,Hem at the ankle.,v6
+length,floor,Hem covers the ankle or touches the floor.,v6
+neckline,,One value. Judge from the photo of the item worn on a model where there is one.,v6
+neckline,crew,"Round, sitting at the base of the neck.",v6
+neckline,V,Two edges meeting in a point at the front.,v6
+neckline,scoop,"Round and lower, showing the collarbone.",v6
+neckline,square,Straight across the chest with vertical sides.,v6
+neckline,high/roll,Covers part or all of the neck.,v6
+neckline,halter,"Straps or fabric fastening behind the neck, leaving the shoulders bare.",v6
+neckline,collared,Has a shirt-style or other turned-down collar.,v6
+neckline,sweetheart,"A curved, heart-shaped edge across the bust.",v6
+neckline,boat,"Wide and shallow, running from shoulder to shoulder.",v6
+neckline,keyhole,A closed neckline with a cut-out opening below it.,v6
+neckline,cowl,Draped folds at the front.,v6
+sheerness,,One value. Lined lace over a solid lining counts as opaque.,v6
+sheerness,opaque,Nothing shows through anywhere on the garment.,v6
+sheerness,semi-sheer,"Skin or an outline shows through part of the garment (sleeves, yoke, an overlay), or faintly through all of it.",v6
+sheerness,sheer,"The body is clearly visible through the main part of the garment, with no lining.",v6
+fit,,One value. Use the text if it states the fit; otherwise read the photo and give a confidence.,v6
+fit,slim,"Follows the body closely. Text words: slim-fit, fitted, skinny, bodycon.",v6
+fit,regular,"Skims the body with a little ease. Text words: regular fit, classic fit, straight fit.",v6
+fit,relaxed,"Visibly loose, with the shoulders still in place. Text words: relaxed, loose, easy fit.",v6
+fit,oversized,"Deliberately large: dropped shoulders, extra volume. Text words: oversized, boxy.",v6
+fabric_construction,,"One value. Use the text if it states the construction; otherwise read the photo and give a confidence. For mixed constructions, tag the main body.",v6
+fabric_construction,woven,"Interlaced threads with little stretch: poplin, twill, denim, satin, chiffon, tweed.",v6
+fabric_construction,knit,"Knitted yarn with visible stitches: sweaters, ribbed and cable knits.",v6
+fabric_construction,jersey,"Fine, smooth machine knit with no visible stitches: T-shirt fabric.",v6
+fabric_construction,lace,Openwork patterned fabric as the main body.,v6
+fabric_construction,mesh,"Open net or perforated fabric: tulle, fishnet, athletic mesh.",v6
+fabric_construction,quilted,Padded layers held by stitching.,v6
+heel_height,,"One value. Use the heel height stated in the text, converted from mm or inches to cm; otherwise estimate from the photo and give a confidence.",v6
+heel_height,flat,Up to 2 cm.,v6
+heel_height,low,"Above 2 cm, up to 5 cm.",v6
+heel_height,mid,"Above 5 cm, up to 8.5 cm.",v6
+heel_height,high,Above 8.5 cm.,v6
+heel_style,,One value.,v6
+heel_style,none,A flat sole with no separate heel.,v6
+heel_style,stiletto,"Thin and tapering, usually 7 cm or more.",v6
+heel_style,kitten,"Thin and short, 5 cm or less.",v6
+heel_style,block,"Wide, with a square or cylindrical shape.",v6
+heel_style,wedge,"Sole and heel are one solid piece, higher at the back.",v6
+heel_style,platform,"A sole of 2 cm or more under the forefoot, with a separate heel.",v6
+heel_style,flatform,A thick sole of even height from front to back.,v6
+heel_style,sculptural,"An unconventional shape: a sphere, a curve, a cut-out.",v6
+bag_size,,"One value. Use the width stated in the text; if no dimensions are given, estimate from the photo and give a confidence. If a size word in the text and the stated width disagree, use the width.",v6
+bag_size,mini,"Width under 18 cm. Text words: mini, micro, nano.",v6
+bag_size,small,Width 18 to 25 cm.,v6
+bag_size,medium,Width 26 to 33 cm.,v6
+bag_size,large,Width 34 to 42 cm.,v6
+bag_size,maxi,"Width over 42 cm. Text words: maxi, oversized, weekender.",v6
+belt_width,,One value.,v6
+belt_width,skinny,Under 2 cm wide.,v6
+belt_width,medium,2 to 4 cm wide.,v6
+belt_width,wide,Over 4 cm wide.,v6
+scarf_size,,One value.,v6
+scarf_size,bandana,"A small square, under 60 cm a side.",v6
+scarf_size,square,Equal sides of 60 cm or more.,v6
+scarf_size,long,"A narrow rectangle, under 45 cm wide, worn round the neck.",v6
+scarf_size,stole,"A wide rectangle, 45 cm wide or more, worn over the shoulders.",v6
+scarf_size,pareo,"A large, light rectangle for wrapping at the beach; the text says pareo or sarong.",v6
+watch_style,,One value.,v6
+watch_style,skeleton,The movement is visible through the dial.,v6
+watch_style,aviator,"A pilot's watch: large legible numerals, often with chronograph subdials.",v6
+watch_style,classic,Everything else: a simple dress or everyday watch. Dive and sports watches fall here for now.,v6
+watch_strap_material,,One value. Use the text if it states the strap material; otherwise read the photo and give a confidence.,v6
+watch_strap_material,leather,"Any leather, including alligator and calf.",v6
+watch_strap_material,bracelet,Metal or ceramic links.,v6
+watch_strap_material,rubber,Rubber or silicone.,v6
+watch_strap_material,fabric,"NATO, canvas, satin or other textile.",v6
+shade_family,,"One value, for lip, cheek and nail colour. A shade outside these families (blue, green, black) is unknown.",v6
+shade_family,nude,"Close to skin tones, from beige to soft rose-beige.",v6
+shade_family,pink,"Clear pink, from light to bright.",v6
+shade_family,red,"True red, whether it leans blue or orange.",v6
+shade_family,berry,"Deep pink-red with a purple cast: raspberry, cranberry.",v6
+shade_family,coral,Pink-orange or peach.,v6
+shade_family,brown,"Brown, caramel, chocolate.",v6
+shade_family,plum,"Dark and purple-leaning: wine, aubergine.",v6
+design_style,,One or two values. Use the text if it states the style; otherwise read the photo and give a confidence.,v6
+design_style,classic,"Traditional forms and decoration: gilt rims, florals, cut crystal, ornate silver.",v6
+design_style,contemporary,"Current design with some character: organic shapes, matte glazes, mixed materials.",v6
+design_style,oriental,"Arabic, Islamic or East Asian motifs: arabesque, calligraphy, geometric lattice, chinoiserie.",v6
+design_style,minimalist,"Plain forms, one colour, no decoration.",v6
+design_style,maximalist,"Dense pattern, saturated colour or heavy ornament.",v6
+exclusivity,,"One or more values, text only. Tag Ounass-exclusive or limited edition only when the text or a badge says so. Do not tag local designer; code sets it from the brand table. If there is no cue, the value is none, and none stands alone.",v6
+exclusivity,Ounass-exclusive,The text or a badge says the product is exclusive to Ounass.,v6
+exclusivity,limited edition,"The text says limited edition, numbered, or limited quantities.",v6
+exclusivity,local designer,The brand is flagged in the brand table as based in the GCC or wider Middle East. Set by code.,v6
+exclusivity,none,No cue. This is the default.,v6
+giftable,,"Set by code. True when the product is a set, or the text calls it a gift or gift set, or it is in a gift-friendly category that needs no size: fragrance, candles and home fragrance, beauty sets, small leather goods, bags, scarves, ties, cufflinks, sunglasses, watches, jewellery other than rings, tableware, home decor, chocolates, dates and sweets, toys and baby gifts. False for clothing, shoes and rings. Price does not exclude anything.",v6
+giftable,true,Meets the giftable rule.,v6
+giftable,false,Does not meet the giftable rule.,v6
+gift_occasion,,"Set by code, only when giftable is true. Up to three values, strongest first.",v6
+gift_occasion,Eid,"Fragrance (oud and bukhoor above all), fine jewellery, watches, bags, chocolates and dates, children's toys and gifts.",v6
+gift_occasion,Ramadan,"Dining and serveware, coffee and tea sets, dates, lanterns, incense burners, or the text names Ramadan.",v6
+gift_occasion,birthday,"Any giftable personal item: fragrance, beauty sets, jewellery, small leather goods, bags, toys.",v6
+gift_occasion,wedding,"Tableware and crystal sets, home decor, fine jewellery, luxury home textiles.",v6
+gift_occasion,Mother's Day,"Women's fragrance, beauty sets, jewellery, scarves, bags, candles.",v6
+gift_occasion,corporate,"Pens and stationery, card holders, tech accessories, boxed chocolates or dates, desk objects. Nothing personal, such as jewellery or fragrance.",v6
+gift_occasion,housewarming,"Candles, home fragrance, decor, tableware, coffee sets.",v6
+gift_occasion,Christmas,"Only when the text says Christmas, holiday or advent.",v6
+gift_occasion,Diwali,Only when the text says Diwali.,v6
+brand_tier,,"Set by code from the brand table. One value per brand, inherited by every product of that brand.",v6
+brand_tier,contemporary,Accessible premium labels positioned below designer; the entry point to the site.,v6
+brand_tier,designer,Established designer labels with a clear design identity and mid-luxury pricing.,v6
+brand_tier,luxury,The major heritage fashion houses.,v6
+brand_tier,ultra-luxury,"Houses at the very top of the market, known for exceptional craft and scarcity, including the fine jewellery and fine watch houses.",v6
+price_band,,Set by code. Three bands relative to the product's department. A department with fewer than nine priced products uses the whole catalog's thirds.,v6
+price_band,entry,Price in the lowest third of products in the same department.,v6
+price_band,mid,Price in the middle third.,v6
+price_band,high,Price in the highest third.,v6
+recency,,Set by code from launch_date.,v6
+recency,new-in,Launched in the last 30 days.,v6
+recency,current season,Launched 31 to 180 days ago.,v6
+recency,carried over,Launched more than 180 days ago.,v6
+case_size_bucket,,"Set by code from case_size_mm. If case_size_mm is missing, there is no bucket.",v6
+case_size_bucket,small <34,Case under 34 mm.,v6
+case_size_bucket,medium 34-40,Case 34 to 40 mm.,v6
+case_size_bucket,large >40,Case over 40 mm.,v6
+colour_secondary,,"One value, optional. If the text names two colours for the product, the second is the secondary colour: use it and quote the words. If the text names only one colour or none, look at the photos: the secondary colour is the second most prominent colour on the product itself, such as a contrast panel, trim, lining that shows, or a second colour in a print. Ignore hardware, the background, the model and other products in the shot. It must differ from the primary colour. Map the colour to a value the same way as for colour_primary. If the product is clearly one colour, answer not applicable.",v6
+is_metallic,,"Set by code from colour_primary. True when the primary colour is gold, silver, rose gold or metallic; false for any other colour. If colour_primary has no accepted value, there is no answer.",v6
+is_metallic,true,"The primary colour is gold, silver, rose gold or metallic.",v6
+is_metallic,false,The primary colour is any other colour.,v6
+closure,,"One value: the main fastening that opens and closes the garment. Use what the text states first; otherwise what the photos show. Never assume a zip. Trousers, jeans and shorts follow their own rule: if there is a button or press stud at the waistband, stated in the text or visible in a photo, the closure is button, even when the text also names a zip fly. When the text names only a zip for one of these, look at the photos for a waist button before answering. Choose zip for trousers, jeans and shorts only when there is a zip and no waist button, such as a side or back zip. For every other garment, if more than one fastening is present, choose the one that opens the garment, not a decorative one. If the text does not name a fastening and none can be seen in the photos, answer unknown.",v6
+closure,button,"Buttons or press studs do the fastening: shirts, cardigans, blazers. Also trousers, jeans and shorts with a button or press stud at the waistband, whether the fly below it is buttoned or zipped.",v6
+closure,zip,"The text says zip or zipped, or a zip is visible in a photo: back zip, side zip, zip-front jacket. On trousers, jeans and shorts, only when there is no button or press stud at the waistband. Never chosen by default.",v6
+closure,pull-on,"No fastening: pulled over the head or up over the hips. T-shirts, jumpers, elasticated or drawstring waists on stretch fabric, slip dresses with no zip mentioned or visible.",v6
+closure,wrap,"One side crosses over the other and is held by a tie or inner button: wrap dresses, wrap skirts, wrap tops, robes.",v6
+closure,tie,"Ties, a belt or a lace-up do the fastening on a piece that does not wrap: tie-front tops, lace-up backs, halter ties, tie-side bottoms.",v6
+closure,hook,"Hook-and-eye or hook-and-bar is the main fastening: bras, corsets, bustiers, some tailored trousers when the text says so.",v6

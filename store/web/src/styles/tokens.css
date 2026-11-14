@@ -1,0 +1,90 @@
+/* Every colour and size token from the design handoff. No hex values anywhere else. */
+:root {
+  /* Colours: store */
+  --ivory: #FAF8F5;
+  --ink: #1A1A1A;
+  --ink-hover: #33312E;
+  --stone: #8A857D;
+  --muted: #5E5A54;
+  --body: #4A4741;
+  --hairline: #E5E0D8;
+  --chip-outline: #D6CFC4;
+  --row-divider: #EFEBE5;
+  --loading: #F2EEE8;
+  --disabled-text: #B5AFA6; /* "No more options" */
+  --accent: #8C6A3F;
+  --scrim: rgba(0, 0, 0, 0.22);
+  --photo-bg: #FAFAFA; /* the product photos' own background, so uncropped photos sit in their frame */
+
+  /* Colours: demo chrome (persona bar, behind the scenes) */
+  --chrome-bg: #141312;
+  --chrome-text: #EDE8E0;
+  --chrome-muted: #9C968C;
+  --chrome-dim: #6E6962;
+  --chrome-divider: #2A2826;
+  --chrome-divider-2: #23211F;
+  --chrome-divider-3: #3A3733;
+  --chrome-highlight: #D9B98A;
+  --chrome-soft: #C8C2B8;
+  --chrome-current: #24221F;
+
+  /* Toast */
+  --toast-bg: #1A1A1A;
+  --toast-text: #FAF8F5;
+
+  /* Type */
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-ui: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", Menlo, monospace;
+  --fs-wordmark: clamp(32px, 5vw, 42px);
+  --fs-section: clamp(34px, 5.5vw, 52px);
+  --fs-pdp-name: clamp(34px, 4.5vw, 46px);
+  --fs-grid-heading: clamp(26px, 3.5vw, 34px);
+  --fs-ctl-title: 32px;
+  --fs-look-title: 26px;
+  --fs-drawer-title: 30px;
+  --fs-card-name: 14px;
+  --fs-hero-name: 15px;
+  --fs-price: 13px;
+  --fs-body: 14px;
+  --lh-body: 1.65;
+  --fs-label: 11px;
+  --fs-label-sm: 10.5px;
+  --ls-label: 0.16em;
+  --ls-label-wide: 0.18em;
+  --fs-button: 12px;
+  --fs-chrome: 12px;
+  --fs-chrome-lg: 13px;
+  --fs-caption: 10px;
+  --ls-caption: 0.08em;
+  --fs-pill: 13px;
+  --fs-pill-sm: 11px;
+
+  /* Shape and spacing */
+  --radius: 0;
+  --radius-pill: 999px;
+  --container: 1280px;
+  --gutter: clamp(16px, 4vw, 48px);
+  --grid-row-gap: clamp(28px, 4vw, 48px);
+  --grid-col-gap: clamp(12px, 2.5vw, 32px);
+  --grid-cols: repeat(auto-fill, minmax(max(150px, calc((100% - 96px) / 4)), 1fr));
+  --button-h: 54px;
+  --size-box: 48px;
+  --check: 14px;
+  --icon: 18px;
+  --pdp-gap: clamp(28px, 5vw, 72px);
+  --band-top: clamp(40px, 7vw, 72px);
+  --band-bottom: clamp(40px, 6vw, 64px);
+  --persona-menu-w: min(380px, 90vw);
+  --bts-w: min(440px, 94vw);
+  --filter-drawer-w: min(400px, 100vw);
+  --toast-top: 132px;
+  --persona-bar-h: 40px;
+
+  /* Motion */
+  --ease: ease;
+  --t-fast: 200ms;
+  --t-slow: 300ms;
+  --t-swap: 230ms;
+  --toast-hold: 1800ms;
+}

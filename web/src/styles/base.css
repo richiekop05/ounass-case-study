@@ -1,0 +1,108 @@
+/* Global rules and the shared primitives (Design PRD sections 3, 12, 13). Uses tokens only. */
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body {
+  background: var(--bg-page);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: var(--text-base);
+  line-height: var(--lh-base);
+  font-variant-numeric: tabular-nums;
+}
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+a { color: var(--text); }
+a:hover { color: var(--action); }
+
+.label {
+  font-size: var(--text-xs);
+  line-height: var(--lh-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.muted { color: var(--text-muted); }
+.small { font-size: var(--text-sm); line-height: var(--lh-sm); }
+.title { font-size: var(--text-lg); line-height: var(--lh-lg); font-weight: 600; margin: 0; }
+
+/* buttons: one primary per page */
+.btn {
+  height: var(--button-height);
+  padding: 0 var(--s4);
+  border-radius: var(--radius);
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity var(--motion), border-color var(--motion);
+}
+.btn-primary { background: var(--action); color: var(--on-action); border: none; }
+.btn-secondary { background: var(--bg-surface); border: 1px solid var(--border); }
+.btn-secondary:hover:not(:disabled) { border-color: var(--text); }
+.btn-review { background: var(--bg-surface); border: 1px solid var(--flag); color: var(--flag); }
+.btn-review:hover { background: var(--flag-bg); }
+.btn-quiet { background: none; border: none; color: var(--text-muted); padding: 0 var(--s2); }
+.btn-quiet:hover { color: var(--action); }
+.btn-sm { height: var(--button-small); padding: 0 var(--s3); }
+.btn:disabled { opacity: 0.4; cursor: default; }
+
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--s4);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  height: var(--chip-height);
+  padding: 0 var(--s3);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-xs);
+  line-height: var(--lh-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+  white-space: nowrap;
+}
+.pill-flag { background: var(--flag-bg); color: var(--flag); }
+.pill-ok { background: var(--ok-bg); color: var(--ok); }
+.pill-outline { border: 1px solid var(--border); }
+
+.skeleton { background: var(--photo-bg); border-radius: var(--radius); }
+
+/* "✓ Approved" / "✓ Changed" pill, shared with the facet rows */
+.decided-pill {
+  display: inline-flex;
+  align-items: center;
+  height: var(--badge-height);
+  padding: 0 var(--s2);
+  border-radius: var(--radius-pill);
+  background: var(--ok-bg);
+  color: var(--ok);
+  font-size: var(--text-xs);
+  line-height: var(--badge-height);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* the only motion: 150ms fades (Design PRD 13) */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* error banner with the server's reason and its problems list (Design PRD 13 "Save failed") */
+.error-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s4);
+  padding: var(--s3) var(--s4);
+  border-radius: var(--radius);
+  background: var(--error-bg);
+  color: var(--error);
+}
+.error-banner-text { flex: 1; min-width: 0; }
+.error-banner-list { margin: var(--s1) 0 0; padding-left: var(--s4); }
+.error-banner .btn { flex: none; }

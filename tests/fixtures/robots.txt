@@ -1,0 +1,87 @@
+# Block crawling software
+
+User-agent: *
+Disallow: /build
+Disallow: /build-v2
+Disallow: /static
+Disallow: /static-v2
+Disallow: /cart
+Disallow: /checkout
+Disallow: /customer
+Disallow: /get-delivery-sla
+Disallow: /get-mega-nav
+Disallow: /get-recommendations
+Disallow: /get-size-guide
+Disallow: /get-style-colors
+Disallow: /wishlist
+Disallow: /contentful/preview
+Disallow: /experiments
+Disallow: /v2/maintenance
+Disallow: /*staff-sale*
+Disallow: /*adsfegsrhtjy*
+Disallow: /*undefined*
+Disallow: /*back-to-school-26th-august*
+Disallow: /*private-sale*
+Disallow: /*extra20-25th-july-2021*
+Disallow: /*adadad-wonder-week-asdasdadadadadad*
+Disallow: /*aggregate*
+Disallow: /*page_action*
+Disallow: /*jserror*
+Disallow: /*234567890987654323456789876545678*
+Disallow: /*ajax*
+Disallow: /*page_view*
+Disallow: /*metrics*
+Disallow: /*get-delivery-sla*
+Disallow: /*session_trace*
+Disallow: /*adadad*
+Disallow: /*fh_sort_by=*
+Disallow: /*fh_start_index=*
+Disallow: /*?*
+# WARNING: Do not remove Disallow:/*?* rule. Doing so will significantly increase crawler activity and server load.
+Disallow: /*?dressType*
+Disallow: /*?dressLength*
+Disallow: /*?sleeveLength*
+Disallow: /*?designerCategoryName*
+Disallow: /*?rtwSizeCode*
+Disallow: /*?color%*
+Disallow: /*?min=*
+Disallow: /*?priceTypeByCustomerGroupId%*
+Disallow: /*?priceTypeByCustomerGroupId*
+Disallow: /*?priceTypeBySaleId%*
+Disallow: /*?priceTypeBySaleId*
+Disallow: /*?discountPercentByCustomerGroupId*
+Disallow: /*?discountPercentBySaleId*
+Disallow: /*?heelHeight%*
+Disallow: /*?heelStyle%*
+Disallow: /*?shoeSizeCode%*
+
+User-agent: rogerbot
+User-agent: AhrefsBot
+User-agent: AhrefsBot-SA
+User-agent: SiteAuditBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+User-agent: sitecheck.internetseer.com
+User-agent: Zealbot
+User-agent: MSIECrawler
+User-agent: SiteSnagger
+User-agent: WebStripper
+User-agent: WebCopier
+User-agent: Fetch
+User-agent: Offline Explorer
+User-agent: Teleport
+User-agent: TeleportPro
+User-agent: WebZIP
+User-agent: linko
+User-agent: HTTrack
+User-agent: Microsoft.URL.Control
+User-agent: Xenu
+User-agent: larbin
+User-agent: libwww
+User-agent: ZyBORG
+User-agent: Download Ninja
+User-agent: WebReaper
+User-agent: PetalBot
+User-agent: Bytespider
+Disallow: /
