@@ -25,6 +25,15 @@ The tables are not there yet. Run `uv run catalog migrate`.
 **`catalog seed-taxonomy` reports nodes "not in categories".**
 The categories are not loaded. Run `uv run scraper plan --spine ounass_spine_v5_nodes.csv` first, then the seed again.
 
+**`catalog load-data` says "Nothing loaded: run `uv run catalog migrate` first".**
+The tables are missing or not up to date. Run `uv run catalog migrate`, then `load-data` again.
+
+**`catalog load-data` says "Nothing loaded: table ... already has rows".**
+It only fills a new, empty database, so it never overwrites data. Use a new Supabase project, or start empty with option B in [Setup](../README.md#setup).
+
+**`scraper fetch-photos` reports photos that failed.**
+Ounass no longer serves some photos of products that have sold out. The products still work; they show without that photo. If it stops with "STOPPED", wait a while and run it again: it skips the photos it already stored.
+
 **`richies setup` stops with "Persona histories refer to products not approved in the store".**
 Expected on a new database: the personas' histories name 23 particular products you have not tagged. Run `uv run catalog migrate` and `uv run richies seed-rules` instead. [Tag your first products](../README.md#tag-your-first-products) explains how to load the histories later.
 

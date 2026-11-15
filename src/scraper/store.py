@@ -209,6 +209,12 @@ class Store:
         if r.status_code >= 300:
             raise RuntimeError(f"storage upload {path} failed: {r.status_code} {r.text[:200]}")
 
+    def listed_images(self, folder: str) -> set[str]:
+        """Paths of the photos stored under one product's folder."""
+        r = self._http.post(f"/object/list/{BUCKET}", json={"prefix": folder, "limit": 1000})
+        r.raise_for_status()
+        return {f"{folder}/{o['name']}" for o in r.json() if o.get("id")}
+
     def download_image(self, path: str) -> bytes:
         r = self._http.get(f"/object/authenticated/{BUCKET}/{path}")
         r.raise_for_status()

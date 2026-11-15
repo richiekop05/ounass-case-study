@@ -234,5 +234,54 @@ def export(out: Path = typer.Option(ROOT / "data" / "products.jsonl"),
     typer.echo(f"wrote {len(products)} rows to {out}")
 
 
+@app.command("fetch-photos")
+def fetch_photos(limit: Optional[int] = typer.Option(None, help="Stop after N products.")):
+    """Download the photos of the products in the database from Ounass into the photo bucket.
+
+    For a database filled with `catalog load-data`: the data has each photo's Ounass address but not the photo.
+    Photos already in the bucket are skipped, so it is safe to stop and rerun. About one request a second."""
+    client = _client()
+    store = _store()
+    with store.conn.cursor() as cur:
+        cur.execute("""select product_id, position, source_url, storage_path from product_images
+                       where storage_path is not null order by product_id, position""")
+        rows = cur.fetchall()
+    by_product: dict[str, list] = {}
+    for r in rows:
+        by_product.setdefault(r[0], []).append(r)
+    products = list(by_product.items())[:limit] if limit else list(by_product.items())
+    stored = skipped = failed = 0
+    try:
+        for i, (pid, images) in enumerate(products, 1):
+            have = store.listed_images(pid)
+            for _, _, url, path in images:
+                if path in have:
+                    skipped += 1
+                    continue
+                try:
+                    resp = client.get(url, expect_page=False)
+                except Exception as e:  # a photo Ounass no longer serves: report and carry on
+                    if isinstance(e, StopScrape):
+                        raise
+                    failed += 1
+                    typer.secho(f"  {path}: {e}", fg="yellow")
+                    continue
+                if not resp.content_type.startswith("image/"):
+                    failed += 1
+                    typer.secho(f"  {path}: not an image ({resp.content_type})", fg="yellow")
+                    continue
+                store.upload_image(path, resp.content, resp.content_type.split(";")[0])
+                stored += 1
+            if i % 20 == 0 or i == len(products):
+                typer.echo(f"{i}/{len(products)} products: {stored} photos stored, {skipped} already there, "
+                           f"{failed} failed")
+    except StopScrape as e:
+        typer.secho(f"STOPPED: {e}. Wait a while, then run the command again to continue.", fg="red")
+        raise typer.Exit(2)
+    finally:
+        store.close()
+        client.close()
+
+
 if __name__ == "__main__":
     sys.exit(app())

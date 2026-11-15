@@ -1,0 +1,591 @@
+{
+ "exported_at": "2026-11-15T10:28:01+00:00",
+ "migrations": [
+  "001_scraper.sql",
+  "002_catalog.sql",
+  "003_catalog_v2.sql",
+  "004_catalog_v3.sql",
+  "005_rule_evidence.sql",
+  "006_tagger.sql",
+  "007_run_provider.sql",
+  "008_run_costs_provider.sql",
+  "009_monitoring.sql",
+  "010_inherited_facets.sql",
+  "011_exclusive_values.sql",
+  "012_parent_categories.sql",
+  "013_category_flagged.sql",
+  "014_invalid_tags_run_category.sql",
+  "015_invalid_tags_skip_retired.sql",
+  "016_golden_holdout.sql",
+  "017_review_app.sql",
+  "018_tag_flags.sql",
+  "019_saved_decisions_resolve_flags.sql",
+  "020_review_outcome_rows.sql",
+  "021_sheet_reviews.sql",
+  "022_auto_approvals.sql",
+  "023_store.sql",
+  "024_review_state_all.sql",
+  "025_store_personas_v3.sql"
+ ],
+ "tables": [
+  {
+   "table": "app_settings",
+   "file": "app_settings.csv.gz",
+   "columns": [
+    "id",
+    "default_review_threshold",
+    "category_review_threshold",
+    "taxonomy_version",
+    "categorise_model",
+    "tag_model",
+    "projection_catalog_size",
+    "updated_at"
+   ],
+   "rows": 1
+  },
+  {
+   "table": "brands",
+   "file": "brands.csv.gz",
+   "columns": [
+    "brand",
+    "brand_tier",
+    "is_local_designer",
+    "created_at"
+   ],
+   "rows": 142
+  },
+  {
+   "table": "categories",
+   "file": "categories.csv.gz",
+   "columns": [
+    "node_id",
+    "parent_id",
+    "level",
+    "audience",
+    "department",
+    "name",
+    "slug",
+    "path",
+    "is_leaf",
+    "definition",
+    "aliases",
+    "review_flag"
+   ],
+   "rows": 1169
+  },
+  {
+   "table": "facets",
+   "file": "facets.csv.gz",
+   "columns": [
+    "facet_id",
+    "name",
+    "definition",
+    "cardinality",
+    "kind",
+    "is_filterable",
+    "sort_order",
+    "data_type",
+    "max_values",
+    "facet_group",
+    "source_rule",
+    "created_at",
+    "unit",
+    "min_values",
+    "none_is_exclusive",
+    "source_policy",
+    "unknown_policy",
+    "auto_threshold",
+    "status",
+    "on_missing",
+    "default_value",
+    "definition_version",
+    "review_threshold",
+    "updated_at",
+    "edited_in_app"
+   ],
+   "rows": 110
+  },
+  {
+   "table": "product_rejects",
+   "file": "product_rejects.csv.gz",
+   "columns": [
+    "id",
+    "run_id",
+    "product_id",
+    "url",
+    "reason",
+    "payload",
+    "rejected_at"
+   ],
+   "rows": 0
+  },
+  {
+   "table": "scrape_runs",
+   "file": "scrape_runs.csv.gz",
+   "columns": [
+    "run_id",
+    "started_at",
+    "finished_at",
+    "status",
+    "args",
+    "requests",
+    "requests_by_host",
+    "cache_hits",
+    "products_written",
+    "rejects",
+    "node_counts",
+    "area_counts",
+    "field_fill_rates",
+    "errors",
+    "notes"
+   ],
+   "rows": 3
+  },
+  {
+   "table": "store_colour_pairings",
+   "file": "store_colour_pairings.csv.gz",
+   "columns": [
+    "colour_a",
+    "colour_b",
+    "score",
+    "rule"
+   ],
+   "rows": 253
+  },
+  {
+   "table": "store_look_templates",
+   "file": "store_look_templates.csv.gz",
+   "columns": [
+    "anchor_role",
+    "slot_role",
+    "position",
+    "required"
+   ],
+   "rows": 24
+  },
+  {
+   "table": "store_occasion_profiles",
+   "file": "store_occasion_profiles.csv.gz",
+   "columns": [
+    "occasion",
+    "display_name",
+    "formality_min",
+    "formality_max",
+    "seasons",
+    "hero_roles",
+    "active",
+    "reviewed",
+    "note"
+   ],
+   "rows": 10
+  },
+  {
+   "table": "store_personas",
+   "file": "store_personas.csv.gz",
+   "columns": [
+    "id",
+    "name",
+    "full_name",
+    "description",
+    "department_default",
+    "starting_intent",
+    "sort_order",
+    "archetype",
+    "entry_source",
+    "entry_occasion",
+    "starting_signals"
+   ],
+   "rows": 4
+  },
+  {
+   "table": "store_score_weights",
+   "file": "store_score_weights.csv.gz",
+   "columns": [
+    "feature",
+    "signal",
+    "weight"
+   ],
+   "rows": 18
+  },
+  {
+   "table": "category_facets",
+   "file": "category_facets.csv.gz",
+   "columns": [
+    "category_id",
+    "facet_id",
+    "is_required",
+    "created_at",
+    "inherited_from"
+   ],
+   "rows": 20984
+  },
+  {
+   "table": "facet_changes",
+   "file": "facet_changes.csv.gz",
+   "columns": [
+    "change_id",
+    "facet_id",
+    "changed_at",
+    "changed_by",
+    "summary",
+    "before",
+    "after"
+   ],
+   "rows": 0
+  },
+  {
+   "table": "facet_values",
+   "file": "facet_values.csv.gz",
+   "columns": [
+    "facet_value_id",
+    "facet_id",
+    "value",
+    "label",
+    "definition",
+    "sort_order",
+    "created_at",
+    "definition_version",
+    "is_exclusive",
+    "is_active"
+   ],
+   "rows": 639
+  },
+  {
+   "table": "products",
+   "file": "products.csv.gz",
+   "columns": [
+    "product_id",
+    "url",
+    "name",
+    "brand",
+    "price",
+    "original_price",
+    "currency",
+    "site_breadcrumb",
+    "spine_node_id",
+    "spine_path",
+    "placement_level",
+    "needs_placement",
+    "audience",
+    "description",
+    "details",
+    "attributes",
+    "content_tabs",
+    "size_and_fit",
+    "colour",
+    "sizes",
+    "in_stock",
+    "badges",
+    "scraped_at",
+    "source",
+    "parent_sku",
+    "sample_area",
+    "listing_url",
+    "raw"
+   ],
+   "rows": 244
+  },
+  {
+   "table": "store_outfit_roles",
+   "file": "store_outfit_roles.csv.gz",
+   "columns": [
+    "category_node_id",
+    "role",
+    "rule",
+    "needs_review"
+   ],
+   "rows": 1169
+  },
+  {
+   "table": "golden_products",
+   "file": "golden_products.csv.gz",
+   "columns": [
+    "product_id",
+    "category_id",
+    "labelled_by",
+    "notes",
+    "created_at",
+    "is_holdout"
+   ],
+   "rows": 95
+  },
+  {
+   "table": "product_images",
+   "file": "product_images.csv.gz",
+   "columns": [
+    "product_id",
+    "position",
+    "source_url",
+    "storage_path"
+   ],
+   "rows": 941
+  },
+  {
+   "table": "tagging_runs",
+   "file": "tagging_runs.csv.gz",
+   "columns": [
+    "tagging_run_id",
+    "tagger_version",
+    "model",
+    "instructions_hash",
+    "started_at",
+    "finished_at",
+    "products_attempted",
+    "products_succeeded",
+    "input_tokens",
+    "output_tokens",
+    "cost_usd",
+    "notes",
+    "created_at",
+    "stage",
+    "rubric_version",
+    "model_profile",
+    "model_id",
+    "input_price",
+    "output_price",
+    "cached_input_price",
+    "cache_write_price",
+    "batch_input_price",
+    "batch_output_price",
+    "cached_input_tokens",
+    "cache_write_tokens",
+    "provider",
+    "is_drill",
+    "drill_name",
+    "product_id",
+    "parent_run_id",
+    "taxonomy_version",
+    "purpose"
+   ],
+   "rows": 273
+  },
+  {
+   "table": "catalog_products",
+   "file": "catalog_products.csv.gz",
+   "columns": [
+    "product_id",
+    "category_id",
+    "category_confidence",
+    "category_reason",
+    "category_status",
+    "name",
+    "brand",
+    "price",
+    "original_price",
+    "currency",
+    "url",
+    "description",
+    "details",
+    "size_and_fit",
+    "primary_image_path",
+    "current_run_id",
+    "is_published",
+    "updated_at",
+    "created_at",
+    "category_runner_up_id",
+    "category_run_id",
+    "launch_date",
+    "launch_date_is_dummy",
+    "approved_at",
+    "approved_by",
+    "approved_via",
+    "ai_run_id",
+    "category_review_outcome",
+    "category_was_flagged",
+    "category_reviewed_at",
+    "review_opened_at",
+    "source",
+    "in_stock"
+   ],
+   "rows": 244
+  },
+  {
+   "table": "evaluation_results",
+   "file": "evaluation_results.csv.gz",
+   "columns": [
+    "evaluation_id",
+    "tagging_run_id",
+    "kind",
+    "scope",
+    "metric",
+    "value",
+    "product_count",
+    "detail",
+    "created_at"
+   ],
+   "rows": 1636
+  },
+  {
+   "table": "golden_tags",
+   "file": "golden_tags.csv.gz",
+   "columns": [
+    "product_id",
+    "facet_id",
+    "facet_value_id",
+    "created_at",
+    "golden_tag_id",
+    "value_number",
+    "value_text",
+    "status"
+   ],
+   "rows": 1532
+  },
+  {
+   "table": "monitor_alerts",
+   "file": "monitor_alerts.csv.gz",
+   "columns": [
+    "alert_id",
+    "tagging_run_id",
+    "baseline_run_id",
+    "facet_id",
+    "segment_type",
+    "segment_value",
+    "check_name",
+    "baseline_value",
+    "current_value",
+    "change",
+    "severity",
+    "status",
+    "note",
+    "acknowledged_at",
+    "created_at"
+   ],
+   "rows": 19
+  },
+  {
+   "table": "monitor_baseline",
+   "file": "monitor_baseline.csv.gz",
+   "columns": [
+    "stage",
+    "tagging_run_id",
+    "pinned_at"
+   ],
+   "rows": 0
+  },
+  {
+   "table": "monitor_runs",
+   "file": "monitor_runs.csv.gz",
+   "columns": [
+    "tagging_run_id",
+    "baseline_run_id",
+    "facets_checked",
+    "warnings",
+    "alerts",
+    "checked_at"
+   ],
+   "rows": 10
+  },
+  {
+   "table": "run_facet_stats",
+   "file": "run_facet_stats.csv.gz",
+   "columns": [
+    "stat_id",
+    "tagging_run_id",
+    "facet_id",
+    "segment_type",
+    "segment_value",
+    "products_applicable",
+    "auto_count",
+    "review_count",
+    "unknown_count",
+    "not_applicable_count",
+    "unknown_rate",
+    "review_rate",
+    "coverage",
+    "values_with_confidence",
+    "band_lt_50",
+    "band_50_70",
+    "band_70_80",
+    "band_80_90",
+    "band_90_100",
+    "mean_confidence",
+    "median_confidence",
+    "created_at"
+   ],
+   "rows": 447
+  },
+  {
+   "table": "tagging_calls",
+   "file": "tagging_calls.csv.gz",
+   "columns": [
+    "call_id",
+    "tagging_run_id",
+    "product_id",
+    "stage",
+    "attempt",
+    "model_id",
+    "served_model",
+    "request",
+    "reply",
+    "parsed",
+    "stop_reason",
+    "input_tokens",
+    "cached_input_tokens",
+    "cache_write_tokens",
+    "output_tokens",
+    "duration_ms",
+    "cost_usd",
+    "error",
+    "created_at"
+   ],
+   "rows": 793
+  },
+  {
+   "table": "tagging_run_products",
+   "file": "tagging_run_products.csv.gz",
+   "columns": [
+    "tagging_run_id",
+    "product_id",
+    "status",
+    "category_id",
+    "category_runner_up_id",
+    "category_confidence",
+    "category_status",
+    "category_run_id",
+    "error",
+    "note",
+    "duration_ms",
+    "finished_at"
+   ],
+   "rows": 774
+  },
+  {
+   "table": "product_facet_tags",
+   "file": "product_facet_tags.csv.gz",
+   "columns": [
+    "tag_id",
+    "product_id",
+    "tagging_run_id",
+    "facet_id",
+    "facet_value_id",
+    "confidence",
+    "evidence",
+    "reason",
+    "status",
+    "created_at",
+    "value_number",
+    "value_text",
+    "evidence_quote",
+    "review_reason",
+    "review_outcome",
+    "review_was_flagged"
+   ],
+   "rows": 13598
+  },
+  {
+   "table": "store_events",
+   "file": "store_events.csv.gz",
+   "columns": [
+    "id",
+    "persona_id",
+    "session_id",
+    "type",
+    "product_id",
+    "context",
+    "is_seed",
+    "created_at"
+   ],
+   "rows": 21
+  }
+ ]
+}

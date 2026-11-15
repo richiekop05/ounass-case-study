@@ -85,5 +85,35 @@ def seed_launch_dates_cmd():
                f"{result['in_last_30_days']}")
 
 
+DATA_DIR = ROOT / "db" / "data"
+
+
+@app.command("export-data")
+def export_data_cmd(out: Path = typer.Option(DATA_DIR, help="Folder to write the files to.")):
+    """Copy the rows of every table to db/data/ (one gzipped CSV per table). Reads only."""
+    from .data_dump import export_data
+    with connect() as conn:
+        conn.read_only = True
+        manifest = export_data(conn, out)
+    total = sum(t["rows"] for t in manifest["tables"])
+    typer.secho(f"exported {total} rows from {len(manifest['tables'])} tables to {out}", fg="green")
+
+
+@app.command("load-data")
+def load_data_cmd(src: Path = typer.Option(DATA_DIR, "--from", help="Folder with the exported files.")):
+    """Load the rows in db/data/ into a new, empty database. Run `catalog migrate` first. All or nothing."""
+    from .data_dump import DataError, load_data
+    with connect() as conn:
+        try:
+            counts = load_data(conn, src)
+        except DataError as e:
+            typer.secho(f"Nothing loaded: {e}", fg="red")
+            raise typer.Exit(1)
+    for t, n in counts.items():
+        typer.echo(f"  {t:<28} {n:>7}")
+    typer.secho(f"loaded {sum(counts.values())} rows into {len(counts)} tables. "
+                "Next: uv run scraper fetch-photos", fg="green")
+
+
 if __name__ == "__main__":
     app()

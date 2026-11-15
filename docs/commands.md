@@ -11,6 +11,9 @@ The [developer reference](reference.md) has the background to each command.
 | `catalog migrate` | Apply the migrations in `db/migrations/` not applied yet, in order. Creates the photo bucket. Safe to rerun. |
 | `scraper plan --spine ounass_spine_v5_nodes.csv` | Load the category spine into `categories`. Drafts `config/sample_plan.csv` only if it does not exist (`--force` redrafts). |
 | `catalog seed-taxonomy` | Load facets, values, rubrics, which facets apply to which category, and brands from `config/`. Keeps facets edited in the app unless `--force`. |
+| `catalog load-data [--from db/data]` | Load the case-study data into a new, empty database, all or nothing. Run `catalog migrate` first. Refuses a database that already has data. |
+| `catalog export-data [--out db/data]` | Write every table's rows to `db/data/` (one gzipped CSV per table, plus `manifest.json`). Reads only. Leaves out session events. |
+| `scraper fetch-photos [--limit N]` | Download the photos of the products in the database from Ounass into the bucket. Skips photos already there, so it can be rerun. |
 | `scraper scrape [--limit N] [--category NODE]` | Scrape products from the listing pages in the sample plan, with their photos. No model calls. |
 | `scraper validate` | Re-check stored products against the schema and the acceptance rules. |
 | `scraper export` | Write the products table to `data/products.jsonl`. |

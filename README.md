@@ -70,7 +70,7 @@ You also need two accounts of your own:
 
 These steps take you from an empty Supabase project to both apps running. Nothing here calls a model or costs money.
 
-> The empty-database path below follows the code but has not been run end to end from a brand-new Supabase project. See [Limits](#limits-and-what-is-not-built).
+> These steps follow the code but have not been run end to end from a brand-new Supabase project. See [Limits](#limits-and-what-is-not-built).
 
 1. Get the code and install everything (Python packages, then both web front ends):
 
@@ -92,7 +92,21 @@ These steps take you from an empty Supabase project to both apps running. Nothin
 
    Open `.env` in an editor. Each line says where to find its value. [Environment variables](#environment-variables) has the full list.
 
-3. Create the tables and the photo bucket, then load the categories, facets and store rules:
+3. Create the tables and the photo bucket, then fill them. Choose **A** to see the project as it was built, or **B** to start empty.
+
+   **A. Load the case-study data (recommended)**
+
+   ```bash
+   uv run catalog migrate
+   uv run catalog load-data
+   uv run scraper fetch-photos
+   ```
+
+   - `catalog migrate` applies the 25 migrations in `db/migrations/` in order. It also creates the private storage bucket `product-images`. It is safe to run again.
+   - `catalog load-data` loads the rows in [db/data/](db/data/) into the new tables, in one go: all of it or nothing. That is everything in the working project: the 244 products, the 1,169 categories, the facets and their rules, every tagging run with its model requests and replies, the reviewed answers, the 95-product golden set, the evaluation results, and the store's rules and four personas with their starting histories. It leaves out only the store's session events, so the store starts clean. It refuses to run on a database that already has data.
+   - `scraper fetch-photos` downloads the 941 product photos from Ounass into your bucket. The data has each photo's address, not the photo. It sends about one request a second, so it takes around 20 minutes. You can start the apps while it runs; photos appear as they arrive. If it stops, run it again and it carries on. It needs `SCRAPER_USER_AGENT` in `.env`.
+
+   **B. Start empty**
 
    ```bash
    uv run catalog migrate
@@ -101,7 +115,6 @@ These steps take you from an empty Supabase project to both apps running. Nothin
    uv run richies seed-rules
    ```
 
-   - `catalog migrate` applies the 25 migrations in `db/migrations/` in order. It also creates the private storage bucket `product-images`. It is safe to run again.
    - `scraper plan` loads the 1,169 categories. It leaves the reviewed `config/sample_plan.csv` as it is.
    - `seed-taxonomy` loads the facets, their values and rubrics, which facets apply to which category, and the brands.
    - `seed-rules` loads the store's occasions, outfit roles, look templates, colour pairings and the four shopper personas.
@@ -117,7 +130,7 @@ These steps take you from an empty Supabase project to both apps running. Nothin
 
    To run the tagger app on its own, use `uv run tagger app`. Both apps listen on your computer only. Stop them with Ctrl+C.
 
-The store is empty until you approve some products. The tables are described in [docs/database.md](docs/database.md).
+With option A, the store opens with the approved products and the tagger app shows every run, the review history and the figures in [Results](#results-at-a-glance). With option B, the store is empty until you approve some products. The tables are described in [docs/database.md](docs/database.md).
 
 ## Tag your first products
 
@@ -141,6 +154,8 @@ uv run tagger run --limit 10            # categorise, tag and derive them (costs
 ```
 
 Then approve them in the tagger app as in steps 4 and 5 above. `scraper scrape` reads the listing pages named in `config/sample_plan.csv`. To choose your own products, use Live tag.
+
+The two notes below apply to option B. With option A, the persona histories are loaded and the evaluation can be rerun with `uv run tagger evaluate --run 1003` (no model call).
 
 **Store personas.** The four demo shoppers (Layla, Noor, James and Sara) start with a browsing history made of 23 particular products. That history loads only when all 23 are in your store. Until then the personas behave like new shoppers. The store still works, but Looks for you and the personalised ranking will not show. To load the histories, tag and approve those products, then run `uv run richies load-personas`. The product IDs are in `store/sample_data/personas.json`.
 
@@ -183,6 +198,8 @@ The main ones; [docs/commands.md](docs/commands.md) has the rest. Every command 
 | `tagger review export --run ID` / `review import FILE` | Review a run in a spreadsheet instead of the app |
 | `tagger publish --run ID` | Point products at a run; publishing happens only by approval |
 | `tagger app` | Start the tagger app |
+| `catalog load-data` | Load the case-study data from `db/data/` into a new database |
+| `scraper fetch-photos` | Download the product photos for loaded data into the bucket |
 | `richies serve --with-tagger` | Start the store and the tagger app |
 
 ## Repository map
@@ -196,6 +213,7 @@ The main ones; [docs/commands.md](docs/commands.md) has the rest. Every command 
 | `store/richies/`, `store/web/` | Richie's store: Python API and React front end |
 | `store/sample_data/` | The store's rules and the four personas' starting histories |
 | `db/migrations/` | The database schema, applied in file order |
+| `db/data/` | The working project's data, one gzipped CSV per table, for `catalog load-data` |
 | `config/` | Facet policy and definitions, the facet dictionary workbook, brands, model profiles and prices, pipeline settings, the sample plan |
 | `skills/` | The categorising and tagging instructions sent to the models |
 | `ounass_spine_v5_nodes.csv` | The category spine: 1,169 categories, L1 to L5 |
@@ -219,11 +237,10 @@ See [docs/troubleshooting.md](docs/troubleshooting.md).
 - **Synthetic shoppers.** The store's four personas and their histories were written for the demo. No real shopper data is used.
 - **No checkout, no sign-in, no accounts.** The store's bag is for show. Both apps run on your own computer only, for one person at a time.
 - **Not tested from a brand-new database.** The setup steps follow the code and were checked on the working project, but not run from an empty Supabase project. If a step fails, [docs/troubleshooting.md](docs/troubleshooting.md) lists the likely causes.
-- **Evaluation not reproducible from empty.** See [Tag your first products](#tag-your-first-products).
-- **Fresh databases use the default confidence level.** Three facets (occasion, formality and aesthetic) were set to review at 0.70 instead of the default 0.80 in the tuned project. A fresh database starts them at 0.80; set them on the **Confidence** tab to match.
+- **Starting empty (option B).** The evaluation cannot be reproduced, and three facets (occasion, formality and aesthetic) start at the default confidence level of 0.80 instead of the tuned 0.70; set them on the **Confidence** tab to match. See [Tag your first products](#tag-your-first-products). Option A has neither gap.
 
 ## Data and credits
 
-Product data was collected from the public Ounass website (ounass.ae) for this case study only. It is not for redistribution, and no product photo is included here. The scraper obeys robots.txt, sends one request at a time and stops at any sign of blocking.
+Product data was collected from the public Ounass website (ounass.ae) for this case study only. It is not for redistribution, and no product photo is included here: `scraper fetch-photos` downloads them from Ounass. The scraper obeys robots.txt, sends one request at a time and stops at any sign of blocking.
 
 Built by Richard George with Claude Code. Models: Claude Haiku 5.5 categorises, Claude Sonnet 5.5 tags, and Claude Opus 5.5 drafted golden labels for a person to review.
